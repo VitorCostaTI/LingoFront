@@ -1,6 +1,6 @@
 # Sistema Admnistrativo Lingo Lingo Kennel.
 
-Este Projeto foi criado com [Angular](https://github.com/angular/angular) e [Electron.JS](https://github.com/angular/angular](https://github.com/electron/electron).
+Este Projeto foi criado com [Angular](https://github.com/angular/angular) e [Electron.JS](https://github.com/electron/electron).
 
 ## Iniciando Scripts.
 
