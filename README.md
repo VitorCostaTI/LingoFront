@@ -10,8 +10,6 @@ Você poderá ultiliza-lo em seu Browser, através do seguinte comando.
 
 ### `ng serve`
 
-Ou buildar o App para desktop nativo.
-
 Abra [http://localhost:4200](http://localhost:4200) estará disponivel através desta porta local em seu Browser.
 
 ### `npm start` para abrir com App Local
