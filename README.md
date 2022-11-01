@@ -10,9 +10,7 @@ Você poderá ultiliza-lo em seu Browser, através do seguinte comando.
 
 ### `ng serve`
 
-Abra [http://localhost:4200](http://localhost:4200) estará disponivel através desta porta local em seu Browser.
-
-* `npm start` para abrir como App Desktop
+Abra [http://localhost:4200](http://localhost:4200) estará disponivel através desta porta local em seu Browser ou `npm start` para abrir como App Desktop.
 
 Esta aplicação está em constante mudança então lembre-se de mante-la sempre atualizada e seguir as dicas aqui disponiveis.
 
