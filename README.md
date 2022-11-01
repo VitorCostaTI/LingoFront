@@ -6,7 +6,7 @@ Este Projeto foi criado com [Angular](https://github.com/angular/angular).
 
 * Será necessário iniciar o BackEnd, [clique aqui para acessar](https://github.com/VitorCostaTI/LingoBack).
 
-Você poderá ultiliza-lo em seu Browser, através dos seguinte comando.
+Você poderá ultiliza-lo em seu Browser, através do seguinte comando.
 
 ### `ng serve`
 
