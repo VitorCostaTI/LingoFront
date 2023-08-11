@@ -1,0 +1,45 @@
+mat-card{
+    margin-top: 25px;
+    width: 25%;
+}
+
+.middle{
+    vertical-align: middle;
+}
+
+.favorite{
+    color: red;
+}
+
+.star{
+    color: rgb(180, 180, 4);
+}
+
+.container{
+    margin: 15px;
+}
+
+.margin-body{
+    margin-top: 20px;
+}
+
+.faturamento{
+    background: rgb(115,203,101);
+    background: linear-gradient(to right, 90deg, rgba(115,203,101,1) 0%, rgba(25,161,6,1) 28%, rgba(24,255,0,1) 100%);
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.despesa{
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 53%, rgba(255,0,0,1) 100%);
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.receita{
+    background: rgb(0,204,255);
+    background: linear-gradient(90deg, rgba(0,204,255,1) 0%, rgba(0,204,255,1) 53%, rgba(0,196,255,1) 100%);
+    color: whitesmoke;
+    font-weight: bold;
+}

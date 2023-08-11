@@ -1,6 +1,6 @@
 # FrontLingo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
+Este projeto é desenvolvido com [Angular CLI](https://github.com/angular/angular-cli) versão 16.1.7.
 
 ## Iniciando Scripts.
 
