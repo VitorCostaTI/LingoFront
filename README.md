@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Esta aplicação está em constante mudança então lembre-se de mante-lo sempre atualizada e seguir as dicas aqui disponiveis.
 
-* Obs: O Back End deste projeto está disponivel em outro [Repositório](https://github.com/VitorCostaTI/LingoBack), de meu perfil.
+* Obs: O Back End deste projeto está disponivel em outro [Repositório](https://github.com/VitorCostaTI/BackRoom), de meu perfil.
 
 Obrigado .\
 Made with :heart: by **Vitor Costa** - [Linkedin](https://www.linkedin.com/in/vitor-costa-10566b22a/)
