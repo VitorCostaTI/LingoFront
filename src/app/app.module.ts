@@ -13,6 +13,8 @@ import { ReceitasComponent } from './components/dialog/receitas/receitas.compone
 import { NascimentoComponent } from './components/dialog/nascimento/nascimento.component';
 import { RankingComponent } from './components/dialog/ranking/ranking.component';
 import { VendasComponent } from './components/dialog/vendas/vendas.component';
+import { ConfiguracoesComponent } from './components/dialog/configuracoes/configuracoes.component';
+import { NotificacoesComponent } from './components/dialog/notificacoes/notificacoes.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { VendasComponent } from './components/dialog/vendas/vendas.component';
     ReceitasComponent,
     NascimentoComponent,
     RankingComponent,
-    VendasComponent
+    VendasComponent,
+    ConfiguracoesComponent,
+    NotificacoesComponent
   ],
   imports: [
     BrowserModule,

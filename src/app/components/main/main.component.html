@@ -3,22 +3,28 @@
         <div fxLayout="row" fxLayoutAlign="space-between center" class="middle"> 
             <h1 class="pointer">Lingo Kennel</h1>
             <div fxLayout="row" fxLayoutAlign="end center" > 
-                <a matTooltip="Configurações">  
+                <button mat-icon-button matTooltip="Configurações" (click)="openDialogConfiguracoes('500ms', '250ms')">
                     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="settings" class="icon-hover"></mat-icon> 
-                </a>
+                </button>
                 &nbsp;
                 &nbsp;
-                <a matTooltip="Notificações">  
+                <button mat-icon-button matTooltip="Notificações" (click)="openDialogNotificacoes('500ms', '250ms')">
                     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="notifications" class="icon-hover"></mat-icon>
-                </a>
+                </button>
                 &nbsp;
                 &nbsp;
-                <a matTooltip="Perfil">  
+                <button mat-icon-button matTooltip="Perfil" aria-label="Example icon-button with a heart icon">
                     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="person" class="icon-hover"></mat-icon>
-                </a>
+                </button>
             </div>
         </div>
     </mat-card-content>
 </mat-card>
+
+<script>
+    function teste(){
+        alert("Botão ativo")
+    }
+</script>
 
   
