@@ -10,6 +10,9 @@ import { SharedModule } from './modules/shared/shared.module';
 import { FaturamentoComponent } from './components/dialog/faturamento/faturamento.component';
 import { DespesasComponent } from './components/dialog/despesas/despesas.component';
 import { ReceitasComponent } from './components/dialog/receitas/receitas.component';
+import { NascimentoComponent } from './components/dialog/nascimento/nascimento.component';
+import { RankingComponent } from './components/dialog/ranking/ranking.component';
+import { VendasComponent } from './components/dialog/vendas/vendas.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { ReceitasComponent } from './components/dialog/receitas/receitas.compone
     DashboardComponent,
     FaturamentoComponent,
     DespesasComponent,
-    ReceitasComponent
+    ReceitasComponent,
+    NascimentoComponent,
+    RankingComponent,
+    VendasComponent
   ],
   imports: [
     BrowserModule,
