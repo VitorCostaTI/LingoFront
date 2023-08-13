@@ -9,6 +9,8 @@ import { DespesasComponent } from '../dialog/despesas/despesas.component';
 export class DashboardComponent {
   constructor(public dialog: MatDialog) {}
 
+  isActive = false;
+
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(DespesasComponent, {
       width: '250px',

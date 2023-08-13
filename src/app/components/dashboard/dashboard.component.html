@@ -1,5 +1,5 @@
 <div fxLayout="row" fxLayoutAlign="space-around center" > 
-    <mat-card class="faturamento">
+    <mat-card class="faturamento mat-elevation-z10" (click)="openDialog('500ms', '250ms')">
         <div class="container">
             <mat-card-title>
                 Faturamento
@@ -11,7 +11,7 @@
         </div>
     </mat-card>
 
-    <mat-card class="despesa">
+    <mat-card class="despesa mat-elevation-z10" (click)="openDialog('500ms', '250ms')">
         <div class="container">
             <mat-card-title>
                 Despesa
@@ -23,7 +23,7 @@
         </div>
     </mat-card>
 
-    <mat-card class="receita">
+    <mat-card class="receita mat-elevation-z10" (click)="openDialog('500ms', '250ms')">
         <div class="container">
             <mat-card-title>
                 Receita
@@ -37,7 +37,7 @@
 </div>
 
 <div fxLayout="row" fxLayoutAlign="space-around center" > 
-    <mat-card>
+    <mat-card (click)="openDialog('500ms', '250ms')" class="mat-elevation-z10">
         <div class="container">
             <mat-card-title>
                 Próximo nascimento
@@ -49,7 +49,7 @@
         </div>
     </mat-card>
 
-    <mat-card>
+    <mat-card (click)="openDialog('500ms', '250ms')" class="mat-elevation-z10">
         <div class="container">
             <mat-card-title>
                 Ranking mais vendidos
@@ -63,7 +63,7 @@
         </div>
     </mat-card>
 
-    <mat-card>
+    <mat-card (click)="openDialog('500ms', '250ms')" class="mat-elevation-z10">
         <div class="container">
             <mat-card-title>
                 Melhor vendedor
