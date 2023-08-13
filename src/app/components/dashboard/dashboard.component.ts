@@ -18,7 +18,7 @@ export class DashboardComponent {
 
   openDialogFaturamento(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(FaturamentoComponent, {
-      width: '250px',
+      width: '750px',
       enterAnimationDuration,
       exitAnimationDuration,
     });
@@ -26,7 +26,7 @@ export class DashboardComponent {
 
   penDialogDespesas(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(DespesasComponent, {
-      width: '250px',
+      width: '750px',
       enterAnimationDuration,
       exitAnimationDuration,
     });
@@ -34,7 +34,7 @@ export class DashboardComponent {
 
   penDialogReceita(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(ReceitasComponent, {
-      width: '250px',
+      width: '750px',
       enterAnimationDuration,
       exitAnimationDuration,
     });
@@ -42,7 +42,7 @@ export class DashboardComponent {
 
   openDialogNascimento(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(NascimentoComponent, {
-      width: '250px',
+      width: '750px',
       enterAnimationDuration,
       exitAnimationDuration,
     });
@@ -50,7 +50,7 @@ export class DashboardComponent {
 
   penDialogRanking(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(RankingComponent, {
-      width: '250px',
+      width: '750px',
       enterAnimationDuration,
       exitAnimationDuration,
     });
@@ -58,7 +58,7 @@ export class DashboardComponent {
 
   penDialogVendas(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(VendasComponent, {
-      width: '250px',
+      width: '750px',
       enterAnimationDuration,
       exitAnimationDuration,
     });
