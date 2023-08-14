@@ -1,4 +1,4 @@
-# FrontLingo
+# LingoFront
 
 Este projeto é desenvolvido com [Angular CLI](https://github.com/angular/angular-cli) versão 16.1.7.
 
