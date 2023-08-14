@@ -4,13 +4,13 @@ Este projeto é desenvolvido com [Angular CLI](https://github.com/angular/angula
 
 ## Iniciando Scripts.
 
-* Você precisará configurar um Banco de Dados PostgreSQL no backEnd.
+* Você precisará configurar um banco de dados no backEnd.
 
-* Para iniciar o FrontEnd basta executar o comando de start do angular "ng serve"
+* Para iniciar o FrontEnd basta executar o comando de start do angular **ng serve**
 
 Esta aplicação está em constante mudança então lembre-se de mante-lo sempre atualizada e seguir as dicas aqui disponiveis.
 
-* Obs: O Back End deste projeto está disponivel em outro [Repositório](https://github.com/VitorCostaTI/BackRoom), de meu perfil.
+* Obs: O Back End deste projeto está disponivel em outro [repositório](https://github.com/VitorCostaTI/BackRoom), de meu perfil.
 
 Obrigado .\
 Made with :heart: by **Vitor Costa** - [Linkedin](https://www.linkedin.com/in/vitor-costa-10566b22a/)
