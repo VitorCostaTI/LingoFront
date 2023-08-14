@@ -9,7 +9,6 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { FaturamentoComponent } from './components/dashboard/dialog/faturamento/faturamento.component';
 import { DespesasComponent } from './components/dashboard/dialog/despesas/despesas.component';
-import { ReceitasComponent } from './components/dashboard/dialog/receitas/receitas.component';
 import { NascimentoComponent } from './components/dashboard/dialog/nascimento/nascimento.component';
 import { RankingComponent } from './components/dashboard/dialog/ranking/ranking.component';
 import { VendasComponent } from './components/dashboard/dialog/vendas/vendas.component';
@@ -23,7 +22,6 @@ import { NotificacoesComponent } from './components/dashboard/dialog/notificacoe
     DashboardComponent,
     FaturamentoComponent,
     DespesasComponent,
-    ReceitasComponent,
     NascimentoComponent,
     RankingComponent,
     VendasComponent,
