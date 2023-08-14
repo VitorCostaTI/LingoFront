@@ -8,7 +8,7 @@ Este projeto é desenvolvido com [Angular CLI](https://github.com/angular/angula
 
 * Para iniciar o FrontEnd basta executar o comando de start do angular **ng serve**
 
-Esta aplicação está em constante mudança então lembre-se de mante-lo sempre atualizada e seguir as dicas aqui disponiveis.
+Esta aplicação está em constante mudança então lembre-se de mante-la sempre atualizada e seguir as dicas aqui disponiveis.
 
 * Obs: O Back End deste projeto está disponivel em outro [repositório](https://github.com/VitorCostaTI/BackRoom), de meu perfil.
 
