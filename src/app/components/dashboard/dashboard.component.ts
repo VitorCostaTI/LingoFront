@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
-import { DespesasComponent } from '../dialog/despesas/despesas.component';
-import { FaturamentoComponent } from '../dialog/faturamento/faturamento.component';
-import { ReceitasComponent } from '../dialog/receitas/receitas.component';
-import { NascimentoComponent } from '../dialog/nascimento/nascimento.component';
-import { RankingComponent } from '../dialog/ranking/ranking.component';
-import { VendasComponent } from '../dialog/vendas/vendas.component';
+import { DespesasComponent } from '../dashboard/dialog/despesas/despesas.component';
+import { FaturamentoComponent } from '../dashboard/dialog/faturamento/faturamento.component';
+import { ReceitasComponent } from '../dashboard/dialog/receitas/receitas.component';
+import { NascimentoComponent } from '../dashboard/dialog/nascimento/nascimento.component';
+import { RankingComponent } from '../dashboard/dialog/ranking/ranking.component';
+import { VendasComponent } from '../dashboard/dialog/vendas/vendas.component';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
-import { ConfiguracoesComponent } from '../dialog/configuracoes/configuracoes.component';
-import { NotificacoesComponent } from '../dialog/notificacoes/notificacoes.component';
+import { ConfiguracoesComponent } from '../dashboard/dialog/configuracoes/configuracoes.component';
+import { NotificacoesComponent } from '../dashboard/dialog/notificacoes/notificacoes.component';
 
 @Component({
   selector: 'app-main',
