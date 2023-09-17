@@ -11,7 +11,6 @@ import { NotificacoesComponent } from './components/dashboard/dialog/notificacoe
 export class AppComponent {
   constructor(public dialog: MatDialog) {}
 
-  showFiller = false;
   title = 'frontLingo';
 
   openDialogConfiguracoes(enterAnimationDuration: string, exitAnimationDuration: string): void {

@@ -12,6 +12,7 @@ import { NascimentoComponent } from './components/dashboard/dialog/nascimento/na
 import { RankingComponent } from './components/dashboard/dialog/ranking/ranking.component';
 import { ConfiguracoesComponent } from './components/dashboard/dialog/configuracoes/configuracoes.component';
 import { NotificacoesComponent } from './components/dashboard/dialog/notificacoes/notificacoes.component';
+import { NavegacaoComponent } from './components/navegacao/navegacao.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NotificacoesComponent } from './components/dashboard/dialog/notificacoe
     NascimentoComponent,
     RankingComponent,
     ConfiguracoesComponent,
-    NotificacoesComponent
+    NotificacoesComponent,
+    NavegacaoComponent
   ],
   imports: [
     BrowserModule,
