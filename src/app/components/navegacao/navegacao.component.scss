@@ -7,7 +7,6 @@
     background-color: rgb(222, 224, 224);
     border-radius: 5px;
     height: 25px;
-    color: black;
 }
 
 h1{
@@ -21,5 +20,11 @@ hr{
 }
 
 .page-navegation{
- font-size: 15px;   
+    font-size: 15px;   
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.page-navegation:hover{
+    color: black;
 }

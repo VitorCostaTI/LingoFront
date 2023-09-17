@@ -12,7 +12,7 @@
                     <button mat-icon-button matTooltip="Menu" (click)="drawer.toggle()">
                         <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="menu" class="icon-hover"></mat-icon> 
                     </button>
-                    <h1 class="pointer">Lingo Kennel</h1>
+                    <a routerLink="/" class="pointer title">Lingo Kennel</a>
                     <div fxLayout="row" fxLayoutAlign="end center" > 
                         <button mat-icon-button (click)="openDialogConfiguracoes('750ms', '150ms')" matTooltip="Configurações">
                             <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="settings" class="icon-hover"></mat-icon> 
@@ -31,6 +31,6 @@
                 </div>
             </mat-card-content>
         </mat-card>  
-        <app-dashboard></app-dashboard>
+        <router-outlet></router-outlet>
     </div>
 </mat-drawer-container>
