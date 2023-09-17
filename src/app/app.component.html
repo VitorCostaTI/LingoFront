@@ -1,2 +1,41 @@
-<app-main></app-main>
-<app-dashboard></app-dashboard>
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer mode="side" class="sidenav">
+        <div class="navegacao">
+            <p>Auto-resizing sidenav</p>
+            <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+            <button (click)="showFiller = !showFiller" mat-raised-button>
+                Toggle extra text
+            </button>
+            <hr>
+        </div>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <mat-card>    
+            <mat-card-content>
+                <div fxLayout="row" fxLayoutAlign="space-between center" class="middle"> 
+                    <button mat-icon-button matTooltip="Menu" (click)="drawer.toggle()">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="menu" class="icon-hover"></mat-icon> 
+                    </button>
+                    <h1 class="pointer">Lingo Kennel</h1>
+                    <div fxLayout="row" fxLayoutAlign="end center" > 
+                        <button mat-icon-button (click)="openDialogConfiguracoes('750ms', '150ms')" matTooltip="Configurações">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="settings" class="icon-hover"></mat-icon> 
+                        </button>
+                        &nbsp;
+                        &nbsp;
+                        <button mat-icon-button (click)="openDialogNotificacoes('750ms', '150ms')" matTooltip="Notificações">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="notifications" class="icon-hover"></mat-icon>
+                        </button>
+                        &nbsp;
+                        &nbsp;
+                        <button mat-icon-button matTooltip="Perfil" aria-label="Example icon-button with a heart icon">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="person" class="icon-hover"></mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>  
+        <app-dashboard></app-dashboard>
+    </div>
+</mat-drawer-container>

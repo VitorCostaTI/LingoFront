@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainComponent } from './components/main/main.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { FaturamentoComponent } from './components/dashboard/dialog/faturamento/faturamento.component';
@@ -17,7 +16,6 @@ import { NotificacoesComponent } from './components/dashboard/dialog/notificacoe
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
     DashboardComponent,
     FaturamentoComponent,
     DespesasComponent,
