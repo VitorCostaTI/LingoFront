@@ -11,7 +11,6 @@ import { FaturamentoComponent } from './components/dashboard/dialog/faturamento/
 import { DespesasComponent } from './components/dashboard/dialog/despesas/despesas.component';
 import { NascimentoComponent } from './components/dashboard/dialog/nascimento/nascimento.component';
 import { RankingComponent } from './components/dashboard/dialog/ranking/ranking.component';
-import { VendasComponent } from './components/dashboard/dialog/vendas/vendas.component';
 import { ConfiguracoesComponent } from './components/dashboard/dialog/configuracoes/configuracoes.component';
 import { NotificacoesComponent } from './components/dashboard/dialog/notificacoes/notificacoes.component';
 
@@ -24,7 +23,6 @@ import { NotificacoesComponent } from './components/dashboard/dialog/notificacoe
     DespesasComponent,
     NascimentoComponent,
     RankingComponent,
-    VendasComponent,
     ConfiguracoesComponent,
     NotificacoesComponent
   ],

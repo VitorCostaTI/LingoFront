@@ -13,9 +13,31 @@
           25/08/2003
         </mat-panel-description>
       </mat-expansion-panel-header>
-        <p class="margin">R$119,20 - Venda: 30053</p>
-        <p class="margin">R$119,20 - Venda: 30053</p>
-        <p class="margin">R$119,20 - Venda: 30053</p>
+
+      <table mat-table [dataSource]="dataSource">
+      
+        <!-- Coluna Custo -->
+        <ng-container matColumnDef="faturamento">
+          <th mat-header-cell *matHeaderCellDef> Faturamento </th>
+          <td mat-cell *matCellDef="let element"> {{element.faturamento}} </td>
+        </ng-container>
+      
+        <!-- Coluna Descrição -->
+        <ng-container matColumnDef="descricao">
+          <th mat-header-cell *matHeaderCellDef> Descrição </th>
+          <td mat-cell *matCellDef="let element"> {{element.descricao}} </td>
+        </ng-container>
+      
+        <!-- Coluna Ordem Serviço -->
+        <ng-container matColumnDef="Oservico">
+          <th mat-header-cell *matHeaderCellDef> Ordem de Serviço </th>
+          <td mat-cell *matCellDef="let element"> {{element.Oservico}} </td>
+        </ng-container>
+          
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
     </mat-expansion-panel>
   </mat-accordion>
   

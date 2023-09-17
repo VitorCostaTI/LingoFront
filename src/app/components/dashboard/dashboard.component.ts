@@ -4,7 +4,6 @@ import { DespesasComponent } from '../dashboard/dialog/despesas/despesas.compone
 import { FaturamentoComponent } from '../dashboard/dialog/faturamento/faturamento.component';
 import { NascimentoComponent } from '../dashboard/dialog/nascimento/nascimento.component';
 import { RankingComponent } from '../dashboard/dialog/ranking/ranking.component';
-import { VendasComponent } from '../dashboard/dialog/vendas/vendas.component';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -41,14 +40,6 @@ export class DashboardComponent {
 
   penDialogRanking(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(RankingComponent, {
-      width: '750px',
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
-  }
-
-  penDialogVendas(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(VendasComponent, {
       width: '750px',
       enterAnimationDuration,
       exitAnimationDuration,
