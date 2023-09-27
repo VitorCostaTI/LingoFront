@@ -24,6 +24,7 @@ import { Error404Component } from './components/pages/error404/error404.componen
 import { OrdemServicoComponent } from './components/pages/ordem-servico/ordem-servico.component';
 import { EstoqueComponent } from './components/pages/estoque/estoque.component';
 import { AuditoriaComponent } from './components/pages/auditoria/auditoria.component';
+import { ProdutosDialogComponent } from './components/pages/produtos/dialog/produtos-dialog/produtos-dialog.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { AuditoriaComponent } from './components/pages/auditoria/auditoria.compo
     Error404Component,
     OrdemServicoComponent,
     EstoqueComponent,
-    AuditoriaComponent
+    AuditoriaComponent,
+    ProdutosDialogComponent
   ],
   imports: [
     BrowserModule,
