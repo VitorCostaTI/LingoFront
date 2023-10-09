@@ -1,89 +1,91 @@
-<div fxLayout="row" fxLayoutAlign="space-between center" class="margin"> 
-    <h1>Seja bem vindo, Vitor Costa!</h1>
+<div class="card">
+    <h1><b>Seja bem vindo, Vitor Costa!</b></h1>
 </div>
 
-<div fxLayout="row" fxLayoutAlign="space-around center" > 
-    <mat-card class="faturamento mat-elevation-z10 pointer" (click)="openDialogFaturamento('500ms', '250ms')">
-        <div class="container">
-            <mat-card-title>
-                Faturamento
-            </mat-card-title>
-            <br>
-            <mat-divider></mat-divider>
-            <div class="margin-body">
-                R$ 1.236,00
+<div class="relatorios">
+    <div fxLayout="row" fxLayoutAlign="space-around center" > 
+        <mat-card class="faturamento mat-elevation-z10 pointer" (click)="openDialogFaturamento('500ms', '250ms')">
+            <div class="container">
+                <mat-card-title>
+                    Faturamento
+                </mat-card-title>
+                <br>
+                <mat-divider></mat-divider>
+                <div class="margin-body">
+                    R$ 1.236,00
+                </div>
             </div>
-        </div>
-    </mat-card>
-
-    <mat-card class="despesa mat-elevation-z10 pointer" (click)="penDialogDespesas('500ms', '250ms')">
-        <div class="container">
-            <mat-card-title>
-                Despesa
-            </mat-card-title>
-            <br>
-            <mat-divider></mat-divider>
-            <div class="margin-body">
-                R$ 236,00
+        </mat-card>
+    
+        <mat-card class="despesa mat-elevation-z10 pointer" (click)="penDialogDespesas('500ms', '250ms')">
+            <div class="container">
+                <mat-card-title>
+                    Despesa
+                </mat-card-title>
+                <br>
+                <mat-divider></mat-divider>
+                <div class="margin-body">
+                    R$ 236,00
+                </div>
             </div>
-        </div>
-    </mat-card>
-
-    <mat-card class="receita mat-elevation-z10 pointer">
-        <div class="container">
-            <mat-card-title>
-                Receita
-            </mat-card-title>
-            <br>
-            <mat-divider></mat-divider>
-            <div class="margin-body">
-                R$ 1.000,00
+        </mat-card>
+    
+        <mat-card class="receita mat-elevation-z10 pointer">
+            <div class="container">
+                <mat-card-title>
+                    Receita
+                </mat-card-title>
+                <br>
+                <mat-divider></mat-divider>
+                <div class="margin-body">
+                    R$ 1.000,00
+                </div>
             </div>
-        </div>
-    </mat-card>
-</div>
-
-<div fxLayout="row" fxLayoutAlign="space-around center margin" > 
-    <mat-card (click)="openDialogNascimento('500ms', '250ms')" class="mat-elevation-z10 pointer">
-        <div class="container">
-            <mat-card-title>
-                Próximo nascimento
-            </mat-card-title>
-            <br>
-            <mat-divider></mat-divider>
-            <div class="margin-body">
-                12/06/2023
+        </mat-card>
+    </div>
+    
+    <div fxLayout="row" fxLayoutAlign="space-around center margin" > 
+        <mat-card (click)="openDialogNascimento('500ms', '250ms')" class="mat-elevation-z10 pointer">
+            <div class="container">
+                <mat-card-title>
+                    Próximo nascimento
+                </mat-card-title>
+                <br>
+                <mat-divider></mat-divider>
+                <div class="margin-body">
+                    12/06/2023
+                </div>
             </div>
-        </div>
-    </mat-card>
-
-    <mat-card (click)="penDialogRanking('500ms', '250ms')" class="mat-elevation-z10 pointer">
-        <div class="container">
-            <mat-card-title>
-                Ranking mais vendidos
-            </mat-card-title>
-            <br>
-            <mat-divider></mat-divider>
-            <div fxLayout="row" class="middle margin-body">
-                Old English BullDog
-                &nbsp;
-                <mat-icon class="middle star" aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon> 
+        </mat-card>
+    
+        <mat-card (click)="penDialogRanking('500ms', '250ms')" class="mat-elevation-z10 pointer">
+            <div class="container">
+                <mat-card-title>
+                    Ranking mais vendidos
+                </mat-card-title>
+                <br>
+                <mat-divider></mat-divider>
+                <div fxLayout="row" class="middle margin-body">
+                    Old English BullDog
+                    &nbsp;
+                    <mat-icon class="middle star" aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon> 
+                </div>
             </div>
-        </div>
-    </mat-card>
-
-    <mat-card class="mat-elevation-z10 pointer">
-        <div class="container">
-            <mat-card-title>
-                Melhor vendedor
-            </mat-card-title>
-            <br>
-            <mat-divider></mat-divider>
-            <div fxLayout="row" class="margin-body">
-                Vitor Costa
-                &nbsp;
-                <mat-icon class="middle favorite" aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon> 
+        </mat-card>
+    
+        <mat-card class="mat-elevation-z10 pointer">
+            <div class="container">
+                <mat-card-title>
+                    Melhor vendedor
+                </mat-card-title>
+                <br>
+                <mat-divider></mat-divider>
+                <div fxLayout="row" class="margin-body">
+                    Vitor Costa
+                    &nbsp;
+                    <mat-icon class="middle favorite" aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon> 
+                </div>
             </div>
-        </div>
-    </mat-card>
+        </mat-card>
+    </div>
 </div>
