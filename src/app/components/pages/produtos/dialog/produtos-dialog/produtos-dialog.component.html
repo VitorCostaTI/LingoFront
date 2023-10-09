@@ -1,55 +1,50 @@
 <div class="container">
-    <div class="title">
-        <h1>Produtos</h1>
+  <h1>Produto</h1>
+
+  <mat-divider></mat-divider>
+ 
+  <div class="post">
+    <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+      <mat-form-field>
+        <mat-label>Produto</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Fornecedor</mat-label>
+        <input matInput>
+      </mat-form-field>
     </div>
-
-    <mat-divider></mat-divider>
-
-    <div class="body" fxLayout="column" fxLayoutAlign="space-around center">
-        <mat-form-field>
-            <mat-label>Produto</mat-label>
-            <input matInput placeholder="pat@example.com" required>
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Investimento</mat-label>
-            <input matInput placeholder="pat@example.com" required>
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Preço</mat-label>
-            <input matInput placeholder="pat@example.com" required>
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Validade</mat-label>
-            <input matInput placeholder="pat@example.com" required>
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Manutenção</mat-label>
-            <input matInput placeholder="pat@example.com" required>
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Tempo Manutenção</mat-label>
-            <input matInput placeholder="pat@example.com" required>
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Status</mat-label>
-            <input matInput placeholder="pat@example.com" required>
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Observação</mat-label>
-            <input matInput placeholder="pat@example.com" required>
-          </mat-form-field>
+  
+    <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+      <mat-form-field>
+        <mat-label>Preço</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Invesimento</mat-label>
+        <input matInput>
+      </mat-form-field>
     </div>
-
-    <mat-divider></mat-divider>
-
-    <div class="buttons margin" fxLayoutAlign="end center" > 
-        <button mat-raised-button color="warn" class="margin-button" [mat-dialog-close]>Fechar</button>
+  
+    <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+      <mat-form-field>
+        <mat-label>Quantidade</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Código do produto</mat-label>
+        <input matInput>
+      </mat-form-field>
     </div>
+  </div>
+   
+  <mat-divider></mat-divider>
+
+  <br>
+
+  <div fxLayout="row" fxLayoutAlign="end center" > 
+    <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
+    &nbsp;
+    <button mat-flat-button color="primary">Salvar</button>
+  </div>
 </div>
