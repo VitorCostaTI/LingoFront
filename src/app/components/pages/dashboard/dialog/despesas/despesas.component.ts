@@ -20,6 +20,11 @@ const ELEMENT_DATA: DespesaElement[] = [
 })
 
 export class DespesasComponent {
-  displayedColumns: string[] = ['custo', 'descricao', 'Oservico'];
+  displayedColumns: string[] = [
+    'custo',
+    'descricao',
+    'Oservico'
+  ];
+  
   dataSource = ELEMENT_DATA;
 }

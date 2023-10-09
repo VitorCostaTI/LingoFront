@@ -25,6 +25,7 @@ import { OrdemServicoComponent } from './components/pages/ordem-servico/ordem-se
 import { EstoqueComponent } from './components/pages/estoque/estoque.component';
 import { AuditoriaComponent } from './components/pages/auditoria/auditoria.component';
 import { ProdutosDialogComponent } from './components/pages/produtos/dialog/produtos-dialog/produtos-dialog.component';
+import { ClientesDialogComponent } from './components/pages/clientes/clientes-dialog/clientes-dialog.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ProdutosDialogComponent } from './components/pages/produtos/dialog/prod
     OrdemServicoComponent,
     EstoqueComponent,
     AuditoriaComponent,
-    ProdutosDialogComponent
+    ProdutosDialogComponent,
+    ClientesDialogComponent
   ],
   imports: [
     BrowserModule,

@@ -14,9 +14,9 @@ export interface DespesaElement {
 }
 
 const ELEMENT_DATA: DespesaElement[] = [
-  {data: new Date('2021-04-23T10:00:00.000'), cliente: 'Catarina Pietra Elaine Carvalho', pet: 'Tobel', servico: 'Tosa', telefone: '(88) 2726-1456'},
-  {data: new  Date('2021-04-23T10:00:00.000'), cliente: 'Daniel Pedro Henrique Emanuel Nogueira', pet: 'Taone', servico: 'Banho', telefone: '(14) 2915-2920'},
-  {data: new Date('2021-04-23T10:00:00.000'), cliente: 'Carla Sophia Nogueira', pet: 'Cyepe', servico: 'Passeio', telefone: '(84) 2630-6718'},
+  {data: new Date('2021-04-19T10:00:00.000'), cliente: 'Catarina Pietra Elaine Carvalho', pet: 'Tobel', servico: 'Tosa', telefone: '(88) 2726-1456'},
+  {data: new  Date('2021-04-21T10:00:00.000'), cliente: 'Daniel Pedro Henrique Emanuel Nogueira', pet: 'Taone', servico: 'Banho', telefone: '(14) 2915-2920'},
+  {data: new Date('2021-04-22T10:00:00.000'), cliente: 'Carla Sophia Nogueira', pet: 'Cyepe', servico: 'Passeio', telefone: '(84) 2630-6718'},
   {data: new Date('2021-04-23T10:00:00.000'), cliente: 'Bárbara Isabel Lopes', pet: 'Launo', servico: 'Hospedagem', telefone: '(82) 2375-2185'},
 ];
 
@@ -63,6 +63,13 @@ export class DashboardComponent {
     });
   }
 
-  displayedColumns: string[] = ['data', 'cliente', 'pet', 'servico', 'telefone'];
+  displayedColumns: string[] = [
+    'data',
+    'cliente', 
+    'pet', 
+    'servico', 
+    'telefone'
+  ];
+  
   dataSource = ELEMENT_DATA;
 }

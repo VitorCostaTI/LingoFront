@@ -19,6 +19,11 @@ const ELEMENT_DATA: FaturamentoElement[] = [
   styleUrls: ['./faturamento.component.scss']
 })
 export class FaturamentoComponent {
-  displayedColumns: string[] = ['faturamento', 'descricao', 'Oservico'];
+  displayedColumns: string[] = [
+    'faturamento',
+    'descricao',
+    'Oservico'
+  ];
+  
   dataSource = ELEMENT_DATA;
 }
