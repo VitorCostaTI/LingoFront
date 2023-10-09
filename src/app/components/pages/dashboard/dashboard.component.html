@@ -1,10 +1,10 @@
-<div class="card">
+<div class="card mat-elevation-z10">
     <h1><b>Seja bem vindo, Vitor Costa!</b></h1>
 </div>
 
 <div class="relatorios">
     <div fxLayout="row" fxLayoutAlign="space-around center" > 
-        <mat-card class="faturamento mat-elevation-z10 pointer" (click)="openDialogFaturamento('500ms', '250ms')">
+        <mat-card class="faturamento pointer" (click)="openDialogFaturamento('500ms', '250ms')">
             <div class="container">
                 <mat-card-title>
                     Faturamento
@@ -17,7 +17,7 @@
             </div>
         </mat-card>
     
-        <mat-card class="despesa mat-elevation-z10 pointer" (click)="penDialogDespesas('500ms', '250ms')">
+        <mat-card class="despesa pointer" (click)="penDialogDespesas('500ms', '250ms')">
             <div class="container">
                 <mat-card-title>
                     Despesa
@@ -30,7 +30,7 @@
             </div>
         </mat-card>
     
-        <mat-card class="receita mat-elevation-z10 pointer">
+        <mat-card class="receita pointer">
             <div class="container">
                 <mat-card-title>
                     Receita
@@ -45,7 +45,7 @@
     </div>
     
     <div fxLayout="row" fxLayoutAlign="space-around center margin" > 
-        <mat-card (click)="openDialogNascimento('500ms', '250ms')" class="mat-elevation-z10 pointer">
+        <mat-card (click)="openDialogNascimento('500ms', '250ms')" class="pointer">
             <div class="container">
                 <mat-card-title>
                     Próximo nascimento
@@ -58,7 +58,7 @@
             </div>
         </mat-card>
     
-        <mat-card (click)="penDialogRanking('500ms', '250ms')" class="mat-elevation-z10 pointer">
+        <mat-card (click)="penDialogRanking('500ms', '250ms')" class="pointer">
             <div class="container">
                 <mat-card-title>
                     Ranking mais vendidos
@@ -73,7 +73,7 @@
             </div>
         </mat-card>
     
-        <mat-card class="mat-elevation-z10 pointer">
+        <mat-card class=" pointer">
             <div class="container">
                 <mat-card-title>
                     Melhor vendedor
@@ -88,4 +88,53 @@
             </div>
         </mat-card>
     </div>
+</div>
+
+<div class="mat-elevation-z5 container">
+    <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Agendamentos da semana
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+    
+          <table mat-table [dataSource]="dataSource">
+          
+            <!-- Coluna Data e Hora -->
+            <ng-container matColumnDef="data">
+              <th mat-header-cell *matHeaderCellDef> Data e Hora </th>
+              <td mat-cell *matCellDef="let element"> {{element.data | date}} </td>
+            </ng-container>
+          
+            <!-- Coluna Cliente -->
+            <ng-container matColumnDef="cliente">
+              <th mat-header-cell *matHeaderCellDef> Cliente </th>
+              <td mat-cell *matCellDef="let element"> {{element.cliente}} </td>
+            </ng-container>
+          
+            <!-- Coluna Pet -->
+            <ng-container matColumnDef="pet">
+              <th mat-header-cell *matHeaderCellDef> Pet </th>
+              <td mat-cell *matCellDef="let element"> {{element.pet}} </td>
+            </ng-container>
+
+            <!-- Coluna Serviço -->
+            <ng-container matColumnDef="servico">
+                <th mat-header-cell *matHeaderCellDef> Serviço </th>
+                <td mat-cell *matCellDef="let element"> {{element.servico}} </td>
+            </ng-container>
+
+            <!-- Coluna Contato -->
+            <ng-container matColumnDef="telefone">
+                <th mat-header-cell *matHeaderCellDef> Telefone </th>
+                <td mat-cell *matCellDef="let element"> {{element.telefone}} </td>
+            </ng-container>
+              
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          
+        </mat-expansion-panel>
+      </mat-accordion>
 </div>
