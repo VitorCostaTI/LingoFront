@@ -30,8 +30,10 @@ import { MatTreeModule }            from '@angular/material/tree';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { PortalModule }  from '@angular/cdk/portal';
 
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
+import { FlexLayoutModule }                 from '@angular/flex-layout';
+import { MatTooltip, MatTooltipModule }     from '@angular/material/tooltip';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AsyncPipe, NgFor }                 from '@angular/common';
 
 const materialModules = [
   MatAutocompleteModule,
@@ -71,6 +73,11 @@ const cdkModules = [
 
 @NgModule({
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    NgFor,
+    AsyncPipe,
+
     cdkModules,
     FlexLayoutModule,
     materialModules

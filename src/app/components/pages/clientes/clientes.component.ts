@@ -11,7 +11,7 @@ export interface DespesaElement {
 }
 
 const ELEMENT_DATA: DespesaElement[] = [
-  {cliente: 'Marcela Maya Luiza da Paz', localizacao: 'JD Nova Suiça, Limeira - SP', email: 'marcela.maya.dapaz@gilconsultoria.com.br', telefone: '(19) 2798-1019', telefone2: '(19) 98921-4502'},
+  {cliente: 'Marcela Maya Luiza da Paz', localizacao: 'Jd. Nova Suiça, Limeira - SP', email: 'marcela.maya.dapaz@gilconsultoria.com.br', telefone: '(19) 2798-1019', telefone2: '(19) 98921-4502'},
   {cliente: 'Marlene Nicole Eduarda Silva', localizacao: 'Barreiro, Belém - PA', email: 'marlene_silva@digen.com.br', telefone: '(91) 3733-2033', telefone2: '(91) 99573-4310'},
   {cliente: 'Vera Emily Aparício', localizacao: 'Vila Buriti, Manaus - AM', email: 'vera_emily_aparicio@unianhanguera.edu.br', telefone: '(92) 2957-7625', telefone2: '(92) 99987-5946'},
   {cliente: 'Cauê Daniel Carlos Moreira', localizacao: 'Guabiraba, Recife - PE', email: 'Cauê Daniel Carlos Moreira', telefone: '(81) 3854-2780', telefone2: '(81) 98678-8263'},
