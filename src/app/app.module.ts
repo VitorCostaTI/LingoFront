@@ -26,6 +26,10 @@ import { EstoqueComponent } from './components/pages/estoque/estoque.component';
 import { AuditoriaComponent } from './components/pages/auditoria/auditoria.component';
 import { ProdutosDialogComponent } from './components/pages/produtos/dialog/produtos-dialog/produtos-dialog.component';
 import { ClientesDialogComponent } from './components/pages/clientes/clientes-dialog/clientes-dialog.component';
+import { OrdemServicoDialogAddComponent } from './components/pages/ordem-servico/ordem-servico-dialog-add/ordem-servico-dialog-add.component';
+import { OrdemServicoDialogUpdateComponent } from './components/pages/ordem-servico/ordem-servico-dialog-update/ordem-servico-dialog-update.component';
+import { OrdemServicoDialogRelatorioComponent } from './components/pages/ordem-servico/ordem-servico-dialog-relatorio/ordem-servico-dialog-relatorio.component';
+import { OrdemServicoDialogFinishComponent } from './components/pages/ordem-servico/ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,11 @@ import { ClientesDialogComponent } from './components/pages/clientes/clientes-di
     EstoqueComponent,
     AuditoriaComponent,
     ProdutosDialogComponent,
-    ClientesDialogComponent
+    ClientesDialogComponent,
+    OrdemServicoDialogAddComponent,
+    OrdemServicoDialogUpdateComponent,
+    OrdemServicoDialogRelatorioComponent,
+    OrdemServicoDialogFinishComponent,
   ],
   imports: [
     BrowserModule,

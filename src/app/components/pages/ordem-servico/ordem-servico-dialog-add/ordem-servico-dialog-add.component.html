@@ -1,0 +1,57 @@
+<div class="container">
+    <h1>Ordem de Serviço</h1>
+  
+    <mat-divider></mat-divider>
+   
+    <div class="post">
+      <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+        <mat-form-field class="example-full-width">
+            <mat-label>Cliente</mat-label>
+            <input type="text" matInput [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option.cliente}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+                
+      </div>
+    
+      <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+        <mat-form-field>
+          <mat-label>Preço</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Invesimento</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+    
+      <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+        <mat-form-field>
+          <mat-label>Colaborador</mat-label>
+          <input matInput>
+        </mat-form-field>
+        
+        <!-- <mat-form-field class="example-full-width">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker">
+              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>           -->
+    </div>
+     
+    <mat-divider></mat-divider>
+  
+    <br>
+  
+    <div fxLayout="row" fxLayoutAlign="end center" > 
+      <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
+      &nbsp;
+      <button mat-flat-button color="primary">Salvar</button>
+    </div>
+</div>

@@ -1,8 +1,7 @@
 <div class="container">
     <div fxLayout="row" fxLayoutAlign="space-between center" class="margin"> 
         <h1>Ordem de Serviços</h1>
-        <!-- <a mat-raised-button color="primary" (click)="openDialogCliente('500ms', '250ms')">Adicionar</a> -->
-        <a mat-raised-button color="primary">Adicionar</a>
+        <a mat-raised-button color="primary" (click)="openDialogServicoAdicionar('500ms', '250ms')">Adicionar</a>
     </div>
 
     <div class="ordens margin-top">
@@ -12,9 +11,9 @@
               <mat-card-subtitle> Banho e tosa - Iniciado </mat-card-subtitle>
             </mat-card-header>
             <mat-card-actions>
-              <button mat-button>Visualizar</button>
-              <button mat-button>Relatório</button>
-              <button mat-button>Finalizar</button>
+              <a mat-button color="green" (click)="openDialogServicoAtualizar('500ms', '250ms')">Visualizar</a>
+              <a mat-button color="basic" (click)="openDialogServicoRelatorio('500ms', '250ms')">Exportar</a>
+              <a mat-button color="warn" (click)="openDialogServicoFinish('500ms', '250ms')">Finalizar</a>
             </mat-card-actions>
         </mat-card>
     </div>
@@ -26,9 +25,9 @@
               <mat-card-subtitle> Castração - Em progresso </mat-card-subtitle>
             </mat-card-header>
             <mat-card-actions>
-              <button mat-button>Visualizar</button>
-              <button mat-button>Relatório</button>
-              <button mat-button>Finalizar</button>
+              <a mat-button color="green" (click)="openDialogServicoAtualizar('500ms', '250ms')">Visualizar</a>
+              <a mat-button color="basic" (click)="openDialogServicoRelatorio('500ms', '250ms')">Exportar</a>
+              <a mat-button color="warn" (click)="openDialogServicoFinish('500ms', '250ms')">Finalizar</a>
             </mat-card-actions>
         </mat-card>
     </div>
