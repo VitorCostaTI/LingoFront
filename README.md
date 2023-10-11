@@ -8,8 +8,6 @@ Este projeto é desenvolvido com [Angular CLI](https://github.com/angular/angula
 
 * Comece instalando as dependências do projeto: **npm install**.
 
-* Você precisará configurar um banco de dados no backEnd.
-
 * Para iniciar o FrontEnd basta executar o comando de start do angular **ng serve**.
 
 Esta aplicação está em constante mudança então lembre-se de mante-la sempre atualizada e seguir as dicas aqui disponiveis.
