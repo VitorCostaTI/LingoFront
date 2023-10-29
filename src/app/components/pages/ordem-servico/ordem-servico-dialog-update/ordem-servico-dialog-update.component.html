@@ -1,1 +1,32 @@
-<p>ordem-servico-dialog-update works!</p>
+<div class="container">
+    <h1>Progresso Serviço</h1>
+     
+    <mat-divider></mat-divider>
+
+    <div fxLayout="row" fxLayoutAlign="center center" > 
+        <mat-stepper>
+            <mat-step>
+                <ng-template matStepLabel>Dados do serviço</ng-template>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Realizações</ng-template>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Pagamento</ng-template>
+              </mat-step>
+            <mat-step>
+              <ng-template matStepLabel>Finalizar</ng-template>
+            </mat-step>
+        </mat-stepper>
+    </div>
+
+    <mat-divider></mat-divider>
+  
+    <br>
+  
+    <div fxLayout="row" fxLayoutAlign="end center" > 
+      <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
+      &nbsp;
+      <button mat-flat-button color="primary" matTooltip="Salvar Progresso">Salvar</button>
+    </div>
+</div>
