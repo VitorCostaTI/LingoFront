@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { ClientesDialogComponent } from './clientes-dialog/clientes-dialog.component';
 
-export interface DespesaElement {
+export interface ClienteElement {
   cliente: string;
   localizacao: string;
   email: string;
@@ -10,7 +10,7 @@ export interface DespesaElement {
   telefone2: string;
 }
 
-const ELEMENT_DATA: DespesaElement[] = [
+const ELEMENT_DATA: ClienteElement[] = [
   {cliente: 'Marcela Maya Luiza da Paz', localizacao: 'Jd. Nova Suiça, Limeira - SP', email: 'marcela.maya.dapaz@gilconsultoria.com.br', telefone: '(19) 2798-1019', telefone2: '(19) 98921-4502'},
   {cliente: 'Marlene Nicole Eduarda Silva', localizacao: 'Barreiro, Belém - PA', email: 'marlene_silva@digen.com.br', telefone: '(91) 3733-2033', telefone2: '(91) 99573-4310'},
   {cliente: 'Vera Emily Aparício', localizacao: 'Vila Buriti, Manaus - AM', email: 'vera_emily_aparicio@unianhanguera.edu.br', telefone: '(92) 2957-7625', telefone2: '(92) 99987-5946'},

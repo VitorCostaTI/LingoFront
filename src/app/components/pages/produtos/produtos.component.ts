@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { ProdutosDialogComponent } from './dialog/produtos-dialog/produtos-dialog.component';
 
-export interface DespesaElement {
+export interface ProdutoElement {
   produto: string;
   fornecedor: string;
   preco: string;
@@ -10,7 +10,7 @@ export interface DespesaElement {
   qtd: string;
 }
 
-const ELEMENT_DATA: DespesaElement[] = [
+const ELEMENT_DATA: ProdutoElement[] = [
   {produto: 'Shampoo', fornecedor: 'Meau', preco: 'R$ 7,40', investimento: 'R$ 4,00', qtd: '92'},
   {produto: 'Condicionador', fornecedor: 'Meau', preco: 'R$ 12,00', investimento: 'R$ 6,00', qtd: '75'},
   {produto: 'Perfume Dog Macho', fornecedor: 'Pet Clean', preco: 'R$ 16,00', investimento: 'R$ 9,00', qtd: '30'},
