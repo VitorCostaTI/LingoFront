@@ -31,4 +31,18 @@
             </mat-card-actions>
         </mat-card>
     </div>
+
+    <div class="ordens margin-top">
+      <mat-card>
+          <mat-card-header>
+            <mat-card-title>  Lorenzo Raimundo Leandro da Mota  </mat-card-title>
+            <mat-card-subtitle> Hospedagem - Concluido </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-actions>
+            <a mat-button color="green" (click)="openDialogServicoAtualizar('500ms', '250ms')" matTooltip="Visualizar Ordem de serviço">Visualizar</a>
+            <a mat-button color="basic" (click)="openDialogServicoRelatorio('500ms', '250ms')" matTooltip="Exportar Ordem de serviço">Exportar</a>
+            <a mat-button color="warn" (click)="openDialogServicoFinish('500ms', '250ms')" matTooltip="Finalizar Ordem de serviço">Finalizar</a>
+          </mat-card-actions>
+      </mat-card>
+  </div>
 </div>

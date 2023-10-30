@@ -30,6 +30,7 @@ import { OrdemServicoDialogAddComponent } from './components/pages/ordem-servico
 import { OrdemServicoDialogUpdateComponent } from './components/pages/ordem-servico/ordem-servico-dialog-update/ordem-servico-dialog-update.component';
 import { OrdemServicoDialogRelatorioComponent } from './components/pages/ordem-servico/ordem-servico-dialog-relatorio/ordem-servico-dialog-relatorio.component';
 import { OrdemServicoDialogFinishComponent } from './components/pages/ordem-servico/ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';
+import { CartaoComponent } from './components/cartao/cartao.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { OrdemServicoDialogFinishComponent } from './components/pages/ordem-serv
     OrdemServicoDialogUpdateComponent,
     OrdemServicoDialogRelatorioComponent,
     OrdemServicoDialogFinishComponent,
+    CartaoComponent,
   ],
   imports: [
     BrowserModule,
