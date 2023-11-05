@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { OrdemServicoDialogAddComponent } from './ordem-servico-dialog-add/ordem-servico-dialog-add.component';
-import { OrdemServicoDialogUpdateComponent } from './ordem-servico-dialog-update/ordem-servico-dialog-update.component';
+import { Component }                            from '@angular/core';
+import { MatDialog }                            from '@angular/material/dialog';
+import { OrdemServicoDialogAddComponent }       from './ordem-servico-dialog-add/ordem-servico-dialog-add.component';
+import { OrdemServicoDialogUpdateComponent }    from './ordem-servico-dialog-update/ordem-servico-dialog-update.component';
 import { OrdemServicoDialogRelatorioComponent } from './ordem-servico-dialog-relatorio/ordem-servico-dialog-relatorio.component';
-import { OrdemServicoDialogFinishComponent } from './ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';
+import { OrdemServicoDialogFinishComponent }    from './ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';
 
 @Component({
   selector: 'app-ordem-servico',

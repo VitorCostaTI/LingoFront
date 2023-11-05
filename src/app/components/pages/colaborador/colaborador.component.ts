@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
-import { ClientesDialogComponent } from '../clientes/clientes-dialog/clientes-dialog.component';
+import { Component }                    from '@angular/core';
+import {MatDialog, MatDialogRef}        from '@angular/material/dialog';
 import { ColaboradoresDialogComponent } from './colaboradores-dialog/colaboradores-dialog.component';
 
 export interface ColaboradoresElement {

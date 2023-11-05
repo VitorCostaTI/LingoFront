@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component }    from '@angular/core';
+import { FormControl }  from '@angular/forms';
 import {map, startWith} from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { Observable }   from 'rxjs';
 
 export interface State {
   flag: string;

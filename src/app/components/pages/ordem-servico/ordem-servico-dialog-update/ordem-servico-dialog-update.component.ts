@@ -1,9 +1,7 @@
-import { BreakpointObserver } from '@angular/cdk/layout';
-import { Component } from '@angular/core';
+import { Component }                            from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import {StepperOrientation, MatStepperModule} from '@angular/material/stepper';
-import { Observable } from 'rxjs/internal/Observable';
-import {map, startWith} from 'rxjs/operators';
+import { Observable }                           from 'rxjs/internal/Observable';
+import {map, startWith}                         from 'rxjs/operators';
 
 export interface User {
   cliente: string;

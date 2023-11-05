@@ -1,10 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {Observable} from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
-import {NgFor, AsyncPipe} from '@angular/common';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatInputModule} from '@angular/material/input';
+import {FormControl}       from '@angular/forms';
+import {Observable}        from 'rxjs';
+import {map, startWith}    from 'rxjs/operators';
 
 export interface User {
   cliente: string;

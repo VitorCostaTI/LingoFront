@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component }             from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
-import { DespesasComponent } from './dialog/despesas/despesas.component';
-import { FaturamentoComponent } from './dialog/faturamento/faturamento.component';
-import { NascimentoComponent } from './dialog/nascimento/nascimento.component';
-import { RankingComponent } from './dialog/ranking/ranking.component';
+import { DespesasComponent }     from './dialog/despesas/despesas.component';
+import { FaturamentoComponent }  from './dialog/faturamento/faturamento.component';
+import { NascimentoComponent }   from './dialog/nascimento/nascimento.component';
+import { RankingComponent }      from './dialog/ranking/ranking.component';
 
 export interface DespesaElement {
   data: Date;
