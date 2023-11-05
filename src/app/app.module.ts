@@ -9,7 +9,6 @@ import { NavegacaoComponent } from './components/navegacao/navegacao.component';
 import { ProdutosComponent } from './components/pages/produtos/produtos.component';
 import { ColaboradorComponent } from './components/pages/colaborador/colaborador.component';
 import { UsuarioComponent } from './components/pages/usuario/usuario.component';
-import { DepartamentoComponent } from './components/pages/departamento/departamento.component';
 import { MateriaisComponent } from './components/pages/materiais/materiais.component';
 import { EmpresasComponent } from './components/pages/empresas/empresas.component';
 import { ClientesComponent } from './components/pages/clientes/clientes.component';
@@ -31,6 +30,7 @@ import { OrdemServicoDialogUpdateComponent } from './components/pages/ordem-serv
 import { OrdemServicoDialogRelatorioComponent } from './components/pages/ordem-servico/ordem-servico-dialog-relatorio/ordem-servico-dialog-relatorio.component';
 import { OrdemServicoDialogFinishComponent } from './components/pages/ordem-servico/ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';
 import { CartaoComponent } from './components/cartao/cartao.component';
+import { ColaboradoresDialogComponent } from './components/pages/colaborador/colaboradores-dialog/colaboradores-dialog.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,6 @@ import { CartaoComponent } from './components/cartao/cartao.component';
     ProdutosComponent,
     ColaboradorComponent,
     UsuarioComponent,
-    DepartamentoComponent,
     MateriaisComponent,
     EmpresasComponent,
     ClientesComponent,
@@ -61,6 +60,7 @@ import { CartaoComponent } from './components/cartao/cartao.component';
     OrdemServicoDialogRelatorioComponent,
     OrdemServicoDialogFinishComponent,
     CartaoComponent,
+    ColaboradoresDialogComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,98 @@
+<div class="container">
+    <h1>Colaborador</h1>
+  
+    <mat-divider></mat-divider>
+   
+    <div class="post">
+      <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+        <mat-form-field>
+          <mat-label>Cliente</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Setor</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+        <mat-form-field>
+          <mat-label>E-mail</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+        <mat-form-field>
+          <mat-label>Telefone</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>telefone 2</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+        <mat-form-field>
+          <mat-label>CEP</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+    
+      <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+        <mat-form-field>
+          <mat-label>Rua/Avenida</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Bairro</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+    
+      <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+        <mat-form-field>
+          <mat-label>Cidade</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Estado</mat-label>
+          <input matInput
+                 aria-label="State"
+                 [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+              <img alt="" class="example-option-img" [src]="state.flag" height="25">
+              &nbsp;
+              <span>{{state.name}}</span> - {{state.sigla}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+        <mat-form-field>
+          <mat-label>Complemento</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+
+        <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+            <mat-form-field>
+              <mat-label>Contato de Emergência</mat-label>
+              <input matInput>
+            </mat-form-field>
+        </div>
+    </div>
+     
+    <mat-divider></mat-divider>
+  
+    <br>
+  
+    <div fxLayout="row" fxLayoutAlign="end center" > 
+      <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
+      &nbsp;
+      <button mat-flat-button color="primary">Salvar</button>
+    </div>
+  </div>

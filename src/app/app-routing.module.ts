@@ -7,7 +7,6 @@ import { ProdutosComponent } from './components/pages/produtos/produtos.componen
 import { Error404Component } from './components/pages/error404/error404.component';
 import { UsuarioComponent } from './components/pages/usuario/usuario.component';
 import { ColaboradorComponent } from './components/pages/colaborador/colaborador.component';
-import { DepartamentoComponent } from './components/pages/departamento/departamento.component';
 import { MateriaisComponent } from './components/pages/materiais/materiais.component';
 import { OrdemServicoComponent } from './components/pages/ordem-servico/ordem-servico.component';
 import { EstoqueComponent } from './components/pages/estoque/estoque.component';
@@ -19,7 +18,6 @@ const routes: Routes = [
   { path: 'estoque', component: EstoqueComponent },
   { path: 'clientes', component: ClientesComponent },
   { path: 'colaboradores', component: ColaboradorComponent },
-  { path: 'departamentos', component: DepartamentoComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'ordemServico', component: OrdemServicoComponent },
   { path: 'estoque', component: EstoqueComponent },
