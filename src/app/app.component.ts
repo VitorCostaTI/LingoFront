@@ -1,5 +1,5 @@
 import { Component }              from '@angular/core';
-import {MatDialog}                from '@angular/material/dialog';
+import { MatDialog }              from '@angular/material/dialog';
 import { ConfiguracoesComponent } from './components/dialogs/configuracoes/configuracoes.component';
 import { NotificacoesComponent }  from './components/dialogs/notificacoes/notificacoes.component';
 

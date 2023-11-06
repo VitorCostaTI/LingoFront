@@ -31,6 +31,7 @@ import { OrdemServicoDialogRelatorioComponent } from './components/pages/ordem-s
 import { OrdemServicoDialogFinishComponent } from './components/pages/ordem-servico/ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';
 import { CartaoComponent } from './components/cartao/cartao.component';
 import { ColaboradoresDialogComponent } from './components/pages/colaborador/colaboradores-dialog/colaboradores-dialog.component';
+import { EmpresasdialogComponent } from './components/pages/empresas/empresasdialog/empresasdialog.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { ColaboradoresDialogComponent } from './components/pages/colaborador/col
     OrdemServicoDialogFinishComponent,
     CartaoComponent,
     ColaboradoresDialogComponent,
+    EmpresasdialogComponent,
   ],
   imports: [
     BrowserModule,

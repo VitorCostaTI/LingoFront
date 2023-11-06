@@ -1,5 +1,5 @@
 import { Component }               from '@angular/core';
-import {MatDialog, MatDialogRef}   from '@angular/material/dialog';
+import { MatDialog }               from '@angular/material/dialog';
 import { ProdutosDialogComponent } from './dialog/produtos-dialog/produtos-dialog.component';
 
 export interface ProdutoElement {
@@ -21,7 +21,6 @@ const ELEMENT_DATA: ProdutoElement[] = [
   {produto: 'Rastreador Ocultaneo', fornecedor: 'Genérico', preco: 'R$ 1,90', investimento: 'R$ 0,80', qtd: '13'},
   {produto: 'V10', fornecedor: 'Nobivac', preco: 'R$ 249,00', investimento: 'R$ 149,00', qtd: '16'},
   {produto: 'Vermifugo', fornecedor: 'Milbemax', preco: 'R$ 249,00', investimento: 'R$ 149,00', qtd: '2'},
-  
 ];
 
 @Component({
