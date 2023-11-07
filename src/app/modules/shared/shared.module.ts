@@ -1,6 +1,7 @@
 import { NgModule }                 from '@angular/core';
 
 import { MatAutocompleteModule }    from '@angular/material/autocomplete';
+import { MatBadgeModule }           from '@angular/material/badge';
 import { MatButtonModule }          from '@angular/material/button';
 import { MatButtonToggleModule }    from '@angular/material/button-toggle';
 import { MatCardModule }            from '@angular/material/card';
@@ -27,18 +28,19 @@ import { MatStepperModule }         from '@angular/material/stepper';
 import { MatTableModule }           from '@angular/material/table';
 import { MatTabsModule }            from '@angular/material/tabs';
 import { MatToolbarModule }         from '@angular/material/toolbar';
+import { MatTooltipModule }         from '@angular/material/tooltip';
 import { MatTreeModule }            from '@angular/material/tree';
 
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { PortalModule }  from '@angular/cdk/portal';
 
 import { FlexLayoutModule }                 from '@angular/flex-layout';
-import { MatTooltip, MatTooltipModule }     from '@angular/material/tooltip';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AsyncPipe, NgFor }                 from '@angular/common';
 
 const materialModules = [
   MatAutocompleteModule,
+  MatBadgeModule,
   MatButtonModule,
   MatCardModule,
   MatCheckboxModule,
