@@ -44,6 +44,8 @@ import { ProdutosDialogComponent }              from './components/pages/produto
 
 import { RankingComponent }                     from './components/pages/dashboard/dialog/ranking/ranking.component';
 import { UsuarioComponent }                     from './components/pages/usuario/usuario.component';
+import { EstoqueComponent } from './components/pages/estoque/estoque.component';
+import { EstoqueDialogComponent } from './components/pages/estoque/estoque-dialog/estoque-dialog.component';
 
 
 @NgModule({
@@ -83,6 +85,8 @@ import { UsuarioComponent }                     from './components/pages/usuario
     
     RankingComponent,
     UsuarioComponent,
+    EstoqueComponent,
+    EstoqueDialogComponent,
   ],
 
   imports: [
