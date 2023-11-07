@@ -6,6 +6,7 @@ import { ClientesComponent }     from './components/pages/clientes/clientes.comp
 import { ColaboradorComponent }  from './components/pages/colaborador/colaborador.component';
 import { DashboardComponent }    from './components/pages/dashboard/dashboard.component';
 import { EmpresasComponent }     from './components/pages/empresas/empresas.component';
+import { EstoqueComponent }      from './components/pages/estoque/estoque.component';
 import { Error404Component }     from './components/pages/error404/error404.component';
 import { OrdemServicoComponent } from './components/pages/ordem-servico/ordem-servico.component';
 import { ProdutosComponent }     from './components/pages/produtos/produtos.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'clientes', component: ClientesComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'empresas', component: EmpresasComponent },
+  { path: 'estoque', component: EstoqueComponent },
   { path: 'ordemServico', component: OrdemServicoComponent },
   { path: 'produtos', component: ProdutosComponent },
   { path: 'usuarios', component: UsuarioComponent },  
