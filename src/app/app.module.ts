@@ -13,6 +13,7 @@ import { SharedModule }            from './modules/shared/shared.module';
 // Componentes
 
 import { AuditoriaComponent }                   from './components/pages/auditoria/auditoria.component';
+
 import { CartaoComponent }                      from './components/cartao/cartao.component';
 
 import { ClientesComponent }                    from './components/pages/clientes/clientes.component';
@@ -20,17 +21,27 @@ import { ClientesDialogComponent }              from './components/pages/cliente
 
 import { ColaboradorComponent }                 from './components/pages/colaborador/colaborador.component';
 import { ColaboradoresDialogComponent }         from './components/pages/colaborador/colaboradores-dialog/colaboradores-dialog.component';
+
 import { ConfiguracoesComponent }               from './components/dialogs/configuracoes/configuracoes.component';
+
 import { DashboardComponent }                   from './components/pages/dashboard/dashboard.component';
+
 import { DespesasComponent }                    from './components/pages/dashboard/dialog/despesas/despesas.component';
 
 import { EmpresasComponent }                    from './components/pages/empresas/empresas.component';
 import { EmpresasdialogComponent }              from './components/pages/empresas/empresasdialog/empresasdialog.component';
 
+import { EstoqueComponent }                     from './components/pages/estoque/estoque.component';
+import { EstoqueDialogComponent }               from './components/pages/estoque/estoque-dialog/estoque-dialog.component';
+
 import { Error404Component }                    from './components/pages/error404/error404.component';
+
 import { FaturamentoComponent }                 from './components/pages/dashboard/dialog/faturamento/faturamento.component';
+
 import { NavegacaoComponent }                   from './components/navegacao/navegacao.component';
+
 import { NascimentoComponent }                  from './components/pages/dashboard/dialog/nascimento/nascimento.component';
+
 import { NotificacoesComponent }                from './components/dialogs/notificacoes/notificacoes.component';
 
 import { OrdemServicoComponent }                from './components/pages/ordem-servico/ordem-servico.component';
@@ -43,16 +54,15 @@ import { ProdutosComponent }                    from './components/pages/produto
 import { ProdutosDialogComponent }              from './components/pages/produtos/dialog/produtos-dialog/produtos-dialog.component';
 
 import { RankingComponent }                     from './components/pages/dashboard/dialog/ranking/ranking.component';
-import { UsuarioComponent }                     from './components/pages/usuario/usuario.component';
-import { EstoqueComponent } from './components/pages/estoque/estoque.component';
-import { EstoqueDialogComponent } from './components/pages/estoque/estoque-dialog/estoque-dialog.component';
 
+import { UsuarioComponent }                     from './components/pages/usuario/usuario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
 
     AuditoriaComponent,
+
     CartaoComponent,
     
     ClientesComponent,
@@ -62,16 +72,25 @@ import { EstoqueDialogComponent } from './components/pages/estoque/estoque-dialo
     ColaboradoresDialogComponent,
     
     ConfiguracoesComponent,
+
     DashboardComponent,
+
     DespesasComponent,
     
     EmpresasComponent,
     EmpresasdialogComponent,
+
+    EstoqueComponent,
+    EstoqueDialogComponent,
     
     Error404Component,
+
     FaturamentoComponent,
+
     NavegacaoComponent,
+
     NascimentoComponent,
+
     NotificacoesComponent,
     
     OrdemServicoComponent,
@@ -84,9 +103,8 @@ import { EstoqueDialogComponent } from './components/pages/estoque/estoque-dialo
     ProdutosDialogComponent,
     
     RankingComponent,
+    
     UsuarioComponent,
-    EstoqueComponent,
-    EstoqueDialogComponent,
   ],
 
   imports: [
