@@ -20,10 +20,10 @@ export interface EstoqueElement {
 
 const ELEMENT_DATA: EstoqueElement[] = [
   {codigo: '001256', produto: 'Shampoo', categoria: 'Banho', quantidade: '92', data: new Date('2021-04-19T10:00:00.000')},
-  {codigo: '001256', produto: 'Perfume Dog Macho', categoria: 'Perfumes', quantidade: '30', data: new Date('2021-04-19T10:00:00.000')},
-  {codigo: '001256', produto: 'Brinquedo Osso', categoria: 'Brinquedo', quantidade: '9', data: new Date('2021-04-19T10:00:00.000')},
-  {codigo: '001256', produto: 'Vermifugo', categoria: 'Medicamento', quantidade: '2', data: new Date('2021-04-19T10:00:00.000')},
-  {codigo: '001256', produto: 'Coleira', categoria: 'Acessório', quantidade: '12', data: new Date('2021-04-19T10:00:00.000')},
+  {codigo: '006258', produto: 'Perfume Dog Macho', categoria: 'Perfumes', quantidade: '30', data: new Date('2021-04-19T10:00:00.000')},
+  {codigo: '008257', produto: 'Brinquedo Osso', categoria: 'Brinquedo', quantidade: '9', data: new Date('2021-04-19T10:00:00.000')},
+  {codigo: '004252', produto: 'Vermifugo', categoria: 'Medicamento', quantidade: '2', data: new Date('2021-04-19T10:00:00.000')},
+  {codigo: '002253', produto: 'Coleira', categoria: 'Acessório', quantidade: '12', data: new Date('2021-04-19T10:00:00.000')},
 
 ];
 
