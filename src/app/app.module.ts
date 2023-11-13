@@ -36,6 +36,8 @@ import { EstoqueDialogComponent }               from './components/pages/estoque
 
 import { Error404Component }                    from './components/pages/error404/error404.component';
 
+import { DepartamentoComponent }                from './components/pages/departamento/departamento.component';
+
 import { FaturamentoComponent }                 from './components/pages/dashboard/dialog/faturamento/faturamento.component';
 
 import { NavegacaoComponent }                   from './components/navegacao/navegacao.component';
@@ -49,6 +51,8 @@ import { OrdemServicoDialogAddComponent }       from './components/pages/ordem-s
 import { OrdemServicoDialogFinishComponent }    from './components/pages/ordem-servico/ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';
 import { OrdemServicoDialogRelatorioComponent } from './components/pages/ordem-servico/ordem-servico-dialog-relatorio/ordem-servico-dialog-relatorio.component';
 import { OrdemServicoDialogUpdateComponent }    from './components/pages/ordem-servico/ordem-servico-dialog-update/ordem-servico-dialog-update.component';
+
+import { PermissaoAcessoComponent }             from './components/pages/permissao-acesso/permissao-acesso.component';
 
 import { ProdutosComponent }                    from './components/pages/produtos/produtos.component';
 import { ProdutosDialogComponent }              from './components/pages/produtos/dialog/produtos-dialog/produtos-dialog.component';
@@ -110,6 +114,8 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
     RankingComponent,
 
     UsuarioComponent,
+    DepartamentoComponent,
+    PermissaoAcessoComponent,
   ],
 
   imports: [
