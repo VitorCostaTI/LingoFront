@@ -8,13 +8,12 @@ export interface State {
   name: string;
   sigla: string;
 }
-
 @Component({
-  selector: 'app-colaboradores-dialog',
-  templateUrl: './colaboradores-dialog.component.html',
-  styleUrls: ['./colaboradores-dialog.component.scss']
+  selector: 'app-usuarios-dialog',
+  templateUrl: './usuarios-dialog.component.html',
+  styleUrls: ['./usuarios-dialog.component.scss']
 })
-export class ColaboradoresDialogComponent {
+export class UsuariosDialogComponent {
   stateCtrl = new FormControl('');
   filteredStates: Observable<State[]>;
 

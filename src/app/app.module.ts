@@ -19,9 +19,6 @@ import { CartaoComponent }                      from './components/cartao/cartao
 import { ClientesComponent }                    from './components/pages/clientes/clientes.component';
 import { ClientesDialogComponent }              from './components/pages/clientes/clientes-dialog/clientes-dialog.component';
 
-import { ColaboradorComponent }                 from './components/pages/colaborador/colaborador.component';
-import { ColaboradoresDialogComponent }         from './components/pages/colaborador/colaboradores-dialog/colaboradores-dialog.component';
-
 import { ConfiguracoesComponent }               from './components/dialogs/configuracoes/configuracoes.component';
 
 import { DashboardComponent }                   from './components/pages/dashboard/dashboard.component';
@@ -60,6 +57,7 @@ import { ProdutosDialogComponent }              from './components/pages/produto
 import { RankingComponent }                     from './components/pages/dashboard/dialog/ranking/ranking.component';
 
 import { UsuarioComponent }                     from './components/pages/usuario/usuario.component';
+import { UsuariosDialogComponent }              from './components/pages/usuario/usuarios-dialog/usuarios-dialog.component';
 
 // Máscara
 
@@ -76,15 +74,14 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
     
     ClientesComponent,
     ClientesDialogComponent,
-    
-    ColaboradorComponent,
-    ColaboradoresDialogComponent,
-    
+        
     ConfiguracoesComponent,
 
     DashboardComponent,
 
     DespesasComponent,
+
+    DepartamentoComponent,
     
     EmpresasComponent,
     EmpresasdialogComponent,
@@ -114,7 +111,8 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
     RankingComponent,
 
     UsuarioComponent,
-    DepartamentoComponent,
+    UsuariosDialogComponent,
+
     PermissaoAcessoComponent,
   ],
 
