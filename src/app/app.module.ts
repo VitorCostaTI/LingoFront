@@ -8,7 +8,7 @@ import { NgModule }                from '@angular/core';
 
 // Modulos Compartilhados
 
-import { SharedModule }            from './modules/shared/shared.module';
+import { SharedModule } from './modules/shared/shared.module';
 
 // Componentes
 
@@ -56,6 +56,7 @@ import { ProdutosDialogComponent }              from './components/pages/produto
 import { RankingComponent }                     from './components/pages/dashboard/dialog/ranking/ranking.component';
 
 import { UsuarioComponent }                     from './components/pages/usuario/usuario.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -103,7 +104,7 @@ import { UsuarioComponent }                     from './components/pages/usuario
     ProdutosDialogComponent,
     
     RankingComponent,
-    
+
     UsuarioComponent,
   ],
 
@@ -112,6 +113,7 @@ import { UsuarioComponent }                     from './components/pages/usuario
     BrowserAnimationsModule,
     BrowserModule,
     SharedModule,
+    NgxMaskModule.forRoot()
   ],
 
   providers: [],
