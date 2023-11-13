@@ -33,8 +33,6 @@ import { EstoqueDialogComponent }               from './components/pages/estoque
 
 import { Error404Component }                    from './components/pages/error404/error404.component';
 
-import { DepartamentoComponent }                from './components/pages/departamento/departamento.component';
-
 import { FaturamentoComponent }                 from './components/pages/dashboard/dialog/faturamento/faturamento.component';
 
 import { NavegacaoComponent }                   from './components/navegacao/navegacao.component';
@@ -80,8 +78,6 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
     DashboardComponent,
 
     DespesasComponent,
-
-    DepartamentoComponent,
     
     EmpresasComponent,
     EmpresasdialogComponent,

@@ -4,7 +4,6 @@ import { RouterModule, Routes }  from '@angular/router';
 import { AuditoriaComponent }       from './components/pages/auditoria/auditoria.component';
 import { ClientesComponent }        from './components/pages/clientes/clientes.component';
 import { DashboardComponent }       from './components/pages/dashboard/dashboard.component';
-import { DepartamentoComponent }    from './components/pages/departamento/departamento.component';
 import { EmpresasComponent }        from './components/pages/empresas/empresas.component';
 import { EstoqueComponent }         from './components/pages/estoque/estoque.component';
 import { Error404Component }        from './components/pages/error404/error404.component';
@@ -17,7 +16,6 @@ const routes: Routes = [
   { path: 'auditorias', component: AuditoriaComponent },
   { path: 'clientes', component: ClientesComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'departamentos', component: DepartamentoComponent},
   { path: 'empresas', component: EmpresasComponent },
   { path: 'estoque', component: EstoqueComponent },
   { path: 'ordemServico', component: OrdemServicoComponent },
