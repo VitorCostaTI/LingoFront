@@ -18,25 +18,25 @@
       <div fxLayout="row" fxLayoutAlign="center" class="form"> 
         <mat-form-field>
           <mat-label>E-mail</mat-label>
-          <input matInput>
+          <input matInput mask="A*@A*.SSS" [validation]="true" [dropSpecialCharacters]="false">
         </mat-form-field>
       </div>
 
       <div fxLayout="row" fxLayoutAlign="center" class="form"> 
         <mat-form-field>
           <mat-label>Telefone</mat-label>
-          <input matInput>
+          <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000">
         </mat-form-field>
         <mat-form-field>
           <mat-label>telefone 2</mat-label>
-          <input matInput>
+          <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000">
         </mat-form-field>
       </div>
 
       <div fxLayout="row" fxLayoutAlign="center" class="form"> 
         <mat-form-field>
           <mat-label>CEP</mat-label>
-          <input matInput>
+          <input matInput mask="00000 - 000">
         </mat-form-field>
       </div>
     
