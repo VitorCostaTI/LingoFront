@@ -18,18 +18,18 @@
     <div fxLayout="row" fxLayoutAlign="center" class="form"> 
       <mat-form-field>
         <mat-label>Preço</mat-label>
-        <input matInput>
+        <input matInput currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" />
       </mat-form-field>
       <mat-form-field>
         <mat-label>Investimento</mat-label>
-        <input matInput>
+        <input matInput currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" />
       </mat-form-field>
     </div>
   
     <div fxLayout="row" fxLayoutAlign="center" class="form"> 
       <mat-form-field>
         <mat-label>Quantidade</mat-label>
-        <input matInput>
+        <input matInput mask="separator.2" thousandSeparator="." separatorLimit="99999999999999">
       </mat-form-field>
       <mat-form-field>
         <mat-label>Código do produto</mat-label>

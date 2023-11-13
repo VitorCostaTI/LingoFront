@@ -56,7 +56,11 @@ import { ProdutosDialogComponent }              from './components/pages/produto
 import { RankingComponent }                     from './components/pages/dashboard/dialog/ranking/ranking.component';
 
 import { UsuarioComponent }                     from './components/pages/usuario/usuario.component';
-import { NgxMaskModule } from 'ngx-mask';
+
+// Máscara
+
+import { NgxMaskModule }      from 'ngx-mask';
+import { CurrencyMaskModule } from "ng2-currency-mask";
 
 @NgModule({
   declarations: [
@@ -112,8 +116,9 @@ import { NgxMaskModule } from 'ngx-mask';
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
+    CurrencyMaskModule,
+    NgxMaskModule.forRoot(),
     SharedModule,
-    NgxMaskModule.forRoot()
   ],
 
   providers: [],
