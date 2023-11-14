@@ -22,6 +22,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatRippleModule }          from '@angular/material/core';
 import { MatSelectModule }          from '@angular/material/select';
 import { MatSidenavModule }         from '@angular/material/sidenav';
+import { MatSlideToggleModule }     from '@angular/material/slide-toggle';
 import { MatSnackBarModule }        from '@angular/material/snack-bar';
 import { MatSortModule }            from '@angular/material/sort';
 import { MatStepperModule }         from '@angular/material/stepper';
@@ -58,6 +59,7 @@ const materialModules = [
   MatRippleModule,
   MatSelectModule,
   MatSidenavModule,
+  MatSlideToggleModule,
   MatSnackBarModule,
   MatSortModule,
   MatStepperModule,

@@ -61,6 +61,7 @@ import { UsuariosDialogComponent }              from './components/pages/usuario
 
 import { NgxMaskModule }      from 'ngx-mask';
 import { CurrencyMaskModule } from "ng2-currency-mask";
+import { PermissaoAcessoDialogComponent } from './components/pages/permissao-acesso/permissao-acesso-dialog/permissao-acesso-dialog.component';
 
 @NgModule({
   declarations: [
@@ -110,6 +111,7 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
     UsuariosDialogComponent,
 
     PermissaoAcessoComponent,
+    PermissaoAcessoDialogComponent,
   ],
 
   imports: [
