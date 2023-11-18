@@ -21,6 +21,8 @@ import { ClientesDialogComponent }              from './components/pages/cliente
 
 import { ConfiguracoesComponent }               from './components/dialogs/configuracoes/configuracoes.component';
 
+import { ComunidadeComponent } from './components/pages/comunidade/comunidade.component';
+
 import { DashboardComponent }                   from './components/pages/dashboard/dashboard.component';
 
 import { DespesasComponent }                    from './components/pages/dashboard/dialog/despesas/despesas.component';
@@ -75,6 +77,8 @@ import { PermissaoAcessoDialogComponent } from './components/pages/permissao-ace
     ClientesDialogComponent,
         
     ConfiguracoesComponent,
+
+    ComunidadeComponent,
 
     DashboardComponent,
 
