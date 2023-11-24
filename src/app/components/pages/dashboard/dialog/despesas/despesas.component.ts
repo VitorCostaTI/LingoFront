@@ -7,10 +7,26 @@ export interface DespesaElement {
 }
 
 const ELEMENT_DATA: DespesaElement[] = [
-  {custo: 'R$1.200,00', descricao: 'Despesa', Oservico: '0079'},
-  {custo: 'R$1.200,00', descricao: 'Despesa', Oservico: '0079'},
-  {custo: 'R$1.200,00', descricao: 'Despesa', Oservico: '0079'},
-  {custo: 'R$1.200,00', descricao: 'Despesa', Oservico: '0079'},
+  {
+    custo: 'R$1.200,00',
+    descricao: 'Despesa',
+    Oservico: '0079'
+  },
+  {
+    custo: 'R$1.200,00',
+    descricao: 'Despesa',
+    Oservico: '0079'
+  },
+  {
+    custo: 'R$1.200,00',
+    descricao: 'Despesa',
+    Oservico: '0079'
+  },
+  {
+    custo: 'R$1.200,00',
+    descricao: 'Despesa',
+    Oservico: '0079'
+  },
 ];
 
 @Component({

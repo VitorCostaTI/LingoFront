@@ -60,16 +60,14 @@
             </mat-form-field>
             <mat-form-field class="example-full-width">
               <mat-label>Estado</mat-label>
-              <input matInput
-                     aria-label="State"
-                     [matAutocomplete]="auto">
-              <mat-autocomplete #auto="matAutocomplete">
+              <input matInput aria-label="State">
+              <mat-select>
                 <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
                   <img alt="" class="example-option-img" [src]="state.flag" height="25">
                   &nbsp;
                   <span>{{state.name}}</span> - {{state.sigla}}
                 </mat-option>
-              </mat-autocomplete>
+              </mat-select>
             </mat-form-field>
           </div>
     
@@ -113,8 +111,6 @@
               </mat-expansion-panel-header>
               <input type="file" name="arquivo" id="arquivo">
             </mat-expansion-panel>
-          </mat-accordion>
-          <mat-accordion>
             <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -123,8 +119,6 @@
               </mat-expansion-panel-header>
               <input type="file" name="arquivo" id="arquivo">
             </mat-expansion-panel>
-          </mat-accordion>
-          <mat-accordion>
             <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -133,8 +127,6 @@
               </mat-expansion-panel-header>
               <input type="file" name="arquivo" id="arquivo">
             </mat-expansion-panel>
-          </mat-accordion>
-          <mat-accordion>
             <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -143,8 +135,6 @@
               </mat-expansion-panel-header>
               <input type="file" name="arquivo" id="arquivo">
             </mat-expansion-panel>
-          </mat-accordion>
-          <mat-accordion>
             <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -153,8 +143,6 @@
               </mat-expansion-panel-header>
               <input type="file" name="arquivo" id="arquivo">
             </mat-expansion-panel>
-          </mat-accordion>
-          <mat-accordion>
             <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>

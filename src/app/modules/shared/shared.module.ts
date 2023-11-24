@@ -1,6 +1,5 @@
 import { NgModule }                 from '@angular/core';
 
-import { MatAutocompleteModule }    from '@angular/material/autocomplete';
 import { MatBadgeModule }           from '@angular/material/badge';
 import { MatButtonModule }          from '@angular/material/button';
 import { MatButtonToggleModule }    from '@angular/material/button-toggle';
@@ -40,7 +39,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AsyncPipe, NgFor }                 from '@angular/common';
 
 const materialModules = [
-  MatAutocompleteModule,
   MatBadgeModule,
   MatButtonModule,
   MatCardModule,
@@ -77,7 +75,6 @@ const materialModules = [
 const cdkModules = [
   CdkTreeModule,
   PortalModule
-
 ]
 
 @NgModule({

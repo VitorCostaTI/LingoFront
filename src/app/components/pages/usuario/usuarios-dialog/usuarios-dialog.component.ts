@@ -14,6 +14,7 @@ export interface State {
   styleUrls: ['./usuarios-dialog.component.scss']
 })
 export class UsuariosDialogComponent {
+  panelOpenState = false;
   stateCtrl = new FormControl('');
   filteredStates: Observable<State[]>;
 

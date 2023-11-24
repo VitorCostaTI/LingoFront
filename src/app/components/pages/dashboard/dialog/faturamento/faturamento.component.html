@@ -36,13 +36,16 @@
           
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
       </table>
 
     </mat-expansion-panel>
   </mat-accordion>
   
 </div>
+
 <mat-divider></mat-divider>
+
 <div class="buttons margin" fxLayoutAlign="end center" > 
-    <button mat-raised-button color="warn" class="margin-button" [mat-dialog-close]>Fechar</button>
+  <button mat-raised-button color="warn" class="margin-button" [mat-dialog-close]>Fechar</button>
 </div>

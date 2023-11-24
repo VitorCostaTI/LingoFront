@@ -48,16 +48,17 @@ export class OrdemServicoDialogUpdateComponent {
 
   private _filter(cliente: string): User[] {
     const filterValue = cliente.toLowerCase();
-
     return this.options.filter(option => option.cliente.toLowerCase().includes(filterValue));
   }
   
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });
+
   secondFormGroup = this._formBuilder.group({
     secondCtrl: ['', Validators.required],
   });
+  
   isEditable = false;
 
   constructor(private _formBuilder: FormBuilder) {}

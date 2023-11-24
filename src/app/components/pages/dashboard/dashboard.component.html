@@ -9,21 +9,27 @@
                 <mat-card-title>
                     Faturamento
                 </mat-card-title>
+
                 <br>
+
                 <mat-divider></mat-divider>
+
                 <div class="margin-body">
                     R$ 1.236,00
                 </div>
             </div>
         </mat-card>
     
-        <mat-card class="despesa pointer" (click)="penDialogDespesas('500ms', '250ms')">
+        <mat-card class="despesa pointer" (click)="openDialogDespesas('500ms', '250ms')">
             <div class="container">
                 <mat-card-title>
                     Despesa
                 </mat-card-title>
+
                 <br>
+
                 <mat-divider></mat-divider>
+
                 <div class="margin-body">
                     R$ 236,00
                 </div>
@@ -35,11 +41,15 @@
                 <mat-card-title>
                     Receita
                 </mat-card-title>
+
                 <br>
+
                 <mat-divider></mat-divider>
+
                 <div class="margin-body">
                     R$ 1.000,00
                 </div>
+
             </div>
         </mat-card>
     </div>
@@ -50,7 +60,9 @@
                 <mat-card-title>
                     Próximo nascimento
                 </mat-card-title>
+
                 <br>
+
                 <mat-divider></mat-divider>
                 <div class="margin-body">
                     12/06/2023
@@ -63,7 +75,9 @@
                 <mat-card-title>
                     Ranking mais vendidos
                 </mat-card-title>
+
                 <br>
+
                 <mat-divider></mat-divider>
                 <div fxLayout="row" class="middle margin-body">
                     Old English BullDog
@@ -78,7 +92,9 @@
                 <mat-card-title>
                     Melhor vendedor
                 </mat-card-title>
+
                 <br>
+
                 <mat-divider></mat-divider>
                 <div fxLayout="row" class="margin-body">
                     Vitor Costa
@@ -99,41 +115,41 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
     
-          <table mat-table [dataSource]="dataSource">
+            <table mat-table [dataSource]="dataSource">
           
-            <!-- Coluna Data e Hora -->
-            <ng-container matColumnDef="data">
-              <th mat-header-cell *matHeaderCellDef> Data e Hora </th>
-              <td mat-cell *matCellDef="let element"> {{element.data | date}} </td>
-            </ng-container>
-          
-            <!-- Coluna Cliente -->
-            <ng-container matColumnDef="cliente">
-              <th mat-header-cell *matHeaderCellDef> Cliente </th>
-              <td mat-cell *matCellDef="let element"> {{element.cliente}} </td>
-            </ng-container>
-          
-            <!-- Coluna Pet -->
-            <ng-container matColumnDef="pet">
-              <th mat-header-cell *matHeaderCellDef> Pet </th>
-              <td mat-cell *matCellDef="let element"> {{element.pet}} </td>
-            </ng-container>
+                <!-- Coluna Data e Hora -->
+                <ng-container matColumnDef="data">
+                <th mat-header-cell *matHeaderCellDef> Data e Hora </th>
+                <td mat-cell *matCellDef="let element"> {{element.data | date}} </td>
+                </ng-container>
+            
+                <!-- Coluna Cliente -->
+                <ng-container matColumnDef="cliente">
+                <th mat-header-cell *matHeaderCellDef> Cliente </th>
+                <td mat-cell *matCellDef="let element"> {{element.cliente}} </td>
+                </ng-container>
+            
+                <!-- Coluna Pet -->
+                <ng-container matColumnDef="pet">
+                <th mat-header-cell *matHeaderCellDef> Pet </th>
+                <td mat-cell *matCellDef="let element"> {{element.pet}} </td>
+                </ng-container>
 
-            <!-- Coluna Serviço -->
-            <ng-container matColumnDef="servico">
-                <th mat-header-cell *matHeaderCellDef> Serviço </th>
-                <td mat-cell *matCellDef="let element"> {{element.servico}} </td>
-            </ng-container>
+                <!-- Coluna Serviço -->
+                <ng-container matColumnDef="servico">
+                    <th mat-header-cell *matHeaderCellDef> Serviço </th>
+                    <td mat-cell *matCellDef="let element"> {{element.servico}} </td>
+                </ng-container>
 
-            <!-- Coluna Contato -->
-            <ng-container matColumnDef="telefone">
-                <th mat-header-cell *matHeaderCellDef> Telefone </th>
-                <td mat-cell *matCellDef="let element"> {{element.telefone}} </td>
-            </ng-container>
-              
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
+                <!-- Coluna Contato -->
+                <ng-container matColumnDef="telefone">
+                    <th mat-header-cell *matHeaderCellDef> Telefone </th>
+                    <td mat-cell *matCellDef="let element"> {{element.telefone}} </td>
+                </ng-container>
+                
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
           
         </mat-expansion-panel>
     </mat-accordion>

@@ -1,47 +1,48 @@
 <div class="container">
 
-    <div fxLayout="row" fxLayoutAlign="space-between center" class="margin"> 
-        <h1>Empresas</h1>
-        <a mat-raised-button color="primary" (click)="openDialogEmpresas('500ms', '250ms')" matTooltip="Adicionar empresa">Adicionar</a>
-    </div>
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="margin"> 
+      <h1>Empresas</h1>
+      <a mat-raised-button color="primary" (click)="openDialogEmpresas('500ms', '250ms')" matTooltip="Adicionar empresa">Adicionar</a>
+  </div>
 
-    <mat-card class="mat-elevation-z8">
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <mat-card class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+      <!-- Coluna Razão Social -->
+      <ng-container matColumnDef="razao_social">
+        <th mat-header-cell *matHeaderCellDef> Razão Social </th>
+        <td mat-cell *matCellDef="let element"> {{element.razao_social}} </td>
+      </ng-container>
       
-            <!-- Coluna Razão Social -->
-            <ng-container matColumnDef="razao_social">
-              <th mat-header-cell *matHeaderCellDef> Razão Social </th>
-              <td mat-cell *matCellDef="let element"> {{element.razao_social}} </td>
-            </ng-container>
-          
-            <!-- Coluna Nome Fantasia -->
-            <ng-container matColumnDef="nome_fantasia">
-              <th mat-header-cell *matHeaderCellDef> Nome Fantasia </th>
-              <td mat-cell *matCellDef="let element"> {{element.nome_fantasia}} </td>
-            </ng-container>
-          
-            <!-- Coluna CNPJ -->
-            <ng-container matColumnDef="cnpj">
-              <th mat-header-cell *matHeaderCellDef> CNPJ </th>
-              <td mat-cell *matCellDef="let element"> {{element.cnpj}} </td>
-            </ng-container>
+      <!-- Coluna Nome Fantasia -->
+      <ng-container matColumnDef="nome_fantasia">
+        <th mat-header-cell *matHeaderCellDef> Nome Fantasia </th>
+        <td mat-cell *matCellDef="let element"> {{element.nome_fantasia}} </td>
+      </ng-container>
+      
+      <!-- Coluna CNPJ -->
+      <ng-container matColumnDef="cnpj">
+        <th mat-header-cell *matHeaderCellDef> CNPJ </th>
+        <td mat-cell *matCellDef="let element"> {{element.cnpj}} </td>
+      </ng-container>
 
-             <!-- Coluna Representante -->
-             <ng-container matColumnDef="representante">
-              <th mat-header-cell *matHeaderCellDef> Representante </th>
-              <td mat-cell *matCellDef="let element"> {{element.representante}} </td>
-            </ng-container>
+      <!-- Coluna Representante -->
+      <ng-container matColumnDef="representante">
+        <th mat-header-cell *matHeaderCellDef> Representante </th>
+        <td mat-cell *matCellDef="let element"> {{element.representante}} </td>
+      </ng-container>
 
-             <!-- Coluna Contato -->
-             <ng-container matColumnDef="contato">
-              <th mat-header-cell *matHeaderCellDef> Contato </th>
-              <td mat-cell *matCellDef="let element"> {{element.contato}} </td>
-            </ng-container>
-              
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-          <mat-paginator [length]="200" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page">
-        </mat-paginator>     
-    </mat-card>
+      <!-- Coluna Contato -->
+      <ng-container matColumnDef="contato">
+        <th mat-header-cell *matHeaderCellDef> Contato </th>
+        <td mat-cell *matCellDef="let element"> {{element.contato}} </td>
+      </ng-container>
+          
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+    </table>
+      
+    <mat-paginator [length]="200" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page"></mat-paginator>     
+  </mat-card>
 </div>

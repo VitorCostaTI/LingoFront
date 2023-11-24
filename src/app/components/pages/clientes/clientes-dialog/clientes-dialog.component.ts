@@ -1,7 +1,7 @@
-import { Component }    from '@angular/core';
-import { FormControl }  from '@angular/forms';
-import {map, startWith} from 'rxjs/operators';
-import { Observable }   from 'rxjs';
+import { Component }      from '@angular/core';
+import { FormControl }    from '@angular/forms';
+import { map, startWith } from 'rxjs/operators';
+import { Observable }     from 'rxjs';
 
 export interface State {
   flag: string;
@@ -150,6 +150,7 @@ export class ClientesDialogComponent {
       sigla: 'TO'
     },
   ];
+
   constructor() {
     this.filteredStates = this.stateCtrl.valueChanges.pipe(
       startWith(''),
@@ -159,7 +160,6 @@ export class ClientesDialogComponent {
 
   private _filterStates(value: string): State[] {
     const filterValue = value.toLowerCase();
-
     return this.states.filter(state => state.name.toLowerCase().includes(filterValue));
   }
 }
