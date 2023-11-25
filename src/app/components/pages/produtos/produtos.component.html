@@ -1,47 +1,47 @@
 <div class="container">
 
-    <div fxLayout="row" fxLayoutAlign="space-between center" class="margin"> 
-        <h1>Produtos</h1>
-        <a mat-raised-button color="primary" (click)="openDialogProduto('500ms', '250ms')" matTooltip="Adicionar produto">Adicionar</a>
-    </div>
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="margin"> 
+      <h1>Produtos</h1>
+      <a mat-raised-button color="primary" (click)="openDialogProduto('500ms', '250ms')" matTooltip="Adicionar produto">Adicionar</a>
+  </div>
 
-    <mat-card class="mat-elevation-z8">
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-      
-            <!-- Coluna Produto -->
-            <ng-container matColumnDef="produto">
-              <th mat-header-cell *matHeaderCellDef> Produto </th>
-              <td mat-cell *matCellDef="let element"> {{element.produto}} </td>
-            </ng-container>
-          
-            <!-- Coluna Fornecedor -->
-            <ng-container matColumnDef="fornecedor">
-              <th mat-header-cell *matHeaderCellDef> Fornecedor </th>
-              <td mat-cell *matCellDef="let element"> {{element.fornecedor}} </td>
-            </ng-container>
-          
-            <!-- Coluna Preço -->
-            <ng-container matColumnDef="preco">
-              <th mat-header-cell *matHeaderCellDef> Preço </th>
-              <td mat-cell *matCellDef="let element"> {{element.preco}} </td>
-            </ng-container>
+  <mat-card class="mat-elevation-z8">
+    
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- Coluna Produto -->
+      <ng-container matColumnDef="produto">
+        <th mat-header-cell *matHeaderCellDef> Produto </th>
+        <td mat-cell *matCellDef="let element"> {{element.produto}} </td>
+      </ng-container>
+    
+      <!-- Coluna Fornecedor -->
+      <ng-container matColumnDef="fornecedor">
+        <th mat-header-cell *matHeaderCellDef> Fornecedor </th>
+        <td mat-cell *matCellDef="let element"> {{element.fornecedor}} </td>
+      </ng-container>
+    
+      <!-- Coluna Preço -->
+      <ng-container matColumnDef="preco">
+        <th mat-header-cell *matHeaderCellDef> Preço </th>
+        <td mat-cell *matCellDef="let element"> {{element.preco}} </td>
+      </ng-container>
 
-             <!-- Coluna Investimento -->
-             <ng-container matColumnDef="investimento">
-              <th mat-header-cell *matHeaderCellDef> Investimento </th>
-              <td mat-cell *matCellDef="let element"> {{element.investimento}} </td>
-            </ng-container>
+        <!-- Coluna Investimento -->
+        <ng-container matColumnDef="investimento">
+        <th mat-header-cell *matHeaderCellDef> Investimento </th>
+        <td mat-cell *matCellDef="let element"> {{element.investimento}} </td>
+      </ng-container>
 
-             <!-- Coluna Quantidade -->
-             <ng-container matColumnDef="qtd">
-              <th mat-header-cell *matHeaderCellDef> Quantidade </th>
-              <td mat-cell *matCellDef="let element"> {{element.qtd}} </td>
-            </ng-container>
-              
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-          <mat-paginator [length]="200" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page">
-        </mat-paginator>        
-    </mat-card>
+        <!-- Coluna Quantidade -->
+        <ng-container matColumnDef="qtd">
+        <th mat-header-cell *matHeaderCellDef> Quantidade </th>
+        <td mat-cell *matCellDef="let element"> {{element.qtd}} </td>
+      </ng-container>
+        
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [length]="200" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page"> </mat-paginator>        
+  </mat-card>
 </div>

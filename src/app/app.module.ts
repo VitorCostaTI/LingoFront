@@ -21,7 +21,7 @@ import { ClientesDialogComponent }              from './components/pages/cliente
 
 import { ConfiguracoesComponent }               from './components/dialogs/configuracoes/configuracoes.component';
 
-import { ComunidadeComponent } from './components/pages/comunidade/comunidade.component';
+import { ComunidadeComponent }                  from './components/pages/comunidade/comunidade.component';
 
 import { DashboardComponent }                   from './components/pages/dashboard/dashboard.component';
 
@@ -50,6 +50,7 @@ import { OrdemServicoDialogRelatorioComponent } from './components/pages/ordem-s
 import { OrdemServicoDialogUpdateComponent }    from './components/pages/ordem-servico/ordem-servico-dialog-update/ordem-servico-dialog-update.component';
 
 import { PermissaoAcessoComponent }             from './components/pages/permissao-acesso/permissao-acesso.component';
+import { PermissaoAcessoDialogComponent }       from './components/pages/permissao-acesso/permissao-acesso-dialog/permissao-acesso-dialog.component';
 
 import { ProdutosComponent }                    from './components/pages/produtos/produtos.component';
 import { ProdutosDialogComponent }              from './components/pages/produtos/dialog/produtos-dialog/produtos-dialog.component';
@@ -63,7 +64,6 @@ import { UsuariosDialogComponent }              from './components/pages/usuario
 
 import { NgxMaskModule }      from 'ngx-mask';
 import { CurrencyMaskModule } from "ng2-currency-mask";
-import { PermissaoAcessoDialogComponent } from './components/pages/permissao-acesso/permissao-acesso-dialog/permissao-acesso-dialog.component';
 
 @NgModule({
   declarations: [

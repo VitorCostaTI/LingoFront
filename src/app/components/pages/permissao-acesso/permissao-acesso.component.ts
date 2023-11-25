@@ -7,6 +7,7 @@ import { PermissaoAcessoDialogComponent } from './permissao-acesso-dialog/permis
   templateUrl: './permissao-acesso.component.html',
   styleUrls: ['./permissao-acesso.component.scss']
 })
+
 export class PermissaoAcessoComponent {
   constructor(public dialog: MatDialog) {}
 

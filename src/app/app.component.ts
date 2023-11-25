@@ -8,6 +8,7 @@ import { NotificacoesComponent }  from './components/dialogs/notificacoes/notifi
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   constructor(public dialog: MatDialog) {}
 

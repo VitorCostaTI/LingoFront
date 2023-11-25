@@ -8,11 +8,13 @@ export interface State {
   name: string;
   sigla: string;
 }
+
 @Component({
   selector: 'app-usuarios-dialog',
   templateUrl: './usuarios-dialog.component.html',
   styleUrls: ['./usuarios-dialog.component.scss']
 })
+
 export class UsuariosDialogComponent {
   panelOpenState = false;
   stateCtrl = new FormControl('');
@@ -150,6 +152,7 @@ export class UsuariosDialogComponent {
       sigla: 'TO'
     },
   ];
+
   constructor() {
     this.filteredStates = this.stateCtrl.valueChanges.pipe(
       startWith(''),
