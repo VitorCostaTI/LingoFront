@@ -2,11 +2,11 @@
   <h1>Usuários</h1>
 
   <mat-divider></mat-divider>
-   
+
   <mat-tab-group>
     <mat-tab label="Ficha de Cadastro">
       <div class="post">
-        <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>Colaborador</mat-label>
             <input matInput>
@@ -16,15 +16,15 @@
             <input matInput>
           </mat-form-field>
         </div>
-  
-        <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>E-mail</mat-label>
             <input matInput mask="A*@A*.SSS" [validation]="true" [dropSpecialCharacters]="false">
           </mat-form-field>
         </div>
-  
-        <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>Telefone</mat-label>
             <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000">
@@ -34,15 +34,15 @@
             <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000">
           </mat-form-field>
         </div>
-  
-        <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>CEP</mat-label>
             <input matInput mask="00000 - 000">
           </mat-form-field>
         </div>
-      
-        <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>Rua/Avenida</mat-label>
             <input matInput>
@@ -52,8 +52,8 @@
             <input matInput>
           </mat-form-field>
         </div>
-      
-        <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>Cidade</mat-label>
             <input matInput>
@@ -70,15 +70,15 @@
             </mat-select>
           </mat-form-field>
         </div>
-  
-        <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>Complemento</mat-label>
             <input matInput>
           </mat-form-field>
         </div>
-  
-        <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>Contato de Emergência</mat-label>
             <input matInput>
@@ -93,7 +93,7 @@
       </div>
       <div class="avatar"></div>
       <div class="post">
-        <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>CPF / CNPJ</mat-label>
             <input matInput mask="000.000.000.00 || 00.000.000/0000-00">
@@ -101,6 +101,12 @@
           <mat-form-field>
             <mat-label>PIS</mat-label>
             <input matInput mask="000.00000.00-0">
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+          <mat-form-field>
+            <mat-label>Senha</mat-label>
+            <input matInput type="password">
           </mat-form-field>
         </div>
         <mat-accordion>
@@ -150,18 +156,18 @@
                 Carteira de Trabalho
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <input type="file" name="arquivo" id="arquivo">            
+            <input type="file" name="arquivo" id="arquivo">
           </mat-expansion-panel>
         </mat-accordion>
       </div>
     </mat-tab>
   </mat-tab-group>
-    
+
   <mat-divider></mat-divider>
 
   <br>
 
-  <div fxLayout="row" fxLayoutAlign="end center" > 
+  <div fxLayout="row" fxLayoutAlign="end center">
     <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
     &nbsp;
     <button mat-flat-button color="primary">Salvar</button>
