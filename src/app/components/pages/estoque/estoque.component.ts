@@ -14,6 +14,7 @@ export interface EstoqueElement {
   codigo: string;
   produto: string;
   categoria: string;
+  responsavel: string;
   quantidade: string;
   data: Date;
 }
@@ -23,6 +24,7 @@ const ELEMENT_DATA: EstoqueElement[] = [
     codigo: '001256',
     produto: 'Shampoo', 
     categoria: 'Banho', 
+    responsavel: 'José Vicente Jesus', 
     quantidade: '92', 
     data: new Date('2021-04-19T10:00:00.000')
   },
@@ -30,6 +32,7 @@ const ELEMENT_DATA: EstoqueElement[] = [
     codigo: '006258', 
     produto: 'Perfume Dog Macho', 
     categoria: 'Perfumes', 
+    responsavel: 'José Vicente Jesus', 
     quantidade: '30', 
     data: new Date('2021-04-19T10:00:00.000')
   },
@@ -37,6 +40,7 @@ const ELEMENT_DATA: EstoqueElement[] = [
     codigo: '008257', 
     produto: 'Brinquedo Osso', 
     categoria: 'Brinquedo', 
+    responsavel: 'José Vicente Jesus', 
     quantidade: '9', 
     data: new Date('2021-04-19T10:00:00.000')
   },
@@ -44,6 +48,7 @@ const ELEMENT_DATA: EstoqueElement[] = [
     codigo: '004252', 
     produto: 'Vermifugo', 
     categoria: 'Medicamento', 
+    responsavel: 'José Vicente Jesus', 
     quantidade: '2', 
     data: new Date('2021-04-19T10:00:00.000')
   },
@@ -51,6 +56,7 @@ const ELEMENT_DATA: EstoqueElement[] = [
     codigo: '002253', 
     produto: 'Coleira', 
     categoria: 'Acessório', 
+    responsavel: 'José Vicente Jesus', 
     quantidade: '12', 
     data: new Date('2021-04-19T10:00:00.000')
   },
@@ -160,6 +166,7 @@ export class EstoqueComponent {
     'codigo',
     'produto',
     'categoria', 
+    'responsavel', 
     'quantidade',
     'data'
   ];
