@@ -24,3 +24,13 @@ mat-card{
     margin-left: 15px;
     vertical-align: middle;
 }
+
+@media only screen and (max-width: 950px) {
+    .table-responsive{
+        overflow: scroll;
+        display: inline-block;
+    }
+    th, td{
+        min-width: 150px !important;
+    }
+}
