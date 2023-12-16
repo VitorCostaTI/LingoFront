@@ -10,7 +10,7 @@ import { NotificacoesComponent }  from './components/dialogs/notificacoes/notifi
 })
 
 export class AppComponent {
-  constructor(public dialog: MatDialog) {}
+    constructor(public dialog: MatDialog) {}
 
   title = 'frontLingo';
 

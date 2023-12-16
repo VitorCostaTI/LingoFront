@@ -90,6 +90,7 @@ const ELEMENT_DATA: ClienteElement[] = [
 })
 
 export class ClientesComponent {
+  
   constructor(public dialog: MatDialog) { }
 
   isActive = false;

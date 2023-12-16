@@ -3,7 +3,7 @@
 </div>
 
 <div class="relatorios">
-    <div fxLayout="row" fxLayoutAlign="space-around center" > 
+    <div class="flex-dash">
         <mat-card class="faturamento pointer" (click)="openDialogFaturamento('500ms', '250ms')">
             <div class="container">
                 <mat-card-title>
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </mat-card>
-    
+
         <mat-card class="despesa pointer" (click)="openDialogDespesas('500ms', '250ms')">
             <div class="container">
                 <mat-card-title>
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </mat-card>
-    
+
         <mat-card class="receita pointer">
             <div class="container">
                 <mat-card-title>
@@ -53,9 +53,9 @@
             </div>
         </mat-card>
     </div>
-    
-    <div fxLayout="row" fxLayoutAlign="space-around center margin" > 
-        <mat-card (click)="openDialogNascimento('500ms', '250ms')" class="pointer">
+
+    <div class="flex-dash margin">
+        <mat-card (click)="openDialogNascimento('500ms', '250ms')" class="pointer card-white">
             <div class="container">
                 <mat-card-title>
                     Próximo nascimento
@@ -69,8 +69,8 @@
                 </div>
             </div>
         </mat-card>
-    
-        <mat-card (click)="penDialogRanking('500ms', '250ms')" class="pointer">
+
+        <mat-card (click)="penDialogRanking('500ms', '250ms')" class="pointer card-white">
             <div class="container">
                 <mat-card-title>
                     Ranking mais vendidos
@@ -79,15 +79,16 @@
                 <br>
 
                 <mat-divider></mat-divider>
-                <div fxLayout="row" class="middle margin-body">
+                <div fxLayout="row" class="middle margin-body text-center">
                     Old English BullDog
                     &nbsp;
-                    <mat-icon class="middle star" aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon> 
+                    <mat-icon class="middle star" aria-hidden="false" aria-label="Example home icon"
+                        fontIcon="star"></mat-icon>
                 </div>
             </div>
         </mat-card>
-    
-        <mat-card class=" pointer">
+
+        <mat-card class="pointer card-white">
             <div class="container">
                 <mat-card-title>
                     Melhor vendedor
@@ -96,10 +97,11 @@
                 <br>
 
                 <mat-divider></mat-divider>
-                <div fxLayout="row" class="margin-body">
+                <div fxLayout="row" class="margin-body text-center">
                     Vitor Costa
                     &nbsp;
-                    <mat-icon class="middle favorite" aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon> 
+                    <mat-icon class="middle favorite" aria-hidden="false" aria-label="Example home icon"
+                        fontIcon="favorite"></mat-icon>
                 </div>
             </div>
         </mat-card>
@@ -109,30 +111,30 @@
 <div class="mat-elevation-z5 container">
     <mat-accordion>
         <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Agendamentos da semana
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-    
-            <table mat-table [dataSource]="dataSource">
-          
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Agendamentos da semana
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <table mat-table [dataSource]="dataSource" class="table-responsive">
+
                 <!-- Coluna Data e Hora -->
                 <ng-container matColumnDef="data">
-                <th mat-header-cell *matHeaderCellDef> Data e Hora </th>
-                <td mat-cell *matCellDef="let element"> {{element.data | date}} </td>
+                    <th mat-header-cell *matHeaderCellDef> Data e Hora </th>
+                    <td mat-cell *matCellDef="let element"> {{element.data | date}} </td>
                 </ng-container>
-            
+
                 <!-- Coluna Cliente -->
                 <ng-container matColumnDef="cliente">
-                <th mat-header-cell *matHeaderCellDef> Cliente </th>
-                <td mat-cell *matCellDef="let element"> {{element.cliente}} </td>
+                    <th mat-header-cell *matHeaderCellDef> Cliente </th>
+                    <td mat-cell *matCellDef="let element"> {{element.cliente}} </td>
                 </ng-container>
-            
+
                 <!-- Coluna Pet -->
                 <ng-container matColumnDef="pet">
-                <th mat-header-cell *matHeaderCellDef> Pet </th>
-                <td mat-cell *matCellDef="let element"> {{element.pet}} </td>
+                    <th mat-header-cell *matHeaderCellDef> Pet </th>
+                    <td mat-cell *matCellDef="let element"> {{element.pet}} </td>
                 </ng-container>
 
                 <!-- Coluna Serviço -->
@@ -146,11 +148,11 @@
                     <th mat-header-cell *matHeaderCellDef> Telefone </th>
                     <td mat-cell *matCellDef="let element"> {{element.telefone}} </td>
                 </ng-container>
-                
+
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
-          
+
         </mat-expansion-panel>
     </mat-accordion>
 </div>

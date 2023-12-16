@@ -1,65 +1,112 @@
-mat-card{
+mat-card {
     margin-top: 25px;
     width: 30%;
 }
 
-.middle{
+.middle {
     vertical-align: middle;
 }
 
-.favorite{
+.favorite {
     color: red;
 }
 
-.star{
+.star {
     color: rgb(180, 180, 4);
 }
 
-.container{
+.container {
     margin: 35px;
 }
 
-.margin-body{
+.margin-body {
     margin-top: 20px;
 }
 
-.faturamento{
-    background: rgb(115,203,101);
-    background: linear-gradient(to right, 90deg, rgba(115,203,101,1) 0%, rgba(25,161,6,1) 28%, rgba(24,255,0,1) 100%);
+@media only screen and (max-width: 950px) {
+    .table-responsive{
+        overflow: scroll;
+        display: inline-block;
+    }
+    th, td{
+        min-width: 150px !important;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .flex-dash {
+        margin-left: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .faturamento {
+        width: 95%;
+    }
+
+    .despesa {
+        width: 95%;
+    }
+
+    .receita {
+        width: 95%;
+    }
+
+    .card-white{
+        width: 95%;
+    }
+
+    .text-center{
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    .flex-dash {
+        // margin-left: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.faturamento {
+    background: rgb(115, 203, 101);
+    background: linear-gradient(to right, 90deg, rgba(115, 203, 101, 1) 0%, rgba(25, 161, 6, 1) 28%, rgba(24, 255, 0, 1) 100%);
     color: whitesmoke;
     font-weight: bold;
 }
 
-.despesa{
-    background: rgb(255,0,0);
-    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 53%, rgba(255,0,0,1) 100%);
+.despesa {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 1) 53%, rgba(255, 0, 0, 1) 100%);
     color: whitesmoke;
     font-weight: bold;
 }
 
-.receita{
-    background: rgb(0,204,255);
-    background: linear-gradient(90deg, rgba(0,204,255,1) 0%, rgba(0,204,255,1) 53%, rgba(0,196,255,1) 100%);
+.receita {
+    background: rgb(0, 204, 255);
+    background: linear-gradient(90deg, rgba(0, 204, 255, 1) 0%, rgba(0, 204, 255, 1) 53%, rgba(0, 196, 255, 1) 100%);
     color: whitesmoke;
     font-weight: bold;
 }
 
-.pointer{
+.pointer {
     cursor: pointer;
 }
 
-.card{
-    background: linear-gradient(90deg, rgba(255,165,0,1) 0%, rgba(243, 175, 48, 0.911) 35%, rgba(255,165,0,1) 100%); 
+.card {
+    background: linear-gradient(90deg, rgba(255, 165, 0, 1) 0%, rgba(243, 175, 48, 0.911) 35%, rgba(255, 165, 0, 1) 100%);
     width: 100%;
     height: 190px;
 }
 
-.card h1{
+.card h1 {
     color: whitesmoke;
     padding: 20px;
     padding-top: 30px;
 }
 
-.relatorios{
+.relatorios {
+    width: 100%;
     margin-top: -100px;
 }
