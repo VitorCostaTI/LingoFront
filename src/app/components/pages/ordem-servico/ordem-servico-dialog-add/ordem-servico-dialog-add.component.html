@@ -1,47 +1,47 @@
 <div class="container">
   <h1>Ordem de Serviço</h1>
-  
-  <mat-divider></mat-divider>
-   
-  <div class="post">
-    <div fxLayout="row" fxLayoutAlign="center" class="form"> 
-      <mat-form-field class="example-full-width">
-        <mat-label>Cliente</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-            {{option.cliente}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-    
-    <div fxLayout="row" fxLayoutAlign="center" class="form"> 
-      <mat-form-field>
-        <mat-label>Preço</mat-label>
-        <input matInput currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" />
-      </mat-form-field>
-    </div>
-    
-    <div fxLayout="row" fxLayoutAlign="center" class="form"> 
-      <mat-form-field>
-        <mat-label>PET</mat-label>
-        <input matInput>
-      </mat-form-field>
-    
-      <mat-form-field>
-        <mat-label>Colaborador</mat-label>
-        <input matInput>
-      </mat-form-field>
-    </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="post">
+  <div fxLayout="row" fxLayoutAlign="center" class="form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Cliente</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option.cliente}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
-     
-  <mat-divider></mat-divider>
-  
-  <br>
-  
-  <div fxLayout="row" fxLayoutAlign="end center" > 
-    <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
-    &nbsp;
-    <button mat-flat-button color="primary">Salvar</button>
+
+  <div fxLayout="row" fxLayoutAlign="center" class="form">
+    <mat-form-field>
+      <mat-label>Preço</mat-label>
+      <input matInput currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" />
+    </mat-form-field>
   </div>
+
+  <div fxLayout="row" fxLayoutAlign="center" class="form">
+    <mat-form-field>
+      <mat-label>PET</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Colaborador</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </div>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="end center">
+  <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
+  &nbsp;
+  <button mat-flat-button color="primary">Salvar</button>
+</div>
 </div>
