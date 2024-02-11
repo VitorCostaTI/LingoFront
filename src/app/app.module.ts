@@ -64,6 +64,8 @@ import { UsuariosDialogComponent }              from './components/pages/usuario
 
 import { NgxMaskModule }      from 'ngx-mask';
 import { CurrencyMaskModule } from "ng2-currency-mask";
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -123,8 +125,14 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
     BrowserAnimationsModule,
     BrowserModule,
     CurrencyMaskModule,
+    HttpClientModule,
     NgxMaskModule.forRoot(),
+    ReactiveFormsModule,
     SharedModule,
+  ],
+  exports: [
+    HttpClientModule,
+    ReactiveFormsModule
   ],
 
   providers: [],

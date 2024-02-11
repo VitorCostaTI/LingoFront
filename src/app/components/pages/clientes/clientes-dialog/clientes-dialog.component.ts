@@ -1,7 +1,9 @@
-import { Component }      from '@angular/core';
-import { FormControl }    from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { map, startWith } from 'rxjs/operators';
-import { Observable }     from 'rxjs';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 export interface State {
   flag: string;
@@ -15,6 +17,11 @@ export interface State {
   styleUrls: ['./clientes-dialog.component.scss']
 })
 export class ClientesDialogComponent {
+
+  cadastroCliente: FormGroup;
+
+  endereco: any = {};
+
   stateCtrl = new FormControl('');
   filteredStates: Observable<State[]>;
 
@@ -151,11 +158,39 @@ export class ClientesDialogComponent {
     },
   ];
 
-  constructor() {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
+
+    this.cadastroCliente = this.fb.group({
+      cliente: ['', [Validators.required]],
+      cpf: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      telefone: ['', [Validators.required]],
+      telefone2: [''],
+      cep: ['', [Validators.required]],
+      logradouro: [''],
+      bairro: [''],
+      cidade: [''],
+      estado: [''],
+      complemento: ['']
+    });
+
     this.filteredStates = this.stateCtrl.valueChanges.pipe(
       startWith(''),
       map(state => (state ? this._filterStates(state) : this.states.slice())),
     );
+  }
+
+  buscarEnderecoPorCep() {
+    const cep = this.endereco.cep.replace(/\D/g, '');
+    if (cep.length !== 8) {
+      return;
+    }
+
+    this.http.get<any>(`https://viacep.com.br/ws/${cep}/json/`).subscribe(data => {
+      this.endereco.logradouro = data.logradouro;
+      this.endereco.cidade = data.localidade;
+      this.endereco.estado = data.uf;
+    });
   }
 
   private _filterStates(value: string): State[] {
