@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import { map, startWith } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 
 export interface State {
   flag: string;
@@ -21,6 +21,7 @@ export class ClientesDialogComponent {
   cadastroCliente: FormGroup;
 
   endereco: any = {};
+  cepNaoEncontrado: boolean = false;
 
   stateCtrl = new FormControl('');
   filteredStates: Observable<State[]>;
@@ -161,12 +162,12 @@ export class ClientesDialogComponent {
   constructor(private fb: FormBuilder, private http: HttpClient) {
 
     this.cadastroCliente = this.fb.group({
-      cliente: ['', [Validators.required]],
+      cliente: ['', [Validators.required, Validators.minLength]],
       cpf: ['', [Validators.required]],
       email: ['', [Validators.required]],
       telefone: ['', [Validators.required]],
       telefone2: [''],
-      cep: ['', [Validators.required]],
+      cep: [''],
       logradouro: [''],
       bairro: [''],
       cidade: [''],
@@ -180,16 +181,29 @@ export class ClientesDialogComponent {
     );
   }
 
+
   buscarEnderecoPorCep() {
-    const cep = this.endereco.cep.replace(/\D/g, '');
-    if (cep.length !== 8) {
+    const cep = this.endereco.cep.replace(/\D/g, ''); // Remove caracteres não numéricos
+    const cepRegex = /^[0-9]{8}$/; // Expressão regular para verificar se o CEP tem 8 dígitos numéricos
+
+    if (!cepRegex.test(cep)) {
+      console.log('CEP inválido');
       return;
     }
 
     this.http.get<any>(`https://viacep.com.br/ws/${cep}/json/`).subscribe(data => {
-      this.endereco.logradouro = data.logradouro;
-      this.endereco.cidade = data.localidade;
-      this.endereco.estado = data.uf;
+      if (data.erro) {
+        this.cepNaoEncontrado = true;
+        console.log('CEP não encontrado');
+      } else {
+        this.endereco.logradouro = data.logradouro;
+        this.endereco.bairro = data.bairro; // Adiciona o bairro aos dados do endereço
+        this.endereco.cidade = data.localidade;
+        this.endereco.estado = data.uf;
+        this.cepNaoEncontrado = false; // Reseta o estado do erro
+      }
+    }, error => {
+      console.log('Erro ao buscar CEP:', error);
     });
   }
 

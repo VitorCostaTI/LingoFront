@@ -10,14 +10,14 @@
     <div fxLayout="row" fxLayoutAlign="center" class="form">
       <mat-form-field>
         <mat-label>Cliente</mat-label>
-        <input matInput formControlName="cliente">
+        <input matInput formControlName="cliente" minlength="3">
       </mat-form-field>
     </div>
 
     <div fxLayout="row" fxLayoutAlign="center" class="form">
       <mat-form-field>
         <mat-label>CPF</mat-label>
-        <input matInput mask="000.000.000.00" formControlName="cpf">
+        <input matInput formControlName="cpf">
       </mat-form-field>
 
       <mat-form-field>
@@ -41,31 +41,37 @@
     <div fxLayout="row" fxLayoutAlign="center" class="form">
       <mat-form-field>
         <mat-label>CEP</mat-label>
-        <input matInput formControlName="cep" mask="00000 - 000" [(ngModel)]="endereco.cep" (blur)="buscarEnderecoPorCep()">
+        <input matInput formControlName="cep" mask="00000 - 000" [(ngModel)]="endereco.cep"
+          (blur)="buscarEnderecoPorCep()">
+        <mat-hint *ngIf="cepNaoEncontrado" class="error-message">CEP não encontrado <br> </mat-hint>
       </mat-form-field>
     </div>
 
     <div fxLayout="row" fxLayoutAlign="center" class="form">
       <mat-form-field>
         <mat-label>Rua/Avenida</mat-label>
-        <input matInput formControlName="logradouro" [(ngModel)]="endereco.logradouro">
+        <input matInput formControlName="logradouro" [(ngModel)]="endereco.logradouro"
+          [required]="cadastroCliente.get('cep')?.value">
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Bairro</mat-label>
-        <input matInput formControlName="bairro" [(ngModel)]="endereco.bairro">
+        <input matInput formControlName="bairro" [(ngModel)]="endereco.bairro"
+          [required]="cadastroCliente.get('cep')?.value">
       </mat-form-field>
     </div>
 
     <div fxLayout="row" fxLayoutAlign="center" class="form">
       <mat-form-field>
         <mat-label>Cidade</mat-label>
-        <input matInput formControlName="cidade" [(ngModel)]="endereco.cidade">
+        <input matInput formControlName="cidade" [(ngModel)]="endereco.cidade"
+          [required]="cadastroCliente.get('cep')?.value">
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
         <mat-label>Estado</mat-label>
-        <input matInput aria-label="State" formControlName="estado" [(ngModel)]="endereco.estado">
+        <input matInput aria-label="State" formControlName="estado" [(ngModel)]="endereco.estado"
+          [required]="cadastroCliente.get('cep')?.value">
         <mat-select>
           <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
             <img alt="" class="example-option-img" [src]="state.flag" height="25">
