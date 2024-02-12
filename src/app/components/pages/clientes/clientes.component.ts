@@ -97,8 +97,7 @@ export class ClientesComponent {
 
   openDialogCliente(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(ClientesDialogComponent, {
-      minWidth: '950px',
-      minHeight: '740px',
+      minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
     });

@@ -96,7 +96,7 @@ export class ProdutosComponent {
 
   openDialogProduto(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(ProdutosDialogComponent, {
-      width: '750px',
+      minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
     });

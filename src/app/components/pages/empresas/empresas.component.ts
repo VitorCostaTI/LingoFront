@@ -98,7 +98,7 @@ export class EmpresasComponent {
 
   openDialogEmpresas(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(EmpresasdialogComponent, {
-      minWidth: '950px',
+      minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
     });
