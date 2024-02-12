@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-empresasdialog',
-  templateUrl: './empresasdialog.component.html',
-  styleUrls: ['./empresasdialog.component.scss']
+  selector: 'app-empresas-dialog',
+  templateUrl: './empresas-dialog.component.html',
+  styleUrls: ['./empresas-dialog.component.scss']
 })
 export class EmpresasdialogComponent {
 

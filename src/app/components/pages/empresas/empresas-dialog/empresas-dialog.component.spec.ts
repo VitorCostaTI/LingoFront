@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmpresasdialogComponent } from './empresasdialog.component';
+import { EmpresasdialogComponent } from './empresas-dialog.component';
 
 describe('EmpresasdialogComponent', () => {
   let component: EmpresasdialogComponent;

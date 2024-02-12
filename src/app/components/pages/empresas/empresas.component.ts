@@ -1,6 +1,6 @@
 import { Component }               from '@angular/core';
 import { MatDialog }               from '@angular/material/dialog';
-import { EmpresasdialogComponent } from './empresasdialog/empresasdialog.component';
+import { EmpresasdialogComponent } from './empresas-dialog/empresas-dialog.component';
 import { FormBuilder } from '@angular/forms';
 
 export interface EmpresasElement {

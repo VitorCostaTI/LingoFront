@@ -28,7 +28,7 @@ import { DashboardComponent }                   from './components/pages/dashboa
 import { DespesasComponent }                    from './components/pages/dashboard/dialog/despesas/despesas.component';
 
 import { EmpresasComponent }                    from './components/pages/empresas/empresas.component';
-import { EmpresasdialogComponent }              from './components/pages/empresas/empresasdialog/empresasdialog.component';
+import { EmpresasdialogComponent }              from './components/pages/empresas/empresas-dialog/empresas-dialog.component';
 
 import { EstoqueComponent }                     from './components/pages/estoque/estoque.component';
 import { EstoqueDialogComponent }               from './components/pages/estoque/estoque-dialog/estoque-dialog.component';
