@@ -2,48 +2,49 @@
   <h1>Empresa</h1>
 </div>
 
-
 <mat-divider></mat-divider>
 
-<div class="post">
-  <div fxLayout="row" fxLayoutAlign="center" class="form">
-    <mat-form-field>
-      <mat-label>Razão Social</mat-label>
-      <input matInput>
-    </mat-form-field>
+<form [formGroup]="cadastroEmpresa">
+  <div class="post container">
+    <div fxLayout="row" fxLayoutAlign="center" class="form">
+      <mat-form-field>
+        <mat-label>Razão Social</mat-label>
+        <input matInput formControlName="razao_social" minlength="3">
+      </mat-form-field>
 
-    <mat-form-field>
-      <mat-label>CNPJ</mat-label>
-      <input matInput mask="00.000.000/0000-00">
-    </mat-form-field>
+      <mat-form-field>
+        <mat-label>CNPJ</mat-label>
+        <input matInput mask="00.000.000/0000-00" formControlName="cnpj">
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center" class="form">
+      <mat-form-field>
+        <mat-label>Nome Fantasia</mat-label>
+        <input matInput formControlName="social" minlength="3">
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center" class="form">
+      <mat-form-field>
+        <mat-label>Representante</mat-label>
+        <input matInput formControlName="representante" minlength="3">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Contato</mat-label>
+        <input matInput formControlName="contato" minlength="3">
+      </mat-form-field>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <br>
+
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
+      &nbsp;
+      <button mat-flat-button color="primary" [disabled]="cadastroEmpresa.invalid">Salvar</button>
+    </div>
   </div>
-
-  <div fxLayout="row" fxLayoutAlign="center" class="form">
-    <mat-form-field>
-      <mat-label>Nome Fantasia</mat-label>
-      <input matInput>
-    </mat-form-field>
-  </div>
-
-  <div fxLayout="row" fxLayoutAlign="center" class="form">
-    <mat-form-field>
-      <mat-label>Representante</mat-label>
-      <input matInput>
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Contato</mat-label>
-      <input matInput>
-    </mat-form-field>
-  </div>
-
-  <mat-divider></mat-divider>
-
-  <br>
-
-  <div fxLayout="row" fxLayoutAlign="end center">
-    <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
-    &nbsp;
-    <button mat-flat-button color="primary">Salvar</button>
-  </div>
-</div>
+</form>

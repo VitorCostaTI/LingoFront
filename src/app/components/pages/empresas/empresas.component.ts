@@ -1,6 +1,7 @@
 import { Component }               from '@angular/core';
 import { MatDialog }               from '@angular/material/dialog';
 import { EmpresasdialogComponent } from './empresasdialog/empresasdialog.component';
+import { FormBuilder } from '@angular/forms';
 
 export interface EmpresasElement {
   razao_social: string;
@@ -90,13 +91,14 @@ const ELEMENT_DATA: EmpresasElement[] = [
 })
 
 export class EmpresasComponent {
-  constructor(public dialog: MatDialog) {}
+  
+  constructor(public dialog: MatDialog, fb: FormBuilder) {}
 
   isActive = false;
 
   openDialogEmpresas(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(EmpresasdialogComponent, {
-      width: '750px',
+      minWidth: '950px',
       enterAnimationDuration,
       exitAnimationDuration,
     });
