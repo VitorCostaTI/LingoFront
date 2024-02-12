@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 export interface ColaboradoresElement {
   colaborador: string;
@@ -69,6 +70,7 @@ const ELEMENT_DATA: EstoqueElement[] = [
 })
 
 export class EstoqueComponent {
+
   colaborador: ColaboradoresElement[] = [
     {
       colaborador: 'José Vicente Jesus', 
@@ -161,6 +163,15 @@ export class EstoqueComponent {
       emergencia: 'Pai - (65) 99271-0741'
     },
   ];
+
+  registroEstoque: FormGroup;
+
+  constructor(private fb: FormBuilder){
+    this.registroEstoque = fb.group({
+      codigo_produto: ['', Validators.required],
+      responsavel: ['', Validators.required],
+    })
+  }
 
   displayedColumns: string[] = [
     'codigo',

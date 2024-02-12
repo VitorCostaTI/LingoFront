@@ -31,7 +31,6 @@ import { EmpresasComponent }                    from './components/pages/empresa
 import { EmpresasdialogComponent }              from './components/pages/empresas/empresas-dialog/empresas-dialog.component';
 
 import { EstoqueComponent }                     from './components/pages/estoque/estoque.component';
-import { EstoqueDialogComponent }               from './components/pages/estoque/estoque-dialog/estoque-dialog.component';
 
 import { Error404Component }                    from './components/pages/error404/error404.component';
 
@@ -90,7 +89,6 @@ import { HttpClientModule } from '@angular/common/http';
     EmpresasdialogComponent,
 
     EstoqueComponent,
-    EstoqueDialogComponent,
     
     Error404Component,
 

@@ -1,80 +1,82 @@
 <div class="container">
 
-    <div fxLayout="row" fxLayoutAlign="space-between center" class="margin"> 
-        <h1>Estoque</h1>
-    </div>
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="margin">
+    <h1>Estoque</h1>
+  </div>
 
-    <div fxLayout="row" fxLayoutAlign="space-between center" class="margin"> 
-      <mat-card>
-        <div class="card">
-          <br>
-          <div fxLayout="row" fxLayoutAlign="center" class="form"> 
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="margin">
+    <mat-card>
+      <div class="card">
+        <br>
+        <form (formGroup)="registroEstoque">
+          <div fxLayout="row" fxLayoutAlign="center" class="form">
             <mat-form-field>
               <mat-label>Código do produto</mat-label>
               <input matInput>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Responsável</mat-label>
-                <mat-select>
-                  <mat-option *ngFor="let colaboradores of colaborador" [value]="colaboradores.colaborador">
-                    {{colaboradores.colaborador}}
-                  </mat-option>
-                </mat-select>
+              <mat-label>Responsável</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let colaboradores of colaborador" [value]="colaboradores.colaborador">
+                  {{colaboradores.colaborador}}
+                </mat-option>
+              </mat-select>
             </mat-form-field>
-            <button mat-raised-button color="primary" class="btn">Registrar</button>
-          </div>            
-        </div>
-      </mat-card>
-    </div>
-
-    <br>
-
-    <mat-card class="mat-elevation-z8">
-        
-      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table-responsive">
-        
-        <!-- Coluna Código -->
-        <ng-container matColumnDef="codigo">
-          <th mat-header-cell *matHeaderCellDef> Código </th>
-          <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
-        </ng-container>
-            
-          <!-- Coluna Produto -->
-          <ng-container matColumnDef="produto">
-            <th mat-header-cell *matHeaderCellDef> Produto </th>
-            <td mat-cell *matCellDef="let element"> {{element.produto}} </td>
-          </ng-container>
-            
-          <!-- Coluna Categoria -->
-          <ng-container matColumnDef="categoria">
-            <th mat-header-cell *matHeaderCellDef> Categoria </th>
-            <td mat-cell *matCellDef="let element"> {{element.categoria}} </td>
-          </ng-container>
-
-          <!-- Coluna Responsavel -->
-          <ng-container matColumnDef="responsavel">
-            <th mat-header-cell *matHeaderCellDef> Responsavel </th>
-            <td mat-cell *matCellDef="let element"> {{element.responsavel}} </td>
-          </ng-container>
-  
-          <!-- Coluna Quantidade -->
-          <ng-container matColumnDef="quantidade">
-            <th mat-header-cell *matHeaderCellDef> Quantidade </th>
-            <td mat-cell *matCellDef="let element"> {{element.quantidade}} </td>
-          </ng-container>
-  
-          <!-- Coluna Data -->
-          <ng-container matColumnDef="data">
-            <th mat-header-cell *matHeaderCellDef> Data </th>
-            <td mat-cell *matCellDef="let element"> {{element.data | date}} </td>
-          </ng-container>
-                
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          
-      </table>
-    
-      <mat-paginator [length]="200" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page"></mat-paginator>  
-
+            <button mat-raised-button color="primary" class="btn" [disabled]="registroEstoque.invalid">Registrar</button>
+          </div>
+        </form>
+      </div>
     </mat-card>
+  </div>
+
+  <br>
+
+  <mat-card class="mat-elevation-z8">
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table-responsive">
+
+      <!-- Coluna Código -->
+      <ng-container matColumnDef="codigo">
+        <th mat-header-cell *matHeaderCellDef> Código </th>
+        <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
+      </ng-container>
+
+      <!-- Coluna Produto -->
+      <ng-container matColumnDef="produto">
+        <th mat-header-cell *matHeaderCellDef> Produto </th>
+        <td mat-cell *matCellDef="let element"> {{element.produto}} </td>
+      </ng-container>
+
+      <!-- Coluna Categoria -->
+      <ng-container matColumnDef="categoria">
+        <th mat-header-cell *matHeaderCellDef> Categoria </th>
+        <td mat-cell *matCellDef="let element"> {{element.categoria}} </td>
+      </ng-container>
+
+      <!-- Coluna Responsavel -->
+      <ng-container matColumnDef="responsavel">
+        <th mat-header-cell *matHeaderCellDef> Responsavel </th>
+        <td mat-cell *matCellDef="let element"> {{element.responsavel}} </td>
+      </ng-container>
+
+      <!-- Coluna Quantidade -->
+      <ng-container matColumnDef="quantidade">
+        <th mat-header-cell *matHeaderCellDef> Quantidade </th>
+        <td mat-cell *matCellDef="let element"> {{element.quantidade}} </td>
+      </ng-container>
+
+      <!-- Coluna Data -->
+      <ng-container matColumnDef="data">
+        <th mat-header-cell *matHeaderCellDef> Data </th>
+        <td mat-cell *matCellDef="let element"> {{element.data | date}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+    <mat-paginator [length]="200" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page"></mat-paginator>
+
+  </mat-card>
 </div>
