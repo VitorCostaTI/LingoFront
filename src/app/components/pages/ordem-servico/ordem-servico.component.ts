@@ -15,7 +15,7 @@ export class OrdemServicoComponent {
 
   openDialogServicoAdicionar(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(OrdemServicoDialogAddComponent, {
-      width: '750px',
+      width: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
     });
@@ -23,7 +23,7 @@ export class OrdemServicoComponent {
 
   openDialogServicoAtualizar(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(OrdemServicoDialogUpdateComponent, {
-      width: '950px',
+      width: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
     });
@@ -31,7 +31,7 @@ export class OrdemServicoComponent {
 
   openDialogServicoRelatorio(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(OrdemServicoDialogRelatorioComponent, {
-      width: '750px',
+      width: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
     });
@@ -39,7 +39,8 @@ export class OrdemServicoComponent {
 
   openDialogServicoFinish(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(OrdemServicoDialogFinishComponent, {
-      width: '750px',
+      width: '60%',
+      height: '140px',
       enterAnimationDuration,
       exitAnimationDuration,
     });

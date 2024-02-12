@@ -4,112 +4,114 @@
 
 <mat-divider></mat-divider>
 
-<div fxLayout="row" fxLayoutAlign="center center">
-  <mat-stepper>
-    <mat-step>
-      <ng-template matStepLabel>Dados do serviço</ng-template>
-
-      <div class="post">
-        <div fxLayout="row" fxLayoutAlign="center" class="form">
-          <mat-form-field class="example-full-width">
-            <mat-label>Cliente</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                {{option.cliente}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
+<form>
+  <div fxLayout="row" fxLayoutAlign="center" class="container">
+    <mat-stepper>
+      <mat-step>
+        <ng-template matStepLabel>Dados do serviço</ng-template>
+  
+        <div class="post">
+          <div fxLayout="row" fxLayoutAlign="center" class="form">
+            <mat-form-field class="example-full-width">
+              <mat-label>Cliente</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option.cliente}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+  
+          <div fxLayout="row" fxLayoutAlign="center" class="form">
+            <mat-form-field>
+              <mat-label>Preço</mat-label>
+              <input matInput currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" />
+            </mat-form-field>
+          </div>
+  
+          <div fxLayout="row" fxLayoutAlign="center" class="form">
+            <mat-form-field>
+              <mat-label>PET</mat-label>
+              <input matInput>
+            </mat-form-field>
+  
+            <mat-form-field>
+              <mat-label>Colaborador</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
         </div>
-
-        <div fxLayout="row" fxLayoutAlign="center" class="form">
-          <mat-form-field>
-            <mat-label>Preço</mat-label>
-            <input matInput currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" />
-          </mat-form-field>
+      </mat-step>
+  
+      <mat-step>
+        <ng-template matStepLabel>Realizações</ng-template>
+  
+        <div class="post">
+          <div fxLayout="row" fxLayoutAlign="center" class="form">
+            <mat-form-field>
+              <mat-label>Realizações</mat-label>
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </div>
         </div>
-
-        <div fxLayout="row" fxLayoutAlign="center" class="form">
-          <mat-form-field>
-            <mat-label>PET</mat-label>
-            <input matInput>
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Colaborador</mat-label>
-            <input matInput>
-          </mat-form-field>
+      </mat-step>
+  
+      <mat-step>
+        <ng-template matStepLabel>Formas de Pagamento</ng-template>
+  
+        <div class="mat-elevation-z5 container">
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title> Pix </mat-panel-title>
+              </mat-expansion-panel-header>
+  
+              <h1 fxLayoutAlign="center center">Apoie nosso projeto</h1>
+  
+              <div fxLayout="row" fxLayoutAlign="center center">
+                <img src="/assets/img/qrPix.png" alt="QR Code">
+              </div>
+  
+            </mat-expansion-panel>
+  
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Boleto
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+  
+              <div fxLayout="row" fxLayoutAlign="center center">
+                <a mat-fab extended color="primary" href="/assets/pdf/amostraBoleto.pdf" target="_blank">
+                  <mat-icon>download</mat-icon>
+                  Baixar Boleto
+                </a>
+              </div>
+  
+              <br>
+  
+              <p fxLayoutAlign="center center">
+                <strong>34191.79001 01043.510047 91020.150008 7 958180026000</strong>
+              </p>
+  
+            </mat-expansion-panel>
+  
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Cartão de Crédito
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+  
+              <app-cartao></app-cartao>
+  
+            </mat-expansion-panel>
+          </mat-accordion>
         </div>
-      </div>
-    </mat-step>
-
-    <mat-step>
-      <ng-template matStepLabel>Realizações</ng-template>
-
-      <div class="post">
-        <div fxLayout="row" fxLayoutAlign="center" class="form">
-          <mat-form-field>
-            <mat-label>Realizações</mat-label>
-            <textarea matInput></textarea>
-          </mat-form-field>
-        </div>
-      </div>
-    </mat-step>
-
-    <mat-step>
-      <ng-template matStepLabel>Formas de Pagamento</ng-template>
-
-      <div class="mat-elevation-z5 container">
-        <mat-accordion>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title> Pix </mat-panel-title>
-            </mat-expansion-panel-header>
-
-            <h1 fxLayoutAlign="center center">Apoie nosso projeto</h1>
-
-            <div fxLayout="row" fxLayoutAlign="center center">
-              <img src="/assets/img/qrPix.png" alt="QR Code">
-            </div>
-
-          </mat-expansion-panel>
-
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Boleto
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-
-            <div fxLayout="row" fxLayoutAlign="center center">
-              <a mat-fab extended color="primary" href="/assets/pdf/amostraBoleto.pdf" target="_blank">
-                <mat-icon>download</mat-icon>
-                Baixar Boleto
-              </a>
-            </div>
-
-            <br>
-
-            <p fxLayoutAlign="center center">
-              <strong>34191.79001 01043.510047 91020.150008 7 958180026000</strong>
-            </p>
-
-          </mat-expansion-panel>
-
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Cartão de Crédito
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-
-            <app-cartao></app-cartao>
-
-          </mat-expansion-panel>
-        </mat-accordion>
-      </div>
-    </mat-step>
-  </mat-stepper>
-</div>
+      </mat-step>
+    </mat-stepper>
+  </div>  
+</form>
 
 <mat-divider></mat-divider>
 
