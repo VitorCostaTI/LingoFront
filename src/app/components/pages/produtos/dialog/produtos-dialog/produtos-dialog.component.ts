@@ -10,15 +10,15 @@ export class ProdutosDialogComponent {
 
   cadastroProduto: FormGroup;
 
-  constructor(private fb:FormBuilder){
+  constructor(private fb: FormBuilder) {
     this.cadastroProduto = this.fb.group({
-      produto: ['', Validators.required, Validators.minLength],
-      categoria: ['', Validators.required, Validators.minLength],
-      fornecedor: ['', Validators.required, Validators.minLength],
-      preco: ['', Validators.required],
+      produto: ['', [Validators.required, Validators.minLength]],
+      categoria: ['', [Validators.required, Validators.minLength]],
+      fornecedor: ['', [Validators.required, Validators.minLength]],
+      preco: ['', [Validators.required]],
       investimento: [''],
-      quantidade: ['', Validators.required],
-      codigo_produto: [''],
+      quantidade: ['', [Validators.required]],
+      codigo_produto: ['', [Validators.required]],
     });
   }
 }
