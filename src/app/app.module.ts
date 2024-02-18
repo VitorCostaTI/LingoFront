@@ -52,7 +52,7 @@ import { PermissaoAcessoComponent }             from './components/pages/permiss
 import { PermissaoAcessoDialogComponent }       from './components/pages/permissao-acesso/permissao-acesso-dialog/permissao-acesso-dialog.component';
 
 import { ProdutosComponent }                    from './components/pages/produtos/produtos.component';
-import { ProdutosDialogComponent }              from './components/pages/produtos/dialog/produtos-dialog/produtos-dialog.component';
+import { ProdutosDialogComponent }              from './components/pages/produtos/produtos-dialog/produtos-dialog.component';
 
 import { RankingComponent }                     from './components/pages/dashboard/dialog/ranking/ranking.component';
 

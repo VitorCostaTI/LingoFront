@@ -1,6 +1,6 @@
 import { Component }               from '@angular/core';
 import { MatDialog }               from '@angular/material/dialog';
-import { ProdutosDialogComponent } from './dialog/produtos-dialog/produtos-dialog.component';
+import { ProdutosDialogComponent } from './produtos-dialog/produtos-dialog.component';
 
 export interface ProdutoElement {
   produto: string;
