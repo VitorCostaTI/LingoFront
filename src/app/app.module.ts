@@ -32,7 +32,7 @@ import { EmpresasdialogComponent }              from './components/pages/empresa
 
 import { EstoqueComponent }                     from './components/pages/estoque/estoque.component';
 
-import { Error404Component }                    from './components/pages/error404/error404.component';
+import { Error404Component }                    from './components/error404/error404.component';
 
 import { FaturamentoComponent }                 from './components/pages/dashboard/dialog/faturamento/faturamento.component';
 

@@ -7,7 +7,7 @@ import { ComunidadeComponent }      from './components/pages/comunidade/comunida
 import { DashboardComponent }       from './components/pages/dashboard/dashboard.component';
 import { EmpresasComponent }        from './components/pages/empresas/empresas.component';
 import { EstoqueComponent }         from './components/pages/estoque/estoque.component';
-import { Error404Component }        from './components/pages/error404/error404.component';
+import { Error404Component }        from './components/error404/error404.component';
 import { OrdemServicoComponent }    from './components/pages/ordem-servico/ordem-servico.component';
 import { PermissaoAcessoComponent } from './components/pages/permissao-acesso/permissao-acesso.component';
 import { ProdutosComponent }        from './components/pages/produtos/produtos.component';
