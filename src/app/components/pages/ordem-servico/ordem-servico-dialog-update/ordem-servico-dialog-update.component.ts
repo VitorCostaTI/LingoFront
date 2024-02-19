@@ -18,6 +18,7 @@ export interface User {
 })
 
 export class OrdemServicoDialogUpdateComponent {
+
   myControl = new FormControl<string | User>('');
   options: User[] = [
     {
@@ -113,12 +114,12 @@ export class OrdemServicoDialogUpdateComponent {
     return this.options.filter(option => option.cliente.toLowerCase().includes(filterValue));
   }
   
-  firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
-  });
-
-  secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
+  ordemServico = this._formBuilder.group({
+    cliente: ['', Validators.required],
+    preco: ['', Validators.required],
+    pet: ['', Validators.required],
+    colaborador: ['', Validators.required],
+    realizacoes: ['']
   });
   
   isEditable = false;
