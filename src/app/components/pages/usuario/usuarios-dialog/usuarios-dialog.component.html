@@ -5,7 +5,7 @@
 <mat-divider></mat-divider>
 
 <mat-tab-group>
-  <mat-tab label="Ficha de Cadastro">
+  <mat-tab label="Ficha de Cadastro" class="container">
     <div class="post">
       <div fxLayout="row" fxLayoutAlign="center" class="form">
         <mat-form-field>
@@ -38,49 +38,6 @@
 
       <div fxLayout="row" fxLayoutAlign="center" class="form">
         <mat-form-field>
-          <mat-label>CEP</mat-label>
-          <input matInput mask="00000 - 000">
-        </mat-form-field>
-      </div>
-
-      <div fxLayout="row" fxLayoutAlign="center" class="form">
-        <mat-form-field>
-          <mat-label>Rua/Avenida</mat-label>
-          <input matInput>
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>Bairro</mat-label>
-          <input matInput>
-        </mat-form-field>
-      </div>
-
-      <div fxLayout="row" fxLayoutAlign="center" class="form">
-        <mat-form-field>
-          <mat-label>Cidade</mat-label>
-          <input matInput>
-        </mat-form-field>
-        <mat-form-field class="example-full-width">
-          <mat-label>Estado</mat-label>
-          <input matInput aria-label="State">
-          <mat-select>
-            <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
-              <img alt="" class="example-option-img" [src]="state.flag" height="25">
-              &nbsp;
-              <span>{{state.name}}</span> - {{state.sigla}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-
-      <div fxLayout="row" fxLayoutAlign="center" class="form">
-        <mat-form-field>
-          <mat-label>Complemento</mat-label>
-          <input matInput>
-        </mat-form-field>
-      </div>
-
-      <div fxLayout="row" fxLayoutAlign="center" class="form">
-        <mat-form-field>
           <mat-label>Contato de Emergência</mat-label>
           <input matInput>
         </mat-form-field>
@@ -88,7 +45,53 @@
     </div>
   </mat-tab>
 
-  <mat-tab label="Documentos">
+  <mat-tab label="Endereço" class="container">
+    <br>
+    <div fxLayout="row" fxLayoutAlign="center" class="form">
+      <mat-form-field>
+        <mat-label>CEP</mat-label>
+        <input matInput mask="00000 - 000">
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center" class="form">
+      <mat-form-field>
+        <mat-label>Rua/Avenida</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Bairro</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center" class="form">
+      <mat-form-field>
+        <mat-label>Cidade</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Estado</mat-label>
+        <input matInput aria-label="State">
+        <mat-select>
+          <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+            <img alt="" class="example-option-img" [src]="state.flag" height="25">
+            &nbsp;
+            <span>{{state.name}}</span> - {{state.sigla}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center" class="form">
+      <mat-form-field>
+        <mat-label>Complemento</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Documentos" class="container">
     <div fxLayoutAlign="center" class="margin-top">
       <img height="100px" src="/assets/img/icon-user.png" alt="icon">
     </div>
@@ -168,7 +171,7 @@
 
 <br>
 
-<div fxLayout="row" fxLayoutAlign="end center">
+<div fxLayout="row" fxLayoutAlign="end center" class="action">
   <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
   &nbsp;
   <button mat-flat-button color="primary">Salvar</button>
