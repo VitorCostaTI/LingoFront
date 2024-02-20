@@ -1,6 +1,7 @@
 import { Component }                    from '@angular/core';
 import {MatDialog, MatDialogRef}        from '@angular/material/dialog';
 import { UsuariosDialogComponent }      from './usuarios-dialog/usuarios-dialog.component';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 export interface usuariosElement {
   usuario: string;
@@ -112,7 +113,15 @@ const ELEMENT_DATA: usuariosElement[] = [
 })
 
 export class UsuarioComponent {
-  constructor(public dialog: MatDialog) {}
+
+  cadastroUsuario: FormGroup;
+
+  constructor(public dialog: MatDialog, private fb: FormBuilder) {
+    this.cadastroUsuario = this.fb.group({
+      nome: []
+    })
+  }
+  
 
   isActive = false;
 

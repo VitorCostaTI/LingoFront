@@ -4,168 +4,170 @@
 
 <mat-divider></mat-divider>
 
-<mat-tab-group>
-  <mat-tab label="Ficha de Cadastro" class="container">
-    <div class="post">
+<form [formGroup]="cadastroMorador">
+  <mat-tab-group>
+    <mat-tab label="Ficha de Cadastro" class="container">
+      <div class="post">
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+          <mat-form-field>
+            <mat-label>Colaborador</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Setor</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </div>
+  
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+          <mat-form-field>
+            <mat-label>E-mail</mat-label>
+            <input matInput mask="A*@A*.SSS" [validation]="true" [dropSpecialCharacters]="false">
+          </mat-form-field>
+        </div>
+  
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+          <mat-form-field>
+            <mat-label>Telefone</mat-label>
+            <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>telefone 2</mat-label>
+            <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000">
+          </mat-form-field>
+        </div>
+  
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+          <mat-form-field>
+            <mat-label>Contato de Emergência</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-tab>
+  
+    <mat-tab label="Endereço" class="container">
+      <br>
       <div fxLayout="row" fxLayoutAlign="center" class="form">
         <mat-form-field>
-          <mat-label>Colaborador</mat-label>
+          <mat-label>CEP</mat-label>
+          <input matInput mask="00000 - 000">
+        </mat-form-field>
+      </div>
+  
+      <div fxLayout="row" fxLayoutAlign="center" class="form">
+        <mat-form-field>
+          <mat-label>Rua/Avenida</mat-label>
           <input matInput>
         </mat-form-field>
         <mat-form-field>
-          <mat-label>Setor</mat-label>
+          <mat-label>Bairro</mat-label>
           <input matInput>
         </mat-form-field>
       </div>
-
+  
       <div fxLayout="row" fxLayoutAlign="center" class="form">
         <mat-form-field>
-          <mat-label>E-mail</mat-label>
-          <input matInput mask="A*@A*.SSS" [validation]="true" [dropSpecialCharacters]="false">
+          <mat-label>Cidade</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Estado</mat-label>
+          <input matInput aria-label="State">
+          <mat-select>
+            <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+              <img alt="" class="example-option-img" [src]="state.flag" height="25">
+              &nbsp;
+              <span>{{state.name}}</span> - {{state.sigla}}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
       </div>
-
+  
       <div fxLayout="row" fxLayoutAlign="center" class="form">
         <mat-form-field>
-          <mat-label>Telefone</mat-label>
-          <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000">
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>telefone 2</mat-label>
-          <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000">
-        </mat-form-field>
-      </div>
-
-      <div fxLayout="row" fxLayoutAlign="center" class="form">
-        <mat-form-field>
-          <mat-label>Contato de Emergência</mat-label>
+          <mat-label>Complemento</mat-label>
           <input matInput>
         </mat-form-field>
       </div>
-    </div>
-  </mat-tab>
-
-  <mat-tab label="Endereço" class="container">
-    <br>
-    <div fxLayout="row" fxLayoutAlign="center" class="form">
-      <mat-form-field>
-        <mat-label>CEP</mat-label>
-        <input matInput mask="00000 - 000">
-      </mat-form-field>
-    </div>
-
-    <div fxLayout="row" fxLayoutAlign="center" class="form">
-      <mat-form-field>
-        <mat-label>Rua/Avenida</mat-label>
-        <input matInput>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Bairro</mat-label>
-        <input matInput>
-      </mat-form-field>
-    </div>
-
-    <div fxLayout="row" fxLayoutAlign="center" class="form">
-      <mat-form-field>
-        <mat-label>Cidade</mat-label>
-        <input matInput>
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>Estado</mat-label>
-        <input matInput aria-label="State">
-        <mat-select>
-          <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
-            <img alt="" class="example-option-img" [src]="state.flag" height="25">
-            &nbsp;
-            <span>{{state.name}}</span> - {{state.sigla}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-
-    <div fxLayout="row" fxLayoutAlign="center" class="form">
-      <mat-form-field>
-        <mat-label>Complemento</mat-label>
-        <input matInput>
-      </mat-form-field>
-    </div>
-  </mat-tab>
-
-  <mat-tab label="Documentos" class="container">
-    <div fxLayoutAlign="center" class="margin-top">
-      <img height="100px" src="/assets/img/icon-user.png" alt="icon">
-    </div>
-    <div class="avatar"></div>
-    <div class="post">
-      <div fxLayout="row" fxLayoutAlign="center" class="form">
-        <mat-form-field>
-          <mat-label>CPF / CNPJ</mat-label>
-          <input matInput mask="000.000.000.00 || 00.000.000/0000-00">
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>PIS</mat-label>
-          <input matInput mask="000.00000.00-0">
-        </mat-form-field>
+    </mat-tab>
+  
+    <mat-tab label="Documentos" class="container">
+      <div fxLayoutAlign="center" class="margin-top">
+        <img height="100px" src="/assets/img/icon-user.png" alt="icon">
       </div>
-      <div fxLayout="row" fxLayoutAlign="center" class="form">
-        <mat-form-field>
-          <mat-label>Senha</mat-label>
-          <input matInput type="password">
-        </mat-form-field>
+      <div class="avatar"></div>
+      <div class="post">
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+          <mat-form-field>
+            <mat-label>CPF / CNPJ</mat-label>
+            <input matInput mask="000.000.000.00 || 00.000.000/0000-00">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>PIS</mat-label>
+            <input matInput mask="000.00000.00-0">
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+          <mat-form-field>
+            <mat-label>Senha</mat-label>
+            <input matInput type="password">
+          </mat-form-field>
+        </div>
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                RG
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <input type="file" name="arquivo" id="arquivo">
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Titulo de Eleitor
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <input type="file" name="arquivo" id="arquivo">
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Documento Militar
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <input type="file" name="arquivo" id="arquivo">
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Certidão de Nascimento
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <input type="file" name="arquivo" id="arquivo">
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Comprovante de Endereço
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <input type="file" name="arquivo" id="arquivo">
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Carteira de Trabalho
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <input type="file" name="arquivo" id="arquivo">
+          </mat-expansion-panel>
+        </mat-accordion>
       </div>
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              RG
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <input type="file" name="arquivo" id="arquivo">
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Titulo de Eleitor
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <input type="file" name="arquivo" id="arquivo">
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Documento Militar
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <input type="file" name="arquivo" id="arquivo">
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Certidão de Nascimento
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <input type="file" name="arquivo" id="arquivo">
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Comprovante de Endereço
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <input type="file" name="arquivo" id="arquivo">
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Carteira de Trabalho
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <input type="file" name="arquivo" id="arquivo">
-        </mat-expansion-panel>
-      </mat-accordion>
-    </div>
-  </mat-tab>
-</mat-tab-group>
+    </mat-tab>
+  </mat-tab-group>
+</form>
 
 <mat-divider></mat-divider>
 
@@ -174,5 +176,5 @@
 <div fxLayout="row" fxLayoutAlign="end center" class="action">
   <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
   &nbsp;
-  <button mat-flat-button color="primary">Salvar</button>
+  <button mat-flat-button color="primary" [disabled]="cadastroMorador.invalid">Salvar</button>
 </div>

@@ -1,7 +1,7 @@
-import { Component }    from '@angular/core';
-import { FormControl }  from '@angular/forms';
-import {map, startWith} from 'rxjs/operators';
-import { Observable }   from 'rxjs';
+import { Component } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { map, startWith } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 export interface State {
   flag: string;
@@ -16,9 +16,6 @@ export interface State {
 })
 
 export class UsuariosDialogComponent {
-  panelOpenState = false;
-  stateCtrl = new FormControl('');
-  filteredStates: Observable<State[]>;
 
   states: State[] = [
     {
@@ -153,11 +150,43 @@ export class UsuariosDialogComponent {
     },
   ];
 
-  constructor() {
+  panelOpenState = false;
+  stateCtrl = new FormControl('');
+  filteredStates: Observable<State[]>;
+
+  cadastroMorador: FormGroup;
+
+  constructor(private fb: FormBuilder) {
     this.filteredStates = this.stateCtrl.valueChanges.pipe(
       startWith(''),
       map(state => (state ? this._filterStates(state) : this.states.slice())),
     );
+
+    this.cadastroMorador = this.fb.group({
+      colaborador: ['', [Validators.required]],
+      setor: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      telefone: ['', [Validators.required]],
+      telefone2: [''],
+      emergencia: [''],
+      cep: ['', [Validators.required]],
+      logradouro: ['', [Validators.required]],
+      bairro: ['', [Validators.required]],
+      cidade: ['', [Validators.required]],
+      estado: ['', [Validators.required]],
+      complemento: [''],
+      documento: ['', [Validators.required]],
+      pis: ['', [Validators.required]],
+      password: ['', [Validators.required]],
+
+      image: [''],
+      rg: [''],
+      titulo: [''],
+      militar: [''],
+      nascimento: [''],
+      endereco: [''],
+      carteira_trabalho: ['']
+    })
   }
 
   private _filterStates(value: string): State[] {
