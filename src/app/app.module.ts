@@ -65,6 +65,8 @@ import { NgxMaskModule }      from 'ngx-mask';
 import { CurrencyMaskModule } from "ng2-currency-mask";
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/account/login/login.component';
+import { HomeComponent } from './components/pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -116,6 +118,8 @@ import { HttpClientModule } from '@angular/common/http';
 
     PermissaoAcessoComponent,
     PermissaoAcessoDialogComponent,
+    LoginComponent,
+    HomeComponent,
   ],
 
   imports: [
