@@ -67,6 +67,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/account/login/login.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { ConfirmacaoComponent } from './components/dialogs/confirmacao/confirmacao.component';
 
 @NgModule({
   declarations: [
@@ -120,6 +121,7 @@ import { HomeComponent } from './components/pages/home/home.component';
     PermissaoAcessoDialogComponent,
     LoginComponent,
     HomeComponent,
+    ConfirmacaoComponent,
   ],
 
   imports: [

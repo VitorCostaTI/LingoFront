@@ -2,6 +2,8 @@ import { Component }                    from '@angular/core';
 import {MatDialog, MatDialogRef}        from '@angular/material/dialog';
 import { UsuariosDialogComponent }      from './usuarios-dialog/usuarios-dialog.component';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
+import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
 
 export interface usuariosElement {
   usuario: string;
@@ -116,19 +118,28 @@ export class UsuarioComponent {
 
   cadastroUsuario: FormGroup;
 
-  constructor(public dialog: MatDialog, private fb: FormBuilder) {
+  constructor(public dialog: MatDialog, private fb: FormBuilder, private confirmacaoService: ConfirmacaoService) {
     this.cadastroUsuario = this.fb.group({
       nome: []
     })
   }
   
-
   isActive = false;
 
   openDialogColaborador(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(UsuariosDialogComponent, {
       width: '750px',
       height: '63%',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
+
+  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, usuario: string): void {
+    this.confirmacaoService.acao = "deletar";
+    this.confirmacaoService.nome = usuario;
+    this.dialog.open(ConfirmacaoComponent, {
+      width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,
     });
@@ -141,6 +152,7 @@ export class UsuarioComponent {
     'email',
     'telefone',
     'telefone2',
+    'acoes'
   ];
 
   dataSource = ELEMENT_DATA;

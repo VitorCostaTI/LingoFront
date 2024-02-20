@@ -1,0 +1,10 @@
+<mat-card-title>
+    <h1 class="start margin">Deseja {{acao}}: <b>{{nome}}</b></h1>
+</mat-card-title>
+
+<mat-divider></mat-divider>
+
+<div class="buttons margin" fxLayoutAlign="end center" > 
+    <button mat-raised-button color="warn" class="margin-button" [mat-dialog-close]>Fechar</button>
+    <button mat-raised-button color="primary" class="margin-button" [mat-dialog-close] (click)="actionConfirm()">Confirmar</button>
+</div>

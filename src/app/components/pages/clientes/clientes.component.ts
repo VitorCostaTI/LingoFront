@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ClientesDialogComponent } from './clientes-dialog/clientes-dialog.component';
+import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
+import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
 
 export interface ClienteElement {
   cliente: string;
@@ -91,7 +93,7 @@ const ELEMENT_DATA: ClienteElement[] = [
 
 export class ClientesComponent {
   
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private confirmacaoService: ConfirmacaoService) { }
 
   isActive = false;
 
@@ -103,12 +105,23 @@ export class ClientesComponent {
     });
   }
 
+  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, nome: string): void {
+    this.confirmacaoService.acao = "deletar";
+    this.confirmacaoService.nome = nome;
+    this.dialog.open(ConfirmacaoComponent, {
+      width: '80%',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
+
   displayedColumns: string[] = [
     'cliente',
     'localizacao',
     'email',
     'telefone',
-    'telefone2'
+    'telefone2',
+    'acoes'
   ];
 
   dataSource = ELEMENT_DATA;

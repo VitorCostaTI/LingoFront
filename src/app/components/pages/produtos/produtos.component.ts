@@ -1,6 +1,8 @@
 import { Component }               from '@angular/core';
 import { MatDialog }               from '@angular/material/dialog';
 import { ProdutosDialogComponent } from './produtos-dialog/produtos-dialog.component';
+import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
+import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
 
 export interface ProdutoElement {
   produto: string;
@@ -90,7 +92,7 @@ const ELEMENT_DATA: ProdutoElement[] = [
 })
 export class ProdutosComponent {
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private confirmacaoService: ConfirmacaoService) {}
 
   isActive = false;
 
@@ -100,14 +102,25 @@ export class ProdutosComponent {
       enterAnimationDuration,
       exitAnimationDuration,
     });
-  }
+  };
+
+  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, razao_social: string): void {
+    this.confirmacaoService.acao = "deletar";
+    this.confirmacaoService.nome = razao_social;
+    this.dialog.open(ConfirmacaoComponent, {
+      width: '80%',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  };
 
   displayedColumns: string[] = [
     'produto',
     'fornecedor',
     'preco', 
     'investimento',
-    'qtd'
+    'qtd',
+    'acoes'
   ];
 
   dataSource = ELEMENT_DATA;

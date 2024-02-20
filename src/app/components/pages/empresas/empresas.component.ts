@@ -1,7 +1,8 @@
 import { Component }               from '@angular/core';
 import { MatDialog }               from '@angular/material/dialog';
 import { EmpresasdialogComponent } from './empresas-dialog/empresas-dialog.component';
-import { FormBuilder } from '@angular/forms';
+import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
+import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
 
 export interface EmpresasElement {
   razao_social: string;
@@ -92,7 +93,7 @@ const ELEMENT_DATA: EmpresasElement[] = [
 
 export class EmpresasComponent {
   
-  constructor(public dialog: MatDialog, fb: FormBuilder) {}
+  constructor(public dialog: MatDialog, private confirmacaoService: ConfirmacaoService ) {}
 
   isActive = false;
 
@@ -104,12 +105,23 @@ export class EmpresasComponent {
     });
   }
 
+  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, razao_social: string): void {
+    this.confirmacaoService.acao = "deletar";
+    this.confirmacaoService.nome = razao_social;
+    this.dialog.open(ConfirmacaoComponent, {
+      width: '80%',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
+
   displayedColumns: string[] = [
     'razao_social',
     'nome_fantasia',
     'cnpj', 
     'representante',
-    'contato'
+    'contato',
+    'acoes'
   ];
 
   dataSource = ELEMENT_DATA;
