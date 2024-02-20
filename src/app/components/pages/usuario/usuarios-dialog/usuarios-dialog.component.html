@@ -1,80 +1,80 @@
 <div class="container">
-  <h1>Usuários</h1>
+  <h1>Ficha de Cadastro</h1>
 </div>
 
 <mat-divider></mat-divider>
 
 <form [formGroup]="cadastroMorador">
   <mat-tab-group>
-    <mat-tab label="Ficha de Cadastro" class="container">
+    <mat-tab label="Dados" class="container">
       <div class="post">
         <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>Colaborador</mat-label>
-            <input matInput>
+            <input matInput formControlName="colaborador">
           </mat-form-field>
           <mat-form-field>
             <mat-label>Setor</mat-label>
-            <input matInput>
+            <input matInput formControlName="setor">
           </mat-form-field>
         </div>
-  
+
         <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>E-mail</mat-label>
-            <input matInput mask="A*@A*.SSS" [validation]="true" [dropSpecialCharacters]="false">
+            <input matInput formControlName="email">
           </mat-form-field>
         </div>
-  
+
         <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>Telefone</mat-label>
-            <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000">
+            <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000" formControlName="telefone">
           </mat-form-field>
           <mat-form-field>
             <mat-label>telefone 2</mat-label>
-            <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000">
+            <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000" formControlName="telefone2">
           </mat-form-field>
         </div>
-  
+
         <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>Contato de Emergência</mat-label>
-            <input matInput>
+            <input matInput formControlName="emergencia">
           </mat-form-field>
         </div>
       </div>
     </mat-tab>
-  
+
     <mat-tab label="Endereço" class="container">
       <br>
       <div fxLayout="row" fxLayoutAlign="center" class="form">
         <mat-form-field>
           <mat-label>CEP</mat-label>
-          <input matInput mask="00000 - 000">
+          <input matInput mask="00000 - 000" formControlName="cep">
         </mat-form-field>
       </div>
-  
+
       <div fxLayout="row" fxLayoutAlign="center" class="form">
         <mat-form-field>
           <mat-label>Rua/Avenida</mat-label>
-          <input matInput>
+          <input matInput formControlName="logradouro">
         </mat-form-field>
         <mat-form-field>
           <mat-label>Bairro</mat-label>
-          <input matInput>
+          <input matInput formControlName="bairro">
         </mat-form-field>
       </div>
-  
+
       <div fxLayout="row" fxLayoutAlign="center" class="form">
         <mat-form-field>
           <mat-label>Cidade</mat-label>
-          <input matInput>
+          <input matInput formControlName="cidade">
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Estado</mat-label>
           <input matInput aria-label="State">
-          <mat-select>
+          <mat-select formControlName="estado">
             <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
               <img alt="" class="example-option-img" [src]="state.flag" height="25">
               &nbsp;
@@ -83,15 +83,15 @@
           </mat-select>
         </mat-form-field>
       </div>
-  
+
       <div fxLayout="row" fxLayoutAlign="center" class="form">
         <mat-form-field>
           <mat-label>Complemento</mat-label>
-          <input matInput>
+          <input matInput formControlName="complemento">
         </mat-form-field>
       </div>
     </mat-tab>
-  
+
     <mat-tab label="Documentos" class="container">
       <div fxLayoutAlign="center" class="margin-top">
         <img height="100px" src="/assets/img/icon-user.png" alt="icon">
@@ -101,17 +101,22 @@
         <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>CPF / CNPJ</mat-label>
-            <input matInput mask="000.000.000.00 || 00.000.000/0000-00">
+            <input matInput mask="000.000.000.00 || 00.000.000/0000-00" formControlName="documento">
           </mat-form-field>
           <mat-form-field>
             <mat-label>PIS</mat-label>
-            <input matInput mask="000.00000.00-0">
+            <input matInput mask="000.00000.00-0" formControlName="pis">
           </mat-form-field>
         </div>
         <div fxLayout="row" fxLayoutAlign="center" class="form">
           <mat-form-field>
             <mat-label>Senha</mat-label>
-            <input matInput type="password">
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Esconder password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon matTooltip="Esconder senha">{{hide ? 'visibility_off' :
+                'visibility'}}</mat-icon>
+            </button>
           </mat-form-field>
         </div>
         <mat-accordion>
@@ -121,7 +126,7 @@
                 RG
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <input type="file" name="arquivo" id="arquivo">
+            <input type="file" name="arquivo" id="arquivo" formControlName="rg">
           </mat-expansion-panel>
           <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -129,7 +134,7 @@
                 Titulo de Eleitor
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <input type="file" name="arquivo" id="arquivo">
+            <input type="file" name="arquivo" id="arquivo" formControlName="titulo">
           </mat-expansion-panel>
           <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -137,7 +142,7 @@
                 Documento Militar
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <input type="file" name="arquivo" id="arquivo">
+            <input type="file" name="arquivo" id="arquivo" formControlName="militar">
           </mat-expansion-panel>
           <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -145,7 +150,7 @@
                 Certidão de Nascimento
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <input type="file" name="arquivo" id="arquivo">
+            <input type="file" name="arquivo" id="arquivo" formControlName="nascimento">
           </mat-expansion-panel>
           <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -153,7 +158,7 @@
                 Comprovante de Endereço
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <input type="file" name="arquivo" id="arquivo">
+            <input type="file" name="arquivo" id="arquivo" formControlName="endereco">
           </mat-expansion-panel>
           <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -161,7 +166,7 @@
                 Carteira de Trabalho
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <input type="file" name="arquivo" id="arquivo">
+            <input type="file" name="arquivo" id="arquivo" formControlName="carteira_trabalho">
           </mat-expansion-panel>
         </mat-accordion>
       </div>

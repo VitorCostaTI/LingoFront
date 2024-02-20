@@ -155,6 +155,7 @@ export class UsuariosDialogComponent {
   filteredStates: Observable<State[]>;
 
   cadastroMorador: FormGroup;
+  hide = true;
 
   constructor(private fb: FormBuilder) {
     this.filteredStates = this.stateCtrl.valueChanges.pipe(
@@ -165,7 +166,7 @@ export class UsuariosDialogComponent {
     this.cadastroMorador = this.fb.group({
       colaborador: ['', [Validators.required]],
       setor: ['', [Validators.required]],
-      email: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
       telefone: ['', [Validators.required]],
       telefone2: [''],
       emergencia: [''],
