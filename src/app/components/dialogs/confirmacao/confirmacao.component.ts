@@ -10,6 +10,8 @@ import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirm
 export class ConfirmacaoComponent {
   constructor(private confirmacaoService: ConfirmacaoService, private _snackBar: MatSnackBar) { }
 
+  isLoading: boolean = false;
+
   horizontalPosition: MatSnackBarHorizontalPosition = 'start';
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
@@ -20,12 +22,13 @@ export class ConfirmacaoComponent {
   recarregarPagina(): void {
     setTimeout(() => {
       window.location.reload();
-    }, 1000);
+    }, 3500);
   }
 
   actionConfirm(): void {
+    this.isLoading = true;
     this._snackBar.open("Sucesso ao executar requisição", "Fechar", {
-      duration: 1000,
+      duration: 3500,
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
     });
