@@ -68,6 +68,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/account/login/login.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { ConfirmacaoComponent } from './components/dialogs/confirmacao/confirmacao.component';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -130,6 +131,7 @@ import { ConfirmacaoComponent } from './components/dialogs/confirmacao/confirmac
     BrowserModule,
     CurrencyMaskModule,
     HttpClientModule,
+    MatSortModule,
     NgxMaskModule.forRoot(),
     ReactiveFormsModule,
     SharedModule,
