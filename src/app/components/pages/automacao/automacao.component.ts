@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
+import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 
 export interface MoradorElement {
   status: string;
@@ -134,8 +137,16 @@ const ELEMENT_DATA: MoradorElement[] = [
 export class AutomacaoComponent {
 
   quantidade = 25;
+  isLoading: boolean = false;
+  isTemperatura: boolean = false;
 
-  constructor(private dialog: MatDialog) { }
+  horizontalPosition: MatSnackBarHorizontalPosition = 'start';
+  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+
+  constructor(private dialog: MatDialog,
+    private confirmacaoService: ConfirmacaoService,
+    private _snackBar: MatSnackBar
+  ) { }
 
   ngOnInit(): void {
     this.reload();
@@ -148,20 +159,43 @@ export class AutomacaoComponent {
   }
 
   openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, nome: string): void {
-    this.dialog.open(AutomacaoComponent, {
+    this.confirmacaoService.acao = "desconectar";
+    this.confirmacaoService.nome = nome;
+    this.dialog.open(ConfirmacaoComponent, {
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,
     });
   }
 
+  reconect() {
+    this.isLoading = true;
+    setTimeout(() => {
+      window.location.reload()
+    }, 3000);  // Contador 3 segundos
+  }
+
   incrementar(): void {
-    this.quantidade++;
+    if (this.quantidade < 35) {
+      this.quantidade++;
+    } else {
+      this._snackBar.open('Temperatura máxima atingida!!', '', {
+        duration: 2000,
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+      });
+    }
   }
 
   decrementar(): void {
-    if (this.quantidade > 0) {
+    if (this.quantidade > 10) {
       this.quantidade--;
+    } else {
+      this._snackBar.open('Temperatura mínima atingida!!', '', {
+        duration: 2000,
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+      });
     }
   }
 

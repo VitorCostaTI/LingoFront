@@ -1,12 +1,12 @@
-.center{
+.center {
     text-align: center;
 }
 
-.margin{
+.margin {
     margin: 25px;
 }
 
-.margin-button{
+.margin-button {
     margin-left: 10px;
 }
 
@@ -22,10 +22,6 @@
     margin: auto;
 }
 
-.end{
-    display: flex;
-    justify-content: end;
-}
 
 @keyframes spin {
     0% {
@@ -35,4 +31,9 @@
     100% {
         transform: rotate(360deg);
     }
+}
+
+.end {
+    display: flex;
+    justify-content: end;
 }
