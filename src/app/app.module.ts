@@ -68,6 +68,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/account/login/login.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { ConfirmacaoComponent } from './components/dialogs/confirmacao/confirmacao.component';
+import { AutomacaoComponent } from './components/pages/automacao/automacao.component';
 
 @NgModule({
   declarations: [
@@ -122,6 +123,7 @@ import { ConfirmacaoComponent } from './components/dialogs/confirmacao/confirmac
     LoginComponent,
     HomeComponent,
     ConfirmacaoComponent,
+    AutomacaoComponent,
   ],
 
   imports: [

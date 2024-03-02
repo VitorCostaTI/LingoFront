@@ -14,6 +14,7 @@ import { ProdutosComponent } from './components/pages/produtos/produtos.componen
 import { UsuarioComponent } from './components/pages/usuario/usuario.component';
 import { LoginComponent } from './components/account/login/login.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { AutomacaoComponent } from './components/pages/automacao/automacao.component';
 
 const routes: Routes = [
 
@@ -21,6 +22,7 @@ const routes: Routes = [
     path: '', component: HomeComponent, children: [
       { path: '', component: DashboardComponent },
       { path: 'auditorias', component: AuditoriaComponent },
+      { path: 'automacao', component: AutomacaoComponent },
       { path: 'clientes', component: ClientesComponent },
       { path: 'comunidade', component: ComunidadeComponent },
       { path: 'empresas', component: EmpresasComponent },

@@ -1,0 +1,196 @@
+<div class="card"> </div>
+
+<div fxLayoutAlign="center">
+    <mat-card class="postagem">
+        <div class="container">
+            <h1>Automação</h1>
+
+            <mat-divider></mat-divider>
+
+            <div class="post">
+                <div fxLayout="row" fxLayoutAlign="center" class="form">
+                    <mat-form-field>
+                        <mat-label> Localidade </mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form" fxLayout="row" fxLayoutAlign="space-between center">
+                <button mat-flat-button color="primary">Adicionar Dispositivo</button>
+                <button mat-flat-button color="primary">Buscar</button>
+            </div>
+        </div>
+    </mat-card>
+</div>
+
+<div class="container">
+    <div class="atendimento">
+
+        <mat-card>
+            <div class="container" fxLayout="row" fxLayoutAlign="space-between center">
+                Controle de temperatura - Quartos
+                <div fxLayout="row">
+                    <div fxLayout="row" class="middle">
+                        <button mat-icon-button (click)="decrementar()" aria-label="Diminuir quantidade"><mat-icon>remove</mat-icon></button>
+                        <p style="font-size: 20px; margin-left: 5px; margin-right: 5px;" [ngClass]="{
+                            'frio': quantidade <= 20,
+                            'calor': quantidade >= 30
+                          }">{{quantidade}}</p>
+                        <button mat-icon-button (click)="incrementar()"
+                            aria-label="Aumentar quantidade"><mat-icon>add</mat-icon></button>
+                    </div>
+                    <div>
+                        <button mat-icon-button>
+                            <mat-icon style="color: red;"> power_settings_new</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </mat-card>
+
+        <br>
+        <br>
+
+        <mat-card>
+            <mat-tab-group>
+                <mat-tab label="Dispositivos">
+                    <div class="container">
+                        <table mat-table [dataSource]="dataSource" class="table-responsive">
+
+                            <!-- Coluna Status -->
+                            <ng-container matColumnDef="status">
+                                <th mat-header-cell *matHeaderCellDef> Status </th>
+                                <td mat-cell *matCellDef="let element"
+                                    [ngStyle]="{'color': element.status === 'Conectado' ? 'green' : 'red'}">
+                                    {{element.status}}
+                                </td>
+                            </ng-container>
+
+                            <!-- Coluna Dispositivo -->
+                            <ng-container matColumnDef="ip">
+                                <th mat-header-cell *matHeaderCellDef> IP </th>
+                                <td mat-cell *matCellDef="let element"> {{element.ip}} </td>
+                            </ng-container>
+
+                            <!-- Coluna Nome -->
+                            <ng-container matColumnDef="dispositivo">
+                                <th mat-header-cell *matHeaderCellDef> Dispositivo </th>
+                                <td mat-cell *matCellDef="let element"> {{element.modelo}} - {{element.fabricante}}</td>
+                            </ng-container>
+
+                            <!-- Coluna Firmware -->
+                            <ng-container matColumnDef="firmware">
+                                <th mat-header-cell *matHeaderCellDef> Leitor </th>
+                                <td mat-cell *matCellDef="let element"> {{element.equipamento}} - {{element.firmware}}
+                                </td>
+                            </ng-container>
+
+                            <!-- Coluna Porta -->
+                            <ng-container matColumnDef="porta">
+                                <th mat-header-cell *matHeaderCellDef> Porta </th>
+                                <td mat-cell *matCellDef="let element"> {{element.porta}} </td>
+                            </ng-container>
+
+                            <!-- Coluna Porta -->
+                            <ng-container matColumnDef="manutencao">
+                                <th mat-header-cell *matHeaderCellDef> Manutenção </th>
+                                <td mat-cell *matCellDef="let element"> {{element.ultima_manutencao | date}} </td>
+                            </ng-container>
+
+                            <!--   Coluna Ações -->
+                            <ng-container matColumnDef="acoes">
+                                <th mat-header-cell *matHeaderCellDef> </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <!-- Ícone de facial -->
+                                    <button mat-icon-button matTooltip="Reconectar dispositivo">
+                                        <mat-icon>refresh</mat-icon>
+                                    </button>
+                                    <!--Ícone de excluir  -->
+                                    <button mat-icon-button>
+                                        <mat-icon style="color: red;">delete</mat-icon>
+                                    </button>
+                                </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Comandos">
+                    <div class="container">
+                        <mat-list role="list">
+                            <mat-list-item role="listitem">
+                                <div fxLayout="row" fxLayoutAlign="space-between center">
+                                    ControlFood - Ração
+                                    <div>
+                                        <button mat-icon-button>
+                                            <mat-icon>timer</mat-icon>
+                                        </button>
+                                        <button mat-icon-button>
+                                            <mat-icon style="color: red;"> power_settings_new</mat-icon>
+                                        </button>
+                                    </div>
+                                </div>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                                <div fxLayout="row" fxLayoutAlign="space-between center">
+                                    ControlFood - Bebedouro
+                                    <div>
+                                        <button mat-icon-button>
+                                            <mat-icon>timer</mat-icon>
+                                        </button>
+                                        <button mat-icon-button>
+                                            <mat-icon style="color: red;"> power_settings_new</mat-icon>
+                                        </button>
+                                    </div>
+                                </div>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                                <div fxLayout="row" fxLayoutAlign="space-between center">
+                                    ControlID
+                                    <div>
+                                        <button mat-icon-button>
+                                            <mat-icon>settings</mat-icon>
+                                        </button>
+                                        <button mat-icon-button>
+                                            <mat-icon style="color: red;"> power_settings_new</mat-icon>
+                                        </button>
+                                    </div>
+                                </div>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                                <div fxLayout="row" fxLayoutAlign="space-between center">
+                                    Relogio Ponto
+                                    <div>
+                                        <button mat-icon-button>
+                                            <mat-icon>settings</mat-icon>
+                                        </button>
+                                        <button mat-icon-button>
+                                            <mat-icon style="color: red;"> power_settings_new</mat-icon>
+                                        </button>
+                                    </div>
+                                </div>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                                <div fxLayout="row" fxLayoutAlign="space-between center">
+                                    Monitoramento
+                                    <div>
+                                        <button mat-icon-button>
+                                            <mat-icon>live_tv</mat-icon>
+                                        </button>
+                                        <button mat-icon-button>
+                                            <mat-icon style="color: red;"> power_settings_new</mat-icon>
+                                        </button>
+                                    </div>
+                                </div>
+                            </mat-list-item>
+                        </mat-list>
+                    </div>
+                    <br>
+                </mat-tab>
+            </mat-tab-group>
+        </mat-card>
+    </div>
+</div>
