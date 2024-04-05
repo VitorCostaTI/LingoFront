@@ -1,18 +1,85 @@
-.container{
-    margin: 15px;
+.container {
+    padding: 15px;
+    padding-right: 15px;
 }
 
-.body{
+.body {
     width: 100%;
     text-align: center;
     margin: 25px;
 }
 
-.post{
-    margin-top: 25px;
+.post {
+    margin: 25px;
 }
 
-.form mat-form-field{
+.column-form {
+    width: 65%;
+}
+
+.actions {
+    margin: 15px;
+}
+
+.total-width {
+    width: 100% !important;
+}
+
+.register-icon {
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.button-photo {
+    margin: 2px;
+}
+
+.form mat-form-field {
     width: 100%;
     margin-left: 15px;
+}
+
+.photo-perfil {
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.form mat-hint {
+    color: red;
+}
+
+.perfil-photo {
+    padding: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
