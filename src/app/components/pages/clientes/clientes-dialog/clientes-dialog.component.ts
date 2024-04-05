@@ -197,10 +197,10 @@ export class ClientesDialogComponent {
         console.log('CEP não encontrado');
       } else {
         this.endereco.logradouro = data.logradouro;
-        this.endereco.bairro = data.bairro; // Adiciona o bairro aos dados do endereço
+        this.endereco.bairro = data.bairro;
         this.endereco.cidade = data.localidade;
         this.endereco.estado = data.uf;
-        this.cepNaoEncontrado = false; // Reseta o estado do erro
+        this.cepNaoEncontrado = false; 
       }
     }, error => {
       console.log('Erro ao buscar CEP:', error);
