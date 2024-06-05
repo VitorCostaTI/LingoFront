@@ -41,10 +41,15 @@
 
     <br>
 
+    <div class="margin">
+      <div *ngIf="isLoading" class="loader"></div>
+    </div>
+
     <div fxLayout="row" fxLayoutAlign="end center">
-      <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
+      <button mat-dialog-close mat-flat-button color="warn" [hidden]="isLoading">Cancelar</button>
       &nbsp;
-      <button mat-flat-button color="primary" [disabled]="cadastroEmpresa.invalid">Salvar</button>
+      <button mat-flat-button color="primary" [disabled]="cadastroEmpresa.invalid" [hidden]="isLoading"
+        (click)="salvarCadastro()">Salvar</button>
     </div>
   </div>
 </form>

@@ -8,7 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class EmpresasdialogComponent {
 
-  cadastroEmpresa: FormGroup
+  cadastroEmpresa: FormGroup;
+  isLoading: boolean = false;
 
   constructor(fb: FormBuilder) {
     this.cadastroEmpresa = fb.group({
@@ -18,5 +19,12 @@ export class EmpresasdialogComponent {
       representante: ['', [Validators.required, Validators.minLength]],
       contato: ['', [Validators.required, Validators.minLength]],
     })
+  }
+
+  salvarCadastro(): void {
+    this.isLoading = true;
+    setTimeout(() => {
+      window.location.reload();
+    }, 3500);
   }
 }
