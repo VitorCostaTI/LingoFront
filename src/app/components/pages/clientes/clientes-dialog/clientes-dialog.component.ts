@@ -22,6 +22,7 @@ export class ClientesDialogComponent {
 
   endereco: any = {};
   cepNaoEncontrado: boolean = false;
+  isLoading: boolean = false;
 
   stateCtrl = new FormControl('');
   filteredStates: Observable<State[]>;
@@ -181,7 +182,6 @@ export class ClientesDialogComponent {
     );
   }
 
-
   buscarEnderecoPorCep() {
     const cep = this.endereco.cep.replace(/\D/g, ''); // Remove caracteres não numéricos
     const cepRegex = /^[0-9]{8}$/; // Expressão regular para verificar se o CEP tem 8 dígitos numéricos
@@ -200,11 +200,18 @@ export class ClientesDialogComponent {
         this.endereco.bairro = data.bairro;
         this.endereco.cidade = data.localidade;
         this.endereco.estado = data.uf;
-        this.cepNaoEncontrado = false; 
+        this.cepNaoEncontrado = false;
       }
     }, error => {
       console.log('Erro ao buscar CEP:', error);
     });
+  }
+
+  salvarCadastro(): void {
+    this.isLoading = true;
+    setTimeout(() => {
+      window.location.reload();
+    }, 3500);
   }
 
   private _filterStates(value: string): State[] {

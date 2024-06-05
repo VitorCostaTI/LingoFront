@@ -10,39 +10,39 @@
     <div fxLayout="row" fxLayoutAlign="center" class="form">
       <mat-form-field>
         <mat-label>Cliente</mat-label>
-        <input matInput formControlName="cliente" minlength="3">
+        <input matInput minlength="3" formControlName="cliente">
       </mat-form-field>
     </div>
 
     <div fxLayout="row" fxLayoutAlign="center" class="form">
       <mat-form-field>
         <mat-label>CPF</mat-label>
-        <input matInput formControlName="cpf">
+        <input matInput mask="000.000.000-00" formControlName="cpf">
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Email</mat-label>
-        <input matInput formControlName="email" mask="A*@A*.SSS" [validation]="true" [dropSpecialCharacters]="false">
+        <input matInput formControlName="email">
       </mat-form-field>
     </div>
 
     <div fxLayout="row" fxLayoutAlign="center" class="form">
       <mat-form-field>
         <mat-label>Telefone</mat-label>
-        <input matInput formControlName="telefone" mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000">
+        <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000" formControlName="telefone">
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>telefone 2</mat-label>
-        <input matInput formControlName="telefone2" mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000">
+        <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000" formControlName="telefone2">
       </mat-form-field>
     </div>
 
     <div fxLayout="row" fxLayoutAlign="center" class="form">
       <mat-form-field>
         <mat-label>CEP</mat-label>
-        <input matInput formControlName="cep" mask="00000 - 000" [(ngModel)]="endereco.cep"
-          (blur)="buscarEnderecoPorCep()">
+        <input matInput mask="00000 - 000" (blur)="buscarEnderecoPorCep()" [(ngModel)]="endereco.cep"
+          formControlName="cep">
         <mat-hint *ngIf="cepNaoEncontrado" class="error-message">CEP não encontrado <br> </mat-hint>
       </mat-form-field>
     </div>
@@ -50,28 +50,28 @@
     <div fxLayout="row" fxLayoutAlign="center" class="form">
       <mat-form-field>
         <mat-label>Rua/Avenida</mat-label>
-        <input matInput formControlName="logradouro" [(ngModel)]="endereco.logradouro"
-          [required]="cadastroCliente.get('cep')?.value">
+        <input matInput [required]="cadastroCliente.get('cep')?.value" [(ngModel)]="endereco.logradouro"
+          formControlName="logradouro">
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Bairro</mat-label>
-        <input matInput formControlName="bairro" [(ngModel)]="endereco.bairro"
-          [required]="cadastroCliente.get('cep')?.value">
+        <input matInput [required]="cadastroCliente.get('cep')?.value" [(ngModel)]="endereco.bairro"
+          formControlName="bairro">
       </mat-form-field>
     </div>
 
     <div fxLayout="row" fxLayoutAlign="center" class="form">
       <mat-form-field>
         <mat-label>Cidade</mat-label>
-        <input matInput formControlName="cidade" [(ngModel)]="endereco.cidade"
-          [required]="cadastroCliente.get('cep')?.value">
+        <input matInput [required]="cadastroCliente.get('cep')?.value" [(ngModel)]="endereco.cidade"
+          formControlName="cidade">
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
         <mat-label>Estado</mat-label>
-        <input matInput aria-label="State" formControlName="estado" [(ngModel)]="endereco.estado"
-          [required]="cadastroCliente.get('cep')?.value">
+        <input matInput aria-label="State" [required]="cadastroCliente.get('cep')?.value" [(ngModel)]="endereco.estado"
+          formControlName="estado">
         <mat-select>
           <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
             <img alt="" class="example-option-img" [src]="state.flag" height="25">
@@ -93,10 +93,14 @@
 
     <br>
 
+    <div class="margin">
+      <div *ngIf="isLoading" class="loader"></div>
+    </div>
+
     <div fxLayout="row" fxLayoutAlign="end center">
-      <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
+      <button mat-dialog-close mat-flat-button [hidden]="isLoading" color="warn">Cancelar</button>
       &nbsp;
-      <button mat-flat-button color="primary" [disabled]="cadastroCliente.invalid">Salvar</button>
+      <button mat-flat-button color="primary" [hidden]="isLoading" [disabled]="cadastroCliente.invalid">Salvar</button>
     </div>
   </div>
 </form>
