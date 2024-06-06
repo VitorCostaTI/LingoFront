@@ -91,16 +91,14 @@
 
     <mat-divider></mat-divider>
 
-    <br>
-
-    <div class="margin">
+    <div>
       <div *ngIf="isLoading" class="loader"></div>
     </div>
 
     <div fxLayout="row" fxLayoutAlign="end center">
       <button mat-dialog-close mat-flat-button [hidden]="isLoading" color="warn">Cancelar</button>
       &nbsp;
-      <button mat-flat-button color="primary" [hidden]="isLoading" [disabled]="cadastroCliente.invalid">Salvar</button>
+      <button mat-flat-button color="primary" [hidden]="isLoading" [disabled]="cadastroCliente.invalid" (click)="salvarCadastro()">Salvar</button>
     </div>
   </div>
 </form>
