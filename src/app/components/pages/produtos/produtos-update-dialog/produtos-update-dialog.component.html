@@ -52,11 +52,11 @@
 
         <mat-divider></mat-divider>
 
-        <div>
+        <div class="margin">
             <div *ngIf="isLoading" class="loader"></div>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="end center">
+        <div class="margin" fxLayout="row" fxLayoutAlign="end center">
             <button mat-dialog-close mat-flat-button [hidden]="isLoading" color="warn">Cancelar</button>
             &nbsp;
             <button mat-flat-button color="primary" [hidden]="isLoading" [disabled]="cadastroProduto.invalid"
