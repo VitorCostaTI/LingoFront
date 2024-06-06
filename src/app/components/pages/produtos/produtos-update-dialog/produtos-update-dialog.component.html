@@ -1,0 +1,66 @@
+<div class="container">
+    <h1>Produto</h1>
+</div>
+
+<mat-divider></mat-divider>
+
+<form [formGroup]="cadastroProduto">
+    <div class="post container">
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+            <mat-form-field>
+                <mat-label>Produto</mat-label>
+                <input matInput minlength="3" [(ngModel)]="data.produto" formControlName="produto">
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+            <mat-form-field>
+                <mat-label>Categoria</mat-label>
+                <input matInput minlength="3" [(ngModel)]="data.categoria" formControlName="categoria">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Fornecedor</mat-label>
+                <input matInput minlength="3" [(ngModel)]="data.fornecedor" formControlName="fornecedor">
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+            <mat-form-field>
+                <mat-label>Preço</mat-label>
+                <input matInput [(ngModel)]="data.preco" formControlName="preco" />
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Investimento</mat-label>
+                <input matInput [(ngModel)]="data.investimento" formControlName="investimento">
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+            <mat-form-field>
+                <mat-label>Quantidade</mat-label>
+                <input matInput mask="separator.2" thousandSeparator="." separatorLimit="99999999999999"
+                    [(ngModel)]="data.quantidade" formControlName="quantidade">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Código do produto</mat-label>
+                <input matInput [(ngModel)]="data.codigo_produto" formControlName="codigo_produto">
+            </mat-form-field>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div>
+            <div *ngIf="isLoading" class="loader"></div>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="end center">
+            <button mat-dialog-close mat-flat-button [hidden]="isLoading" color="warn">Cancelar</button>
+            &nbsp;
+            <button mat-flat-button color="primary" [hidden]="isLoading" [disabled]="cadastroProduto.invalid"
+                (click)="atualizarCadastro()">Salvar</button>
+        </div>
+    </div>
+</form>

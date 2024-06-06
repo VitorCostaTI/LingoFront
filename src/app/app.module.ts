@@ -71,6 +71,7 @@ import { ConfirmacaoComponent } from './components/dialogs/confirmacao/confirmac
 import { AutomacaoComponent } from './components/pages/automacao/automacao.component';
 import { ClientesUpdateDialogComponent } from './components/pages/clientes/clientes-update-dialog/clientes-update-dialog.component';
 import { EmpresasUpdateDialogComponent } from './components/pages/empresas/empresas-update-dialog/empresas-update-dialog.component';
+import { ProdutosUpdateDialogComponent } from './components/pages/produtos/produtos-update-dialog/produtos-update-dialog.component';
 
 @NgModule({
   declarations: [
@@ -128,6 +129,7 @@ import { EmpresasUpdateDialogComponent } from './components/pages/empresas/empre
     AutomacaoComponent,
     ClientesUpdateDialogComponent,
     EmpresasUpdateDialogComponent,
+    ProdutosUpdateDialogComponent,
   ],
 
   imports: [
