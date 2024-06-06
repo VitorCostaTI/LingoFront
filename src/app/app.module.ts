@@ -70,6 +70,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { ConfirmacaoComponent } from './components/dialogs/confirmacao/confirmacao.component';
 import { AutomacaoComponent } from './components/pages/automacao/automacao.component';
 import { ClientesUpdateDialogComponent } from './components/pages/clientes/clientes-update-dialog/clientes-update-dialog.component';
+import { EmpresasUpdateDialogComponent } from './components/pages/empresas/empresas-update-dialog/empresas-update-dialog.component';
 
 @NgModule({
   declarations: [
@@ -126,6 +127,7 @@ import { ClientesUpdateDialogComponent } from './components/pages/clientes/clien
     ConfirmacaoComponent,
     AutomacaoComponent,
     ClientesUpdateDialogComponent,
+    EmpresasUpdateDialogComponent,
   ],
 
   imports: [

@@ -1,0 +1,55 @@
+<div class="container">
+    <h1>Empresa</h1>
+</div>
+
+<mat-divider></mat-divider>
+
+<form [formGroup]="cadastroEmpresa">
+    <div class="post container">
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+            <mat-form-field>
+                <mat-label>Razão Social</mat-label>
+                <input matInput minlength="3" [(ngModel)]="data.razao_social" formControlName="razao_social">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>CNPJ</mat-label>
+                <input matInput mask="00.000.000/0000-00" [(ngModel)]="data.cnpj" formControlName="cnpj">
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+            <mat-form-field>
+                <mat-label>Nome Fantasia</mat-label>
+                <input matInput minlength="3" [(ngModel)]="data.nome_fantasia" formControlName="nome_fantasia">
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+            <mat-form-field>
+                <mat-label>Representante</mat-label>
+                <input matInput minlength="3" [(ngModel)]="data.representante" formControlName="representante">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Contato</mat-label>
+                <input matInput minlength="3" [(ngModel)]="data.contato" formControlName="contato">
+            </mat-form-field>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <br>
+
+        <div class="margin">
+            <div *ngIf="isLoading" class="loader"></div>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="end center">
+            <button mat-dialog-close mat-flat-button color="warn" [hidden]="isLoading">Cancelar</button>
+            &nbsp;
+            <button mat-flat-button color="primary" [disabled]="cadastroEmpresa.invalid" [hidden]="isLoading"
+                (click)="atualizarCadastro()">Salvar</button>
+        </div>
+    </div>
+</form>

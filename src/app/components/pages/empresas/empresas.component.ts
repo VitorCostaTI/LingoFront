@@ -3,6 +3,7 @@ import { MatDialog }               from '@angular/material/dialog';
 import { EmpresasdialogComponent } from './empresas-dialog/empresas-dialog.component';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
 import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
+import { EmpresasUpdateDialogComponent } from './empresas-update-dialog/empresas-update-dialog.component';
 
 export interface EmpresasElement {
   razao_social: string;
@@ -102,6 +103,15 @@ export class EmpresasComponent {
       minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
+    });
+  }
+
+  openDialogUpdateEmpresas(enterAnimationDuration: string, exitAnimationDuration: string, empresas: any): void {
+    this.dialog.open(EmpresasUpdateDialogComponent, {
+      minWidth: '60%',
+      enterAnimationDuration,
+      exitAnimationDuration,
+      data: empresas
     });
   }
 

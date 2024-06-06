@@ -1,17 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-empresas-dialog',
-  templateUrl: './empresas-dialog.component.html',
-  styleUrls: ['./empresas-dialog.component.scss']
+  selector: 'app-empresas-update-dialog',
+  templateUrl: './empresas-update-dialog.component.html',
+  styleUrls: ['./empresas-update-dialog.component.scss']
 })
-export class EmpresasdialogComponent {
-
+export class EmpresasUpdateDialogComponent {
   cadastroEmpresa: FormGroup;
   isLoading: boolean = false;
 
-  constructor(fb: FormBuilder) {
+  constructor(
+    fb: FormBuilder,
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) {
     this.cadastroEmpresa = fb.group({
       razao_social: ['', [Validators.required, Validators.minLength]],
       cnpj: ['', [Validators.required]],
@@ -21,7 +24,7 @@ export class EmpresasdialogComponent {
     })
   }
 
-  salvarCadastro(): void {
+  atualizarCadastro(): void {
     this.isLoading = true;
     setTimeout(() => {
       window.location.reload();
