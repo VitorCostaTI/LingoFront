@@ -157,6 +157,8 @@ export class UsuariosDialogComponent {
   cadastroMorador: FormGroup;
   hide = true;
 
+  isLoading: boolean = false;
+
   constructor(private fb: FormBuilder) {
     this.filteredStates = this.stateCtrl.valueChanges.pipe(
       startWith(''),
@@ -194,5 +196,12 @@ export class UsuariosDialogComponent {
     const filterValue = value.toLowerCase();
 
     return this.states.filter(state => state.name.toLowerCase().includes(filterValue));
+  }
+
+  salvarCadastro(): void {
+    this.isLoading = true;
+    setTimeout(() => {
+      window.location.reload();
+    }, 3500);
   }
 }

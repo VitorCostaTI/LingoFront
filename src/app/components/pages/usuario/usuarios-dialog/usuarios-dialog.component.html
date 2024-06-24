@@ -178,8 +178,14 @@
 
 <br>
 
-<div fxLayout="row" fxLayoutAlign="end center" class="action">
-  <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
-  &nbsp;
-  <button mat-flat-button color="primary" [disabled]="cadastroMorador.invalid">Salvar</button>
+<div class="container-actions">
+  <div>
+    <div *ngIf="isLoading" class="loader"></div>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="end center">
+    <button mat-dialog-close mat-flat-button [hidden]="isLoading" color="warn">Cancelar</button>
+    &nbsp;
+    <button mat-flat-button color="primary" [hidden]="isLoading" (click)="salvarCadastro()">Salvar</button>
+  </div>
 </div>
