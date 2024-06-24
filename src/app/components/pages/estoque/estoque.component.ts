@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 
 export interface ColaboradoresElement {
   colaborador: string;
@@ -166,8 +167,11 @@ export class EstoqueComponent {
 
   registroEstoque: FormGroup;
 
-  constructor(private fb: FormBuilder){
-    this.registroEstoque = fb.group({
+  horizontalPosition: MatSnackBarHorizontalPosition='start';
+  verticalPosition: MatSnackBarVerticalPosition='bottom'
+
+  constructor(private fb: FormBuilder, private snackBar: MatSnackBar){
+    this.registroEstoque = this.fb.group({
       codigo_produto: ['', Validators.required],
       responsavel: ['', Validators.required],
     })
@@ -181,6 +185,16 @@ export class EstoqueComponent {
     'quantidade',
     'data'
   ];
+
+  registrarEstoque(): void{
+    this.snackBar.open('Produto registrado com sucesso', '', {
+      duration: 1000,
+      verticalPosition: this.verticalPosition,
+      horizontalPosition: this.horizontalPosition
+    })
+
+    this.registroEstoque.reset();
+  }
 
   dataSource = ELEMENT_DATA;
 }
