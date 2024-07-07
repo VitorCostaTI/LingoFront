@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
+import { TemplateCrudService } from 'src/app/modules/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-confirmacao',
@@ -8,12 +8,9 @@ import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirm
   styleUrls: ['./confirmacao.component.scss']
 })
 export class ConfirmacaoComponent {
-  constructor(private confirmacaoService: ConfirmacaoService, private _snackBar: MatSnackBar) { }
+  constructor(private confirmacaoService: ConfirmacaoService, private templateService: TemplateCrudService) { }
 
   isLoading: boolean = false;
-
-  horizontalPosition: MatSnackBarHorizontalPosition = 'start';
-  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
   acao: String = this.confirmacaoService.acao;
   nome: String = this.confirmacaoService.nome;
@@ -27,11 +24,7 @@ export class ConfirmacaoComponent {
 
   actionConfirm(): void {
     this.isLoading = true;
-    this._snackBar.open("Sucesso ao executar requisição", "Fechar", {
-      duration: 3500,
-      horizontalPosition: this.horizontalPosition,
-      verticalPosition: this.verticalPosition,
-    });
+    this.templateService.snackBarSuccess("Sucesso ao executar requisição", "")
     this.recarregarPagina();
   }
 }

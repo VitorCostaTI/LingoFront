@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
 import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
-import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { TemplateCrudService } from 'src/app/modules/services/Template/template-crud.service';
 
 export interface MoradorElement {
   status: string;
@@ -140,12 +140,9 @@ export class AutomacaoComponent {
   isLoading: boolean = false;
   isTemperatura: boolean = false;
 
-  horizontalPosition: MatSnackBarHorizontalPosition = 'start';
-  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
-
   constructor(private dialog: MatDialog,
     private confirmacaoService: ConfirmacaoService,
-    private _snackBar: MatSnackBar
+    private templateService: TemplateCrudService
   ) { }
 
   ngOnInit(): void {
@@ -179,11 +176,7 @@ export class AutomacaoComponent {
     if (this.quantidade < 35) {
       this.quantidade++;
     } else {
-      this._snackBar.open('Temperatura máxima atingida!!', '', {
-        duration: 2000,
-        horizontalPosition: this.horizontalPosition,
-        verticalPosition: this.verticalPosition,
-      });
+      this.templateService.snackBarFailed("Temperatura maxima atingida!!", "")
     }
   }
 
@@ -191,11 +184,7 @@ export class AutomacaoComponent {
     if (this.quantidade > 10) {
       this.quantidade--;
     } else {
-      this._snackBar.open('Temperatura mínima atingida!!', '', {
-        duration: 2000,
-        horizontalPosition: this.horizontalPosition,
-        verticalPosition: this.verticalPosition,
-      });
+      this.templateService.snackBarFailed("Temperatura minima atingida!!", "")
     }
   }
 

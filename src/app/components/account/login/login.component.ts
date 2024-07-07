@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +12,6 @@ export class LoginComponent {
   hide = true;
 
   constructor(
-    private _snackBar: MatSnackBar,
     private formBuilder: FormBuilder // Injeta o FormBuilder
   ) {
     // Inicializa o formulário no construtor

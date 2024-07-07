@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PermissaoAcessoDialogComponent } from './permissao-acesso-dialog/permissao-acesso-dialog.component';
-import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { TemplateCrudService } from 'src/app/modules/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-permissao-acesso',
@@ -10,10 +10,7 @@ import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition
 })
 
 export class PermissaoAcessoComponent {
-  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar) { }
-
-  horizontalPosition: MatSnackBarHorizontalPosition = 'start';
-  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+  constructor(public dialog: MatDialog, private templateService: TemplateCrudService) { }
 
   typesOfShoes: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
 
@@ -26,10 +23,6 @@ export class PermissaoAcessoComponent {
   }
 
   autorizarSetor(): void {
-    this._snackBar.open("Permissão salva com sucesso", "Fechar", {
-      duration: 1500,
-      horizontalPosition: this.horizontalPosition,
-      verticalPosition: this.verticalPosition,
-    });
+    this.templateService.snackBarSuccess("Permissão atualizada com sucesso!!", "")
   }
 }

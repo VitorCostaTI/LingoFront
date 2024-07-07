@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { TemplateCrudService } from 'src/app/modules/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-error404',
@@ -8,16 +8,9 @@ import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition
 })
 export class Error404Component {
 
-  horizontalPosition: MatSnackBarHorizontalPosition = 'start';
-  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
-
-  constructor(private _snackBar: MatSnackBar) { }
+  constructor(private templateService: TemplateCrudService) { }
 
   ngOnInit() {
-    this._snackBar.open('Não foi possivel buscar requisição!!', '', {
-      duration: 2000,
-      horizontalPosition: this.horizontalPosition,
-      verticalPosition: this.verticalPosition,
-    });
+    this.templateService.snackBarFailed("Sucesso ao executar requisição", "")
   }
 }
