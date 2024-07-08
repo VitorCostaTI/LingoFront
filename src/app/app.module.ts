@@ -72,6 +72,7 @@ import { AutomacaoComponent } from './components/pages/automacao/automacao.compo
 import { ClientesUpdateDialogComponent } from './components/pages/clientes/clientes-update-dialog/clientes-update-dialog.component';
 import { EmpresasUpdateDialogComponent } from './components/pages/empresas/empresas-update-dialog/empresas-update-dialog.component';
 import { ProdutosUpdateDialogComponent } from './components/pages/produtos/produtos-update-dialog/produtos-update-dialog.component';
+import { NotesComponent } from './components/notes/notes.component';
 
 @NgModule({
   declarations: [
@@ -130,6 +131,7 @@ import { ProdutosUpdateDialogComponent } from './components/pages/produtos/produ
     ClientesUpdateDialogComponent,
     EmpresasUpdateDialogComponent,
     ProdutosUpdateDialogComponent,
+    NotesComponent,
   ],
 
   imports: [

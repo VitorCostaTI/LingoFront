@@ -1,0 +1,48 @@
+<div class="container">
+    <h1>Anotações</h1>
+</div>
+
+<mat-divider></mat-divider>
+
+<form class="post" [formGroup]="cadastroColuna">
+
+    <div fxLayout="row" fxLayoutAlign="center" class="form">
+        <mat-form-field>
+            <input matInput formControlName="anotacao" />
+        </mat-form-field>
+    </div>
+    <div fxLayoutAlign="center">
+        <button mat-flat-button color="primary" (click)="addColumn()" matTooltip="Registra nova coluna"
+            [disabled]="cadastroColuna.invalid">Salvar</button>
+    </div>
+</form>
+
+<div class="container" *ngIf="entidades.length > 0">
+
+    <table mat-table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="anotacao">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let element" minLenght=""> {{element.anotacao}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-button color="warn" (click)="deleteColumn(element)">Deletar</button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-divider></mat-divider>
+
+    <div class="actions" fxLayout="row" fxLayoutAlign="end center">
+        <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
+        &nbsp;
+        <button mat-flat-button color="primary" (click)="addColumn()"
+            matTooltip="Realiza requisição da nova tabela">Salvar</button>
+    </div>
+</div>

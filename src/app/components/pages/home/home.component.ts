@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfiguracoesComponent } from '../../dialogs/configuracoes/configuracoes.component';
 import { NotificacoesComponent } from '../../dialogs/notificacoes/notificacoes.component';
+import { NotesComponent } from '../../notes/notes.component';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { NotificacoesComponent } from '../../dialogs/notificacoes/notificacoes.c
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) { }
 
   title = 'frontLingo';
 
@@ -23,6 +24,14 @@ export class HomeComponent {
 
   openDialogNotificacoes(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(NotificacoesComponent, {
+      width: '750px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
+
+  openNotesDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(NotesComponent, {
       width: '750px',
       enterAnimationDuration,
       exitAnimationDuration,

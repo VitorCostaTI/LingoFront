@@ -30,6 +30,12 @@
 
                         <mat-menu #menu="matMenu">
                             <div fxLayout="row" class="option">
+                                <mat-icon aria-hidden="false" fontIcon="speaker_notes" class="icon-hover"></mat-icon> 
+                                &nbsp;
+                                <p (click)="openNotesDialog('750ms', '150ms')" class="pointer">Anotações</p>
+                            </div> 
+                            
+                            <div fxLayout="row" class="option">
                                 <mat-icon aria-hidden="false" fontIcon="theaters"></mat-icon> 
                                 &nbsp;
                                 <p routerLink="automacao" class="pointer">Automações</p>
@@ -40,7 +46,6 @@
                                 &nbsp;
                                 <p routerLink="/comunidade" class="pointer">Comunidade</p>
                             </div>                      
-
 
                             <mat-divider></mat-divider>
                             
