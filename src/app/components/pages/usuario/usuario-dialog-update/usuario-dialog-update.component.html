@@ -1,0 +1,200 @@
+<div class="container">
+    <h1>Ficha de Cadastro</h1>
+</div>
+
+<mat-divider></mat-divider>
+
+<form [formGroup]="cadastroMorador">
+    <mat-tab-group>
+        <mat-tab label="Dados" class="container">
+            <div class="post">
+                <div fxLayout="row" fxLayoutAlign="center" class="form">
+                    <mat-form-field>
+                        <mat-label>Colaborador</mat-label>
+                        <input matInput [(ngModel)]="data.usuario" formControlName="colaborador">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Setor</mat-label>
+                        <input matInput [(ngModel)]="data.setor" formControlName="setor">
+                    </mat-form-field>
+                </div>
+
+                <div fxLayout="row" fxLayoutAlign="center" class="form">
+                    <mat-form-field>
+                        <mat-label>E-mail</mat-label>
+                        <input matInput [(ngModel)]="data.email" formControlName="email">
+                    </mat-form-field>
+                </div>
+
+                <div fxLayout="row" fxLayoutAlign="center" class="form">
+                    <mat-form-field>
+                        <mat-label>Telefone</mat-label>
+                        <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000" [(ngModel)]="data.telefone"
+                            formControlName="telefone">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>telefone 2</mat-label>
+                        <input matInput mask="+00 (00) 00000 - 0000||+00 (00) 0000 - 0000" [(ngModel)]="data.telefone2"
+                            formControlName="telefone2">
+                    </mat-form-field>
+                </div>
+
+                <div fxLayout="row" fxLayoutAlign="center" class="form">
+                    <mat-form-field>
+                        <mat-label>Contato de Emergência</mat-label>
+                        <input matInput [(ngModel)]="data.emergencia" formControlName="emergencia">
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Endereço" class="container">
+            <br>
+            <div fxLayout="row" fxLayoutAlign="center" class="form">
+                <mat-form-field>
+                    <mat-label>CEP</mat-label>
+                    <input matInput mask="00000 - 000" [(ngModel)]="data.cep" formControlName="cep">
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="center" class="form">
+                <mat-form-field>
+                    <mat-label>Rua/Avenida</mat-label>
+                    <input matInput [(ngModel)]="data.logradouro" formControlName="logradouro">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Bairro</mat-label>
+                    <input matInput [(ngModel)]="data.bairro" formControlName="bairro">
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="center" class="form">
+                <mat-form-field>
+                    <mat-label>Cidade</mat-label>
+                    <input matInput [(ngModel)]="data.cidade" formControlName="cidade">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Estado</mat-label>
+                    <input matInput aria-label="State">
+                    <mat-select [(ngModel)]="data.estado" formControlName="estado">
+                        <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+                            <img alt="" class="example-option-img" [src]="state.flag" height="25">
+                            &nbsp;
+                            <span>{{state.name}}</span> - {{state.sigla}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="center" class="form">
+                <mat-form-field>
+                    <mat-label>Complemento</mat-label>
+                    <input matInput [(ngModel)]="data.complemento" formControlName="complemento">
+                </mat-form-field>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Documentos" class="container">
+            <div fxLayoutAlign="center" class="margin-top">
+                <img height="100px" src="/assets/img/icon-user.png" alt="icon">
+            </div>
+            <div class="avatar"></div>
+            <div class="post">
+                <div fxLayout="row" fxLayoutAlign="center" class="form">
+                    <mat-form-field>
+                        <mat-label>CPF / CNPJ</mat-label>
+                        <input matInput mask="000.000.000.00 || 00.000.000/0000-00" [(ngModel)]="data.documento"
+                            formControlName="documento">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>PIS</mat-label>
+                        <input matInput mask="000.00000.00-0" [(ngModel)]="data.pis" formControlName="pis">
+                    </mat-form-field>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center" class="form">
+                    <mat-form-field>
+                        <mat-label>Senha</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="data.password"
+                            formControlName="password">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Esconder password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon matTooltip="Esconder senha">{{hide ? 'visibility_off' :
+                                'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                RG
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <input type="file" name="arquivo" id="arquivo" [(ngModel)]="data.rg" formControlName="rg">
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Titulo de Eleitor
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <input type="file" name="arquivo" id="arquivo" [(ngModel)]="data.titulo"
+                            formControlName="titulo">
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Documento Militar
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <input type="file" name="arquivo" id="arquivo" [(ngModel)]="data.militar"
+                            formControlName="militar">
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Certidão de Nascimento
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <input type="file" name="arquivo" id="arquivo" [(ngModel)]="data.nascimento"
+                            formControlName="nascimento">
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Comprovante de Endereço
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <input type="file" name="arquivo" id="arquivo" [(ngModel)]="data.endereco"
+                            formControlName="endereco">
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Carteira de Trabalho
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <input type="file" name="arquivo" id="arquivo" [(ngModel)]="data.carteira_trabalho"
+                            formControlName="carteira_trabalho">
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</form>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div class="container-actions">
+    <div>
+        <div *ngIf="isLoading" class="loader"></div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="end center">
+        <button mat-dialog-close mat-flat-button [hidden]="isLoading" color="warn">Cancelar</button>
+        &nbsp;
+        <button mat-flat-button color="primary" [hidden]="isLoading" (click)="atualizarCadastro()">Salvar</button>
+    </div>
+</div>

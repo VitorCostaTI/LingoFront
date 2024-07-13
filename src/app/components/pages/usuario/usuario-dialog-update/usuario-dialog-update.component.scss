@@ -1,0 +1,59 @@
+.container {
+    margin: 15px;
+}
+
+.body {
+    width: 100%;
+    text-align: center;
+    margin: 25px;
+}
+
+.post {
+    margin-top: 25px;
+    margin-right: 15px;
+}
+
+.form mat-form-field {
+    width: 100%;
+    margin-left: 15px;
+}
+
+.form mat-hint {
+    color: red;
+}
+
+.margin {
+    margin-top: 15px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.end {
+    display: flex;
+    justify-content: end;
+}
+
+.container-actions {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}

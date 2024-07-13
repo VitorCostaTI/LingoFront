@@ -29,7 +29,7 @@ const ELEMENT_DATA: ClienteElement[] = [
     telefone2: '+55 (19) 98921-4502',
     localizacao: 'Jd. Nova Suiça, Limeira - SP',
     logradouro: "Rua esquina da quadra",
-    cep:"13000-000",
+    cep: "13000-000",
     bairro: "Jd. Nova Suiça",
     cidade: "Perdida",
     estado: "SP",
@@ -43,7 +43,7 @@ const ELEMENT_DATA: ClienteElement[] = [
     telefone2: '+55 (91) 99573-4310',
     localizacao: 'Barreiro, Belém - PA',
     logradouro: "Rua esquina da quadra",
-    cep:"13000-000",
+    cep: "13000-000",
     bairro: "Barreiro",
     cidade: "Belém",
     estado: "PA",
@@ -57,7 +57,7 @@ const ELEMENT_DATA: ClienteElement[] = [
     telefone2: '+55 (92) 99987-5946',
     localizacao: 'Vila Buriti, Manaus - AM',
     logradouro: "Rua esquina da quadra",
-    cep:"13000-000",
+    cep: "13000-000",
     bairro: "Vila Buriti",
     cidade: "Manaus",
     estado: "AM",
@@ -71,7 +71,7 @@ const ELEMENT_DATA: ClienteElement[] = [
     telefone2: '+55 (81) 98678-8263',
     localizacao: 'Guabiraba, Recife - PE',
     logradouro: "Rua esquina da quadra",
-    cep:"13000-000",
+    cep: "13000-000",
     bairro: "Guabiraba",
     cidade: "Recife",
     estado: "PE",
@@ -85,7 +85,7 @@ const ELEMENT_DATA: ClienteElement[] = [
     telefone2: '+55 (27) 99225-1705',
     localizacao: 'Centro, Vitória - ES',
     logradouro: "Rua esquina da quadra",
-    cep:"13000-000",
+    cep: "13000-000",
     bairro: "Centro",
     cidade: "Vitória",
     estado: "ES",
@@ -99,7 +99,7 @@ const ELEMENT_DATA: ClienteElement[] = [
     telefone2: '+55 (79) 98638-6652',
     localizacao: 'Inácio Barbosa, Aracaju - SE',
     logradouro: "Rua esquina da quadra",
-    cep:"13000-000",
+    cep: "13000-000",
     bairro: "Inácio Barbosa",
     cidade: "Aracaju",
     estado: "SE",
@@ -113,7 +113,7 @@ const ELEMENT_DATA: ClienteElement[] = [
     telefone2: '+55 (12) 99508-4456',
     localizacao: 'Jardim Jacinto, Jacareí -SP',
     logradouro: "Rua esquina da quadra",
-    cep:"13000-000",
+    cep: "13000-000",
     bairro: "Jardim Jacinto",
     cidade: "Jacareí",
     estado: "SP",
@@ -127,7 +127,7 @@ const ELEMENT_DATA: ClienteElement[] = [
     telefone2: '+55 (11) 99141-2866',
     localizacao: 'Presidente Altino, Osasco - SP',
     logradouro: "Rua esquina da quadra",
-    cep:"13000-000",
+    cep: "13000-000",
     bairro: "Presidente Altino",
     cidade: "Osasco",
     estado: "SP",
@@ -141,7 +141,7 @@ const ELEMENT_DATA: ClienteElement[] = [
     telefone2: '+55 (51) 99777-9529',
     localizacao: 'Vila Nova, Porto Alegre - RS',
     logradouro: "Rua esquina da quadra",
-    cep:"13000-000",
+    cep: "13000-000",
     bairro: "Vila Nova",
     cidade: "Porto Alegre",
     estado: "RS",
@@ -155,7 +155,7 @@ const ELEMENT_DATA: ClienteElement[] = [
     telefone2: '+55 (21) 99262-1519',
     localizacao: 'Porto Novo, São Gonçalo - RJ',
     logradouro: "Rua esquina da quadra",
-    cep:"13000-000",
+    cep: "13000-000",
     bairro: "Porto Novo",
     cidade: "São Gonçalo",
     estado: "RJ",
@@ -170,7 +170,7 @@ const ELEMENT_DATA: ClienteElement[] = [
 })
 
 export class ClientesComponent {
-  
+
   constructor(public dialog: MatDialog, private confirmacaoService: ConfirmacaoService) { }
 
   isActive = false;
@@ -190,7 +190,6 @@ export class ClientesComponent {
       exitAnimationDuration,
       data: cliente
     });
-    console.log(cliente)
   }
 
   openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, nome: string): void {

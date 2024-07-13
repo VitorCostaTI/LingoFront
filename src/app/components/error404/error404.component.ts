@@ -11,6 +11,6 @@ export class Error404Component {
   constructor(private templateService: TemplateCrudService) { }
 
   ngOnInit() {
-    this.templateService.snackBarFailed("Sucesso ao executar requisição", "")
+    this.templateService.snackBarFailed("Falha ao buscar requisição", "")
   }
 }
