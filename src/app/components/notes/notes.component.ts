@@ -11,6 +11,7 @@ import { TemplateCrudService } from 'src/app/modules/services/Template/template-
 export class NotesComponent {
 
   cadastroColuna: FormGroup;
+  limpaNotas: any = []
 
   entidades: Array<{ anotacao: string }> = [];
   entidade: Array<{ anotacao: string }> = [];
@@ -39,7 +40,13 @@ export class NotesComponent {
     const index = this.entidades.indexOf(entry);
     if (index >= 0) {
       this.entidades.splice(index, 1);
-      this.dataSource.data = this.entidades.slice(); // Atualiza o datasource
+      this.dataSource.data = this.entidades.slice();
     }
+  }
+
+  saveColumn(){
+    console.log(this.dataSource.data);
+    this.entidades.length = 0;
+    this.templateService.snackBarSuccess('Anotações salvas com sucesso!', '')
   }
 }
