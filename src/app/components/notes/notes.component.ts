@@ -10,6 +10,8 @@ import { TemplateCrudService } from 'src/app/modules/services/Template/template-
 })
 export class NotesComponent {
 
+  isLoading: boolean = false;
+
   cadastroColuna: FormGroup;
   limpaNotas: any = []
 
@@ -44,9 +46,12 @@ export class NotesComponent {
     }
   }
 
-  saveColumn(){
-    console.log(this.dataSource.data);
-    this.entidades.length = 0;
-    this.templateService.snackBarSuccess('Anotações salvas com sucesso!', '')
+  saveColumn() {
+    this.isLoading = true;
+    setTimeout(() => {
+      console.log(this.dataSource.data);
+      this.entidades.length = 0;
+      this.templateService.snackBarSuccess('Anotações salvas com sucesso!', '');
+    }, 1000)
   }
 }

@@ -12,6 +12,8 @@
         </mat-form-field>
     </div>
     <div fxLayoutAlign="center">
+        <button mat-flat-button color="warn" *ngIf="entidades.length == 0" mat-dialog-close>Cancelar</button>
+        &nbsp;
         <button mat-flat-button color="primary" (click)="addColumn()" matTooltip="Registra nova coluna"
             [disabled]="cadastroColuna.invalid">Salvar</button>
     </div>
@@ -39,10 +41,17 @@
 
     <mat-divider></mat-divider>
 
+    <br>
+    <br>
+
+    <div>
+        <div *ngIf="isLoading" class="loader"></div>
+    </div>
+
     <div class="actions" fxLayout="row" fxLayoutAlign="end center">
-        <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
+        <button mat-dialog-close mat-flat-button color="warn" [hidden]="isLoading">Cancelar</button>
         &nbsp;
-        <button mat-flat-button color="primary" (click)="saveColumn()" mat-dialog-close
-            matTooltip="Realiza requisição da nova tabela">Salvar</button>
+        <button mat-flat-button color="primary" (click)="saveColumn()" matTooltip="Realiza requisição da nova tabela"
+            [hidden]="isLoading">Salvar</button>
     </div>
 </div>
