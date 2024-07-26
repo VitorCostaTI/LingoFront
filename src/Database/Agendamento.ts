@@ -1,6 +1,6 @@
 import { Agendamento } from "src/app/modules/model/Agendamento";
 
-export const Agendamento_base: Agendamento[] = [
+export const Agendamento_DATA: Agendamento[] = [
   {
     data: new Date('2021-04-19T10:00:00.000'), 
     cliente: 'Marcela Maya Luiza da Paz', 

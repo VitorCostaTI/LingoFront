@@ -4,7 +4,7 @@ import { DespesasComponent } from './dialog/despesas/despesas.component';
 import { FaturamentoComponent } from './dialog/faturamento/faturamento.component';
 import { NascimentoComponent } from './dialog/nascimento/nascimento.component';
 import { RankingComponent } from './dialog/ranking/ranking.component';
-import { Agendamento_base } from 'src/Database/Agendamento';
+import { Agendamento_DATA } from 'src/Database/Agendamento';
 
 @Component({
   selector: 'app-dashboard',
@@ -57,5 +57,5 @@ export class DashboardComponent {
     'telefone'
   ];
 
-  dataSource = Agendamento_base;
+  dataSource = Agendamento_DATA;
 }
