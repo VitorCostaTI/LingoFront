@@ -14,8 +14,6 @@ Este projeto é desenvolvido com [Angular CLI](https://github.com/angular/angula
 
 ## Software.
 
-* A documentação deste projeto estará disponivel em outro [repositório](https://github.com/VitorCostaTI/LingoDocs), de meu perfil.
-
 * O Back End deste projeto está disponivel em outro [repositório](https://github.com/VitorCostaTI/LingoBack), de meu perfil.
 
 * Todos os dados aqui apresentados são meramente ilustrativos
