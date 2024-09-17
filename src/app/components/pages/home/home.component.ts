@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ConfiguracoesComponent } from '../../dialogs/configuracoes/configuracoes.component';
+import { Clipboard } from '@angular/cdk/clipboard';
 import { NotificacoesComponent } from '../../dialogs/notificacoes/notificacoes.component';
 import { NotesComponent } from '../../notes/notes.component';
+import { TemplateCrudService } from 'src/app/modules/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-home',
@@ -10,17 +11,13 @@ import { NotesComponent } from '../../notes/notes.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  constructor(public dialog: MatDialog) { }
-
   title = 'frontLingo';
 
-  openDialogConfiguracoes(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(ConfiguracoesComponent, {
-      width: '750px',
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
-  }
+  constructor(
+    public clipboard: Clipboard,
+    public dialog: MatDialog,
+    public templateService: TemplateCrudService
+  ) { }
 
   openDialogNotificacoes(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(NotificacoesComponent, {
@@ -36,5 +33,11 @@ export class HomeComponent {
       enterAnimationDuration,
       exitAnimationDuration,
     });
+  }
+
+  copyLinkedln() {
+    const link = 'https://www.linkedin.com/in/vitor-costa-10566b22a/'
+    this.clipboard.copy(link)
+    this.templateService.snackBarSuccess('Link copiado com sucesso', '')
   }
 }
