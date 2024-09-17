@@ -1,9 +1,9 @@
-import { Component }                            from '@angular/core';
-import { MatDialog }                            from '@angular/material/dialog';
-import { OrdemServicoDialogAddComponent }       from './ordem-servico-dialog-add/ordem-servico-dialog-add.component';
-import { OrdemServicoDialogUpdateComponent }    from './ordem-servico-dialog-update/ordem-servico-dialog-update.component';
+import { Component, HostListener } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { OrdemServicoDialogAddComponent } from './ordem-servico-dialog-add/ordem-servico-dialog-add.component';
+import { OrdemServicoDialogUpdateComponent } from './ordem-servico-dialog-update/ordem-servico-dialog-update.component';
 import { OrdemServicoDialogRelatorioComponent } from './ordem-servico-dialog-relatorio/ordem-servico-dialog-relatorio.component';
-import { OrdemServicoDialogFinishComponent }    from './ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';
+import { OrdemServicoDialogFinishComponent } from './ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';
 
 @Component({
   selector: 'app-ordem-servico',
@@ -11,7 +11,13 @@ import { OrdemServicoDialogFinishComponent }    from './ordem-servico-dialog-fin
   styleUrls: ['./ordem-servico.component.scss']
 })
 export class OrdemServicoComponent {
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) { }
+
+  @HostListener('window:keydown.control.y', ['$event'])
+  handleSave(event: KeyboardEvent) {
+    event.preventDefault();
+    this.openDialogServicoAdicionar('500ms', '250ms')
+  }
 
   openDialogServicoAdicionar(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(OrdemServicoDialogAddComponent, {

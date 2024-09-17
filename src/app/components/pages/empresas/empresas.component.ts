@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { EmpresasdialogComponent } from './empresas-dialog/empresas-dialog.component';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
@@ -14,9 +14,18 @@ import { Empresa_DATA } from 'src/Database/Empresa';
 
 export class EmpresasComponent {
 
-  constructor(public dialog: MatDialog, private confirmacaoService: ConfirmacaoService) { }
-
   isActive = false;
+
+  constructor(
+    public dialog: MatDialog,
+    private confirmacaoService: ConfirmacaoService
+  ) { }
+
+  @HostListener('window:keydown.control.y', ['$event'])
+  handleSave(event: KeyboardEvent){
+    event.preventDefault();
+    this.openDialogEmpresas('500ms', '250ms')
+  }
 
   openDialogEmpresas(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(EmpresasdialogComponent, {

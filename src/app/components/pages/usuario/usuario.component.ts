@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UsuariosDialogComponent } from './usuarios-dialog/usuarios-dialog.component';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -15,13 +15,17 @@ import { Colaborador_DATA } from 'src/Database/Colaborador';
 
 export class UsuarioComponent {
 
-  cadastroUsuario: FormGroup;
   isActive = false;
 
-  constructor(public dialog: MatDialog, private fb: FormBuilder, private confirmacaoService: ConfirmacaoService) {
-    this.cadastroUsuario = this.fb.group({
-      nome: []
-    })
+  constructor(
+    public dialog: MatDialog,
+    private confirmacaoService: ConfirmacaoService
+  ) { }
+
+  @HostListener('window:keydown.control.y', ['$event'])
+  handleSave(event: KeyboardEvent) {
+    event.preventDefault();
+    this.openDialogColaborador('500ms', '250ms')
   }
 
   openDialogColaborador(enterAnimationDuration: string, exitAnimationDuration: string): void {
