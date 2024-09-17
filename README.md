@@ -18,6 +18,10 @@ Este projeto é desenvolvido com [Angular CLI](https://github.com/angular/angula
 
 * Todos os dados aqui apresentados são meramente ilustrativos
 
+## Build
+
+Execute `ng build` para construir o projeto. Os arquivos do build serão armazenados no diretório `dist/`.
+
 ---
 
 Obrigado .\
