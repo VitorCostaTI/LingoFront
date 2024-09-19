@@ -4,6 +4,7 @@ import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.comp
 import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
 import { TemplateCrudService } from 'src/app/modules/services/Template/template-crud.service';
 import { Automacao_DATA } from 'src/Database/Automacao';
+import { AutomacoesDialogComponent } from './automacoes-dialog/automacoes-dialog.component';
 
 @Component({
   selector: 'app-automacao',
@@ -41,6 +42,14 @@ export class AutomacaoComponent {
     setTimeout(() => {
       window.location.reload();
     }, 120000);
+  }
+
+  openDialogAutomacao(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(AutomacoesDialogComponent, {
+      width: '80%',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
   }
 
   openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, nome: string): void {

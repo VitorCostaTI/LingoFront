@@ -17,8 +17,7 @@
             </div>
 
             <div class="form" fxLayout="row" fxLayoutAlign="space-between center">
-                <button mat-flat-button color="primary">Adicionar Dispositivo</button>
-                <button mat-flat-button color="primary">Buscar</button>
+                <button mat-flat-button color="primary" (click)="openDialogAutomacao('500ms', '250ms')">Adicionar Dispositivo</button>
             </div>
         </div>
     </mat-card>
@@ -44,7 +43,7 @@
                           }">{{quantidade}}
                         </p>
 
-                        <button mat-icon-button (click)="incrementar()" matTooltip="(ctrl + m)"
+                        <button mat-icon-button (click)="incrementar()" matTooltip="(ctrl + )"
                             aria-label="Aumentar quantidade"><mat-icon>add</mat-icon>
                         </button>
 
