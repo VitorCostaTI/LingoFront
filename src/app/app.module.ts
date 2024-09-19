@@ -75,6 +75,9 @@ import { ProdutosUpdateDialogComponent } from './components/pages/produtos/produ
 import { NotesComponent } from './components/notes/notes.component';
 import { UsuarioDialogUpdateComponent } from './components/pages/usuario/usuario-dialog-update/usuario-dialog-update.component';
 import { AutomacoesDialogComponent } from './components/pages/automacao/automacoes-dialog/automacoes-dialog.component';
+import { AutomacoesUpdateDialogComponent } from './components/pages/automacao/automacoes-update-dialog/automacoes-update-dialog.component';
+import { AutomacoesControlTimeComponent } from './components/pages/automacao/automacoes-control-time/automacoes-control-time.component';
+import { AutomacoesMonitoramentoComponent } from './components/pages/automacao/automacoes-monitoramento/automacoes-monitoramento.component';
 
 @NgModule({
   declarations: [
@@ -136,6 +139,9 @@ import { AutomacoesDialogComponent } from './components/pages/automacao/automaco
     NotesComponent,
     UsuarioDialogUpdateComponent,
     AutomacoesDialogComponent,
+    AutomacoesUpdateDialogComponent,
+    AutomacoesControlTimeComponent,
+    AutomacoesMonitoramentoComponent,
   ],
 
   imports: [

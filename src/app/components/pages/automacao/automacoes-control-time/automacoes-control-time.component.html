@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>Temporizador</h1>
+</div>
+
+<mat-divider></mat-divider>
+
+<form [formGroup]="registerTime">
+    <div class="post container">
+        <div fxLayout="row" fxLayoutAlign="center" class="form">
+            <mat-form-field>
+                <mat-label>Configurar tempo</mat-label>
+                <mat-select formControlName="time">
+                    <mat-option></mat-option>
+                    <mat-option value="2">2 Horas</mat-option>
+                    <mat-option value="4">4 Horas</mat-option>
+                    <mat-option value="6">6 Horas</mat-option>
+                    <mat-option value="8">8 Horas</mat-option>
+                    <mat-option value="12">12 Horas</mat-option>
+                    <mat-option value="24">24 Horas</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="margin">
+            <div *ngIf="isLoading" class="loader"></div>
+        </div>
+
+        <div class="margin" fxLayout="row" fxLayoutAlign="end center">
+            <button mat-dialog-close mat-flat-button color="warn" [hidden]="isLoading">Cancelar</button>
+            &nbsp;
+            <button mat-flat-button color="primary" [disabled]="registerTime.invalid"
+                [hidden]="isLoading">Salvar</button>
+        </div>
+    </div>
+</form>

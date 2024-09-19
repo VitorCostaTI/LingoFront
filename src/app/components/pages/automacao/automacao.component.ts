@@ -5,6 +5,9 @@ import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirm
 import { TemplateCrudService } from 'src/app/modules/services/Template/template-crud.service';
 import { Automacao_DATA } from 'src/Database/Automacao';
 import { AutomacoesDialogComponent } from './automacoes-dialog/automacoes-dialog.component';
+import { AutomacoesUpdateDialogComponent } from './automacoes-update-dialog/automacoes-update-dialog.component';
+import { AutomacoesControlTimeComponent } from './automacoes-control-time/automacoes-control-time.component';
+import { AutomacoesMonitoramentoComponent } from './automacoes-monitoramento/automacoes-monitoramento.component';
 
 @Component({
   selector: 'app-automacao',
@@ -17,6 +20,11 @@ export class AutomacaoComponent {
   isLoading: boolean = false;
   isTemperatura: boolean = false;
 
+  power: boolean = true;
+  power1: boolean = true;
+  power2: boolean = true;
+  power3: boolean = true;
+
   constructor(private dialog: MatDialog,
     private confirmacaoService: ConfirmacaoService,
     private templateService: TemplateCrudService
@@ -27,13 +35,13 @@ export class AutomacaoComponent {
   }
 
   @HostListener('window:keydown.control.m', ['$event'])
-  handlePlus(event: KeyboardEvent){
+  handlePlus(event: KeyboardEvent) {
     event.preventDefault();
     this.incrementar()
   }
 
   @HostListener('window:keydown.control.b', ['$event'])
-  handleDecrement(event: KeyboardEvent){
+  handleDecrement(event: KeyboardEvent) {
     event.preventDefault();
     this.decrementar()
   }
@@ -44,6 +52,38 @@ export class AutomacaoComponent {
     }, 120000);
   }
 
+  powerFunction(): void {
+    if (this.power === true) {
+      this.power = false;
+    } else {
+      this.power = true;
+    }
+  }
+
+  powerFunction1(): void {
+    if (this.power1 === true) {
+      this.power1 = false;
+    } else {
+      this.power1 = true;
+    }
+  }
+
+  powerFunction2(): void {
+    if (this.power2 === true) {
+      this.power2 = false;
+    } else {
+      this.power2 = true;
+    }
+  }
+
+  powerFunction3(): void {
+    if (this.power3 === true) {
+      this.power3 = false;
+    } else {
+      this.power3 = true;
+    }
+  }
+
   openDialogAutomacao(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(AutomacoesDialogComponent, {
       width: '80%',
@@ -52,10 +92,35 @@ export class AutomacaoComponent {
     });
   }
 
+  openDialogUpdate(enterAnimationDuration: string, exitAnimationDuration: string, automacao: any): void {
+    this.dialog.open(AutomacoesUpdateDialogComponent, {
+      width: '80%',
+      enterAnimationDuration,
+      exitAnimationDuration,
+      data: automacao
+    });
+  }
+
   openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, nome: string): void {
     this.confirmacaoService.acao = "desconectar";
     this.confirmacaoService.nome = nome;
     this.dialog.open(ConfirmacaoComponent, {
+      width: '80%',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
+
+  openDialogTemporizador(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(AutomacoesControlTimeComponent, {
+      width: '80%',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
+
+  openDialogMonitoramento(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(AutomacoesMonitoramentoComponent, {
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,

@@ -17,7 +17,8 @@
             </div>
 
             <div class="form" fxLayout="row" fxLayoutAlign="space-between center">
-                <button mat-flat-button color="primary" (click)="openDialogAutomacao('500ms', '250ms')">Adicionar Dispositivo</button>
+                <button mat-flat-button color="primary" (click)="openDialogAutomacao('500ms', '250ms')">Adicionar
+                    Dispositivo</button>
             </div>
         </div>
     </mat-card>
@@ -36,21 +37,21 @@
                             aria-label="Diminuir quantidade"><mat-icon>remove</mat-icon>
                         </button>
 
-                        <p style="font-size: 20px; margin-left: 5px; margin-right: 5px;"
-                            [ngClass]="{
+                        <p style="font-size: 20px; margin-left: 5px; margin-right: 5px;" [ngClass]="{
                             'frio': quantidade <= 20,
                             'calor': quantidade >= 30
                           }">{{quantidade}}
                         </p>
 
-                        <button mat-icon-button (click)="incrementar()" matTooltip="(ctrl + )"
+                        <button mat-icon-button (click)="incrementar()" matTooltip="(ctrl + m)"
                             aria-label="Aumentar quantidade"><mat-icon>add</mat-icon>
                         </button>
 
                     </div>
                     <div>
-                        <button mat-icon-button>
-                            <mat-icon style="color: red;"> power_settings_new</mat-icon>
+                        <button mat-icon-button (click)="powerFunction()">
+                            <mat-icon [ngStyle]="{'color': power ? 'red' : 'rgb(126, 121, 121)'}">
+                                power_settings_new</mat-icon>
                         </button>
                     </div>
                 </div>
@@ -69,47 +70,50 @@
                             <!-- Coluna Status -->
                             <ng-container matColumnDef="status">
                                 <th mat-header-cell *matHeaderCellDef> Status </th>
-                                <td mat-cell *matCellDef="let element"
-                                    [ngStyle]="{'color': element.status === 'Conectado' ? 'green' : 'red'}">
-                                    {{element.status}}
+                                <td mat-cell *matCellDef="let automacao"
+                                    [ngStyle]="{'color': automacao.status === 'Conectado' ? 'green' : 'red'}">
+                                    {{automacao.status}}
                                 </td>
                             </ng-container>
 
                             <!-- Coluna Dispositivo -->
                             <ng-container matColumnDef="ip">
                                 <th mat-header-cell *matHeaderCellDef> IP </th>
-                                <td mat-cell *matCellDef="let element"> {{element.ip}} </td>
+                                <td mat-cell *matCellDef="let automacao"> {{automacao.ip}} </td>
                             </ng-container>
 
                             <!-- Coluna Nome -->
                             <ng-container matColumnDef="dispositivo">
                                 <th mat-header-cell *matHeaderCellDef> Dispositivo </th>
-                                <td mat-cell *matCellDef="let element"> {{element.modelo}} - {{element.fabricante}}</td>
+                                <td mat-cell *matCellDef="let automacao"> {{automacao.modelo}} -
+                                    {{automacao.fabricante}}</td>
                             </ng-container>
 
                             <!-- Coluna Firmware -->
                             <ng-container matColumnDef="firmware">
                                 <th mat-header-cell *matHeaderCellDef> Leitor </th>
-                                <td mat-cell *matCellDef="let element"> {{element.equipamento}} - {{element.firmware}}
+                                <td mat-cell *matCellDef="let automacao"> {{automacao.equipamento}} -
+                                    {{automacao.firmware}}
                                 </td>
                             </ng-container>
 
                             <!-- Coluna Porta -->
                             <ng-container matColumnDef="porta">
                                 <th mat-header-cell *matHeaderCellDef> Porta </th>
-                                <td mat-cell *matCellDef="let element"> {{element.porta}} </td>
+                                <td mat-cell *matCellDef="let automacao"> {{automacao.porta}} </td>
                             </ng-container>
 
                             <!-- Coluna Porta -->
                             <ng-container matColumnDef="manutencao">
                                 <th mat-header-cell *matHeaderCellDef> Manutenção </th>
-                                <td mat-cell *matCellDef="let element"> {{element.ultima_manutencao | date: 'dd/MM/yyyy'}} </td>
+                                <td mat-cell *matCellDef="let automacao"> {{automacao.ultima_manutencao | date:
+                                    'dd/MM/yyyy'}} </td>
                             </ng-container>
 
                             <!--   Coluna Ações -->
                             <ng-container matColumnDef="acoes">
                                 <th mat-header-cell *matHeaderCellDef> </th>
-                                <td mat-cell *matCellDef="let element">
+                                <td mat-cell *matCellDef="let automacao">
 
                                     <div *ngIf="isLoading" class="loader"></div>
 
@@ -119,9 +123,15 @@
                                         <mat-icon>refresh</mat-icon>
                                     </button>
 
+                                    <!--Ícone de atualizar -->
+                                    <button [hidden]="isLoading" mat-icon-button
+                                        (click)="openDialogUpdate('500ms', '250ms', automacao)">
+                                        <mat-icon style="color: blue;">edit</mat-icon>
+                                    </button>
+
                                     <!--Ícone de excluir  -->
                                     <button [hidden]="isLoading" mat-icon-button
-                                        (click)="openDialogDelete('500ms', '250ms', element.ip)">
+                                        (click)="openDialogDelete('500ms', '250ms', automacao.ip)">
                                         <mat-icon style="color: red;">delete</mat-icon>
                                     </button>
                                 </td>
@@ -139,11 +149,13 @@
                                 <div fxLayout="row" fxLayoutAlign="space-between center">
                                     ControlFood - Ração
                                     <div>
-                                        <button mat-icon-button>
+                                        <button mat-icon-button (click)="openDialogTemporizador('500ms', '250ms')">
                                             <mat-icon>timer</mat-icon>
                                         </button>
-                                        <button mat-icon-button>
-                                            <mat-icon style="color: red;"> power_settings_new</mat-icon>
+                                        <button mat-icon-button (click)="powerFunction1()">
+                                            <mat-icon [ngStyle]="{'color': power1 ? 'red' : 'rgb(126, 121, 121)'}">
+                                                power_settings_new
+                                            </mat-icon>
                                         </button>
                                     </div>
                                 </div>
@@ -152,50 +164,29 @@
                                 <div fxLayout="row" fxLayoutAlign="space-between center">
                                     ControlFood - Bebedouro
                                     <div>
-                                        <button mat-icon-button>
+                                        <button mat-icon-button (click)="openDialogTemporizador('500ms', '250ms')">
                                             <mat-icon>timer</mat-icon>
                                         </button>
-                                        <button mat-icon-button>
-                                            <mat-icon style="color: red;"> power_settings_new</mat-icon>
+                                        <button mat-icon-button (click)="powerFunction2()">
+                                            <mat-icon [ngStyle]="{'color': power2 ? 'red' : 'rgb(126, 121, 121)'}">
+                                                power_settings_new
+                                            </mat-icon>
                                         </button>
                                     </div>
                                 </div>
                             </mat-list-item>
-                            <mat-list-item role="listitem">
-                                <div fxLayout="row" fxLayoutAlign="space-between center">
-                                    ControlID
-                                    <div>
-                                        <button mat-icon-button>
-                                            <mat-icon>settings</mat-icon>
-                                        </button>
-                                        <button mat-icon-button>
-                                            <mat-icon style="color: red;"> power_settings_new</mat-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </mat-list-item>
-                            <mat-list-item role="listitem">
-                                <div fxLayout="row" fxLayoutAlign="space-between center">
-                                    Relogio Ponto
-                                    <div>
-                                        <button mat-icon-button>
-                                            <mat-icon>settings</mat-icon>
-                                        </button>
-                                        <button mat-icon-button>
-                                            <mat-icon style="color: red;"> power_settings_new</mat-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </mat-list-item>
+
                             <mat-list-item role="listitem">
                                 <div fxLayout="row" fxLayoutAlign="space-between center">
                                     Monitoramento
                                     <div>
-                                        <button mat-icon-button>
+                                        <button mat-icon-button (click)="openDialogMonitoramento('500ms', '250ms')">
                                             <mat-icon>live_tv</mat-icon>
                                         </button>
-                                        <button mat-icon-button>
-                                            <mat-icon style="color: red;"> power_settings_new</mat-icon>
+                                        <button mat-icon-button (click)="powerFunction3()">
+                                            <mat-icon [ngStyle]="{'color': power3 ? 'red' : 'rgb(126, 121, 121)'}">
+                                                power_settings_new
+                                            </mat-icon>
                                         </button>
                                     </div>
                                 </div>
