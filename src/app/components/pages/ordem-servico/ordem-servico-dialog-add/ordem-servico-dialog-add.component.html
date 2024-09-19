@@ -7,11 +7,11 @@
 <form [formGroup]="addOrdemServico">
   <div class="post container">
     <div fxLayout="row" fxLayoutAlign="center" class="form">
-      <mat-form-field class="example-full-width">
+      <mat-form-field>
         <mat-label>Cliente</mat-label>
         <mat-select formControlName="cliente">
-          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-            {{option.cliente}}
+          <mat-option *ngFor="let clientes of cliente" [value]="clientes.cliente">
+            {{clientes.cliente}}
           </mat-option>
         </mat-select>
       </mat-form-field>
@@ -21,7 +21,7 @@
       <mat-form-field>
         <mat-label>Preço</mat-label>
         <input matInput currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" value="0"
-          formControlName="preco" /> 
+          formControlName="preco" />
       </mat-form-field>
     </div>
 

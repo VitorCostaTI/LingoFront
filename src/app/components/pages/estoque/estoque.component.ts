@@ -23,10 +23,6 @@ export class EstoqueComponent {
   }
 
   ngOnInit(): void {
-    this.getColaborador();
-  }
-
-  getColaborador(): void {
     this.colaborador = Colaborador_DATA;
   }
 
