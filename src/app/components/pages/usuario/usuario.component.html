@@ -26,7 +26,7 @@
       <!-- Coluna Localização -->
       <ng-container matColumnDef="localizacao">
         <th mat-header-cell *matHeaderCellDef> Localização </th>
-        <td mat-cell *matCellDef="let usuario"> {{usuario.localizacao}} </td>
+        <td mat-cell *matCellDef="let usuario"> {{usuario.bairro}}, {{usuario.cidade}} - {{usuario.estado}} </td>
       </ng-container>
 
       <!-- Coluna E-mail -->

@@ -11,7 +11,7 @@
                 <div fxLayout="row" fxLayoutAlign="center" class="form">
                     <mat-form-field>
                         <mat-label>Colaborador</mat-label>
-                        <input matInput [(ngModel)]="data.usuario" formControlName="colaborador">
+                        <input matInput [(ngModel)]="data.colaborador" formControlName="colaborador">
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Setor</mat-label>
@@ -73,16 +73,10 @@
                     <mat-label>Cidade</mat-label>
                     <input matInput [(ngModel)]="data.cidade" formControlName="cidade">
                 </mat-form-field>
-                <mat-form-field class="example-full-width">
+
+                <mat-form-field>
                     <mat-label>Estado</mat-label>
-                    <input matInput aria-label="State">
-                    <mat-select [(ngModel)]="data.estado" formControlName="estado">
-                        <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
-                            <img alt="" class="example-option-img" [src]="state.flag" height="25">
-                            &nbsp;
-                            <span>{{state.name}}</span> - {{state.sigla}}
-                        </mat-option>
-                    </mat-select>
+                    <input matInput [(ngModel)]="data.estado" formControlName="estado">
                 </mat-form-field>
             </div>
 
