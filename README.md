@@ -6,9 +6,9 @@ Este projeto é desenvolvido com [Angular CLI](https://github.com/angular/angula
 
 ## Iniciando Scripts.
 
-* Comece instalando as dependências do projeto: **npm install**.
+* Comece instalando as dependências do projeto: `npm install`.
 
-* Para iniciar o FrontEnd basta executar o comando de start do angular **ng serve**.
+* Execute `ng serve` para um servidor dev. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
 
 * Esta documentação está em constante mudança então lembre-se de mante-la sempre atualizada e seguir as dicas aqui disponiveis.
 
