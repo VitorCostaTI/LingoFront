@@ -51,8 +51,6 @@ import { DashboardModule } from './modules/modules/dashboard/dashboard.module';
   declarations: [
     AppComponent,
 
-    LoginComponent,
-
     ConfirmacaoComponent,
     Error404Component,
     HomeComponent,
