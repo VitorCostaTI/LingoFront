@@ -10,7 +10,6 @@ import { NgModule } from '@angular/core';
 
 import { SharedModule } from './modules/shared/shared.module';
 
-
 //Pages
 
 import { AuditoriaComponent } from './components/pages/auditoria/auditoria.component';
@@ -57,6 +56,7 @@ import { AutomacoesModule } from './modules/modules/automacoes/automacoes.module
 import { EmpresasModule } from './modules/modules/empresas/empresas.module';
 import { PermissaoModule } from './modules/modules/permissao/permissao.module';
 import { ProdutosModule } from './modules/modules/produtos/produtos.module';
+import { UsuariosModule } from './modules/modules/usuarios/usuarios.module';
 
 @NgModule({
   declarations: [
@@ -94,15 +94,11 @@ import { ProdutosModule } from './modules/modules/produtos/produtos.module';
 
     RankingComponent,
 
-    UsuarioComponent,
-    UsuariosDialogComponent,
-
     LoginComponent,
     HomeComponent,
     ConfirmacaoComponent,
     AutomacaoComponent,
     NotesComponent,
-    UsuarioDialogUpdateComponent,
   ],
 
   imports: [
@@ -119,7 +115,8 @@ import { ProdutosModule } from './modules/modules/produtos/produtos.module';
     EmpresasModule,
     ClientesModule,
     PermissaoModule,
-    ProdutosModule
+    ProdutosModule,
+    UsuariosModule
   ],
   exports: [
     HttpClientModule,
