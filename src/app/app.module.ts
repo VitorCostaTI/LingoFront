@@ -12,7 +12,6 @@ import { SharedModule } from './modules/shared/shared.module';
 
 //Pages
 
-import { AuditoriaComponent } from './components/pages/auditoria/auditoria.component';
 import { ComunidadeComponent } from './components/pages/comunidade/comunidade.component';
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 import { EstoqueComponent } from './components/pages/estoque/estoque.component';
@@ -46,12 +45,11 @@ import { PermissaoModule } from './modules/modules/permissao/permissao.module';
 import { ProdutosModule } from './modules/modules/produtos/produtos.module';
 import { UsuariosModule } from './modules/modules/usuarios/usuarios.module';
 import { OrdemServicoModule } from './modules/modules/ordem-servico/ordem-servico.module';
+import { AuditoriaModule } from './modules/modules/auditoria/auditoria.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-
-    AuditoriaComponent,
 
     ConfiguracoesComponent,
 
@@ -91,6 +89,7 @@ import { OrdemServicoModule } from './modules/modules/ordem-servico/ordem-servic
 
     SharedModule,
 
+    AuditoriaModule,
     AutomacoesModule,
     EmpresasModule,
     ClientesModule,
