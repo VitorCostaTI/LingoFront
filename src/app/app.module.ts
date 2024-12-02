@@ -12,12 +12,10 @@ import { SharedModule } from './modules/shared/shared.module';
 
 //Pages
 
-import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 import { EstoqueComponent } from './components/pages/estoque/estoque.component';
 
 // Componentes
 
-import { ConfiguracoesComponent } from './components/dialogs/configuracoes/configuracoes.component';
 import { DespesasComponent } from './components/pages/dashboard/dialog/despesas/despesas.component';
 import { Error404Component } from './components/error404/error404.component';
 import { FaturamentoComponent } from './components/pages/dashboard/dialog/faturamento/faturamento.component';
@@ -47,33 +45,20 @@ import { OrdemServicoModule } from './modules/modules/ordem-servico/ordem-servic
 import { AuditoriaModule } from './modules/modules/auditoria/auditoria.module';
 import { ComunidadeModule } from './modules/modules/comunidade/comunidade.module';
 import { ConfiguracaoModule } from './modules/modules/configuracao/configuracao.module';
+import { DashboardModule } from './modules/modules/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
     AppComponent,
 
-    DashboardComponent,
-
-    DespesasComponent,
-
-    EstoqueComponent,
-
-    Error404Component,
-
-    FaturamentoComponent,
-
-    NavegacaoComponent,
-
-    NascimentoComponent,
-
-    NotificacoesComponent,
-
-    RankingComponent,
-
     LoginComponent,
-    HomeComponent,
+
     ConfirmacaoComponent,
+    Error404Component,
+    HomeComponent,
+    NavegacaoComponent,
     NotesComponent,
+    NotificacoesComponent,
   ],
 
   imports: [
@@ -83,13 +68,13 @@ import { ConfiguracaoModule } from './modules/modules/configuracao/configuracao.
     HttpClientModule,
     NgxMaskModule.forRoot(),
     ReactiveFormsModule,
-
     SharedModule,
 
     AuditoriaModule,
     AutomacoesModule,
     ComunidadeModule,
     ConfiguracaoModule,
+    DashboardModule,
     EmpresasModule,
     ClientesModule,
     OrdemServicoModule,
