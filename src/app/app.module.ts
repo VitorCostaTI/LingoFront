@@ -46,6 +46,8 @@ import { AuditoriaModule } from './modules/modules/auditoria/auditoria.module';
 import { ComunidadeModule } from './modules/modules/comunidade/comunidade.module';
 import { ConfiguracaoModule } from './modules/modules/configuracao/configuracao.module';
 import { DashboardModule } from './modules/modules/dashboard/dashboard.module';
+import { EstoqueModule } from './modules/modules/estoque/estoque.module';
+import { LoginModule } from './modules/modules/login/login.module';
 
 @NgModule({
   declarations: [
@@ -70,11 +72,13 @@ import { DashboardModule } from './modules/modules/dashboard/dashboard.module';
 
     AuditoriaModule,
     AutomacoesModule,
+    ClientesModule,
     ComunidadeModule,
     ConfiguracaoModule,
     DashboardModule,
     EmpresasModule,
-    ClientesModule,
+    EstoqueModule,
+    LoginModule,
     OrdemServicoModule,
     PermissaoModule,
     ProdutosModule,
