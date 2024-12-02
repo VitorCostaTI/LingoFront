@@ -27,29 +27,18 @@ import { FaturamentoComponent } from './components/pages/dashboard/dialog/fatura
 import { NavegacaoComponent } from './components/navegacao/navegacao.component';
 import { NascimentoComponent } from './components/pages/dashboard/dialog/nascimento/nascimento.component';
 import { NotificacoesComponent } from './components/dialogs/notificacoes/notificacoes.component';
-
-import { OrdemServicoComponent } from './components/pages/ordem-servico/ordem-servico.component';
-import { OrdemServicoDialogAddComponent } from './components/pages/ordem-servico/ordem-servico-dialog-add/ordem-servico-dialog-add.component';
-import { OrdemServicoDialogFinishComponent } from './components/pages/ordem-servico/ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';
-import { OrdemServicoDialogRelatorioComponent } from './components/pages/ordem-servico/ordem-servico-dialog-relatorio/ordem-servico-dialog-relatorio.component';
-import { OrdemServicoDialogUpdateComponent } from './components/pages/ordem-servico/ordem-servico-dialog-update/ordem-servico-dialog-update.component';
-
 import { RankingComponent } from './components/pages/dashboard/dialog/ranking/ranking.component';
-
-import { UsuarioComponent } from './components/pages/usuario/usuario.component';
-import { UsuariosDialogComponent } from './components/pages/usuario/usuarios-dialog/usuarios-dialog.component';
 
 // Máscara
 
 import { NgxMaskModule } from 'ngx-mask';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 import { LoginComponent } from './components/account/login/login.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { ConfirmacaoComponent } from './components/dialogs/confirmacao/confirmacao.component';
-import { AutomacaoComponent } from './components/pages/automacao/automacao.component';
 import { NotesComponent } from './components/notes/notes.component';
-import { UsuarioDialogUpdateComponent } from './components/pages/usuario/usuario-dialog-update/usuario-dialog-update.component';
 
 import { ClientesModule } from './modules/modules/clientes/clientes.module';
 import { AutomacoesModule } from './modules/modules/automacoes/automacoes.module';
@@ -57,6 +46,7 @@ import { EmpresasModule } from './modules/modules/empresas/empresas.module';
 import { PermissaoModule } from './modules/modules/permissao/permissao.module';
 import { ProdutosModule } from './modules/modules/produtos/produtos.module';
 import { UsuariosModule } from './modules/modules/usuarios/usuarios.module';
+import { OrdemServicoModule } from './modules/modules/ordem-servico/ordem-servico.module';
 
 @NgModule({
   declarations: [
@@ -86,12 +76,6 @@ import { UsuariosModule } from './modules/modules/usuarios/usuarios.module';
 
     NotificacoesComponent,
 
-    OrdemServicoComponent,
-    OrdemServicoDialogAddComponent,
-    OrdemServicoDialogFinishComponent,
-    OrdemServicoDialogRelatorioComponent,
-    OrdemServicoDialogUpdateComponent,
-
     RankingComponent,
 
     LoginComponent,
@@ -113,9 +97,10 @@ import { UsuariosModule } from './modules/modules/usuarios/usuarios.module';
     AutomacoesModule,
     EmpresasModule,
     ClientesModule,
+    OrdemServicoModule,
     PermissaoModule,
     ProdutosModule,
-    UsuariosModule
+    UsuariosModule,
   ],
   exports: [
     HttpClientModule,
