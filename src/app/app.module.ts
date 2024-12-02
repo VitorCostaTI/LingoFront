@@ -13,30 +13,16 @@ import { SharedModule } from './modules/shared/shared.module';
 // Componentes
 
 import { AuditoriaComponent }                   from './components/pages/auditoria/auditoria.component';
-
-import { CartaoComponent }                      from './components/cartao/cartao.component';
-
+import { CartaoComponent }                      from './components/cartao/cartao.component'
 import { ConfiguracoesComponent }               from './components/dialogs/configuracoes/configuracoes.component';
-
 import { ComunidadeComponent }                  from './components/pages/comunidade/comunidade.component';
-
 import { DashboardComponent }                   from './components/pages/dashboard/dashboard.component';
-
 import { DespesasComponent }                    from './components/pages/dashboard/dialog/despesas/despesas.component';
-
-import { EmpresasComponent }                    from './components/pages/empresas/empresas.component';
-import { EmpresasdialogComponent }              from './components/pages/empresas/empresas-dialog/empresas-dialog.component';
-
 import { EstoqueComponent }                     from './components/pages/estoque/estoque.component';
-
 import { Error404Component }                    from './components/error404/error404.component';
-
 import { FaturamentoComponent }                 from './components/pages/dashboard/dialog/faturamento/faturamento.component';
-
 import { NavegacaoComponent }                   from './components/navegacao/navegacao.component';
-
 import { NascimentoComponent }                  from './components/pages/dashboard/dialog/nascimento/nascimento.component';
-
 import { NotificacoesComponent }                from './components/dialogs/notificacoes/notificacoes.component';
 
 import { OrdemServicoComponent }                from './components/pages/ordem-servico/ordem-servico.component';
@@ -89,9 +75,6 @@ import { AutomacoesModule } from './modules/modules/automacoes/automacoes.module
     DashboardComponent,
 
     DespesasComponent,
-    
-    EmpresasComponent,
-    EmpresasdialogComponent,
 
     EstoqueComponent,
     
@@ -125,7 +108,6 @@ import { AutomacoesModule } from './modules/modules/automacoes/automacoes.module
     HomeComponent,
     ConfirmacaoComponent,
     AutomacaoComponent,
-    EmpresasUpdateDialogComponent,
     ProdutosUpdateDialogComponent,
     NotesComponent,
     UsuarioDialogUpdateComponent,
