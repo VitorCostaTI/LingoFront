@@ -12,19 +12,12 @@ import { SharedModule } from './modules/shared/shared.module';
 
 // Componentes
 
-import { Error404Component } from './components/error404/error404.component';
-import { NavegacaoComponent } from './components/navegacao/navegacao.component';
-import { NotificacoesComponent } from './components/dialogs/notificacoes/notificacoes.component';
-
 // Máscara
 
 import { NgxMaskModule } from 'ngx-mask';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { HomeComponent } from './components/pages/home/home.component';
-import { ConfirmacaoComponent } from './components/dialogs/confirmacao/confirmacao.component';
-import { NotesComponent } from './components/notes/notes.component';
 
 import { ClientesModule } from './modules/modules/clientes/clientes.module';
 import { AutomacoesModule } from './modules/modules/automacoes/automacoes.module';
@@ -39,17 +32,11 @@ import { ConfiguracaoModule } from './modules/modules/configuracao/configuracao.
 import { DashboardModule } from './modules/modules/dashboard/dashboard.module';
 import { EstoqueModule } from './modules/modules/estoque/estoque.module';
 import { LoginModule } from './modules/modules/login/login.module';
+import { HomeModule } from './modules/modules/home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-
-    ConfirmacaoComponent,
-    Error404Component,
-    HomeComponent,
-    NavegacaoComponent,
-    NotesComponent,
-    NotificacoesComponent,
   ],
 
   imports: [
@@ -69,6 +56,7 @@ import { LoginModule } from './modules/modules/login/login.module';
     DashboardModule,
     EmpresasModule,
     EstoqueModule,
+    HomeModule,
     LoginModule,
     OrdemServicoModule,
     PermissaoModule,
