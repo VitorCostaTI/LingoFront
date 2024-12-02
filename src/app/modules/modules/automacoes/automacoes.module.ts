@@ -4,9 +4,11 @@ import { AutomacoesUpdateDialogComponent } from 'src/app/components/pages/automa
 import { AutomacoesControlTimeComponent } from 'src/app/components/pages/automacao/automacoes-control-time/automacoes-control-time.component';
 import { AutomacoesMonitoramentoComponent } from 'src/app/components/pages/automacao/automacoes-monitoramento/automacoes-monitoramento.component';
 import { SharedModule } from '../../shared/shared.module';
+import { AutomacaoComponent } from 'src/app/components/pages/automacao/automacao.component';
 
 @NgModule({
   declarations: [
+    AutomacaoComponent,
     AutomacoesDialogComponent,
     AutomacoesUpdateDialogComponent,
     AutomacoesControlTimeComponent,
@@ -16,6 +18,7 @@ import { SharedModule } from '../../shared/shared.module';
     SharedModule
   ],
   exports: [
+    AutomacaoComponent,
     AutomacoesDialogComponent,
     AutomacoesUpdateDialogComponent,
     AutomacoesControlTimeComponent,

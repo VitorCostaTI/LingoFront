@@ -97,7 +97,6 @@ import { UsuariosModule } from './modules/modules/usuarios/usuarios.module';
     LoginComponent,
     HomeComponent,
     ConfirmacaoComponent,
-    AutomacaoComponent,
     NotesComponent,
   ],
 
