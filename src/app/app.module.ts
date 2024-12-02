@@ -10,30 +10,23 @@ import { NgModule }                from '@angular/core';
 
 import { SharedModule } from './modules/shared/shared.module';
 
-// Componentes
+
+//Pages
 
 import { AuditoriaComponent }                   from './components/pages/auditoria/auditoria.component';
-
-import { CartaoComponent }                      from './components/cartao/cartao.component';
-
-import { ConfiguracoesComponent }               from './components/dialogs/configuracoes/configuracoes.component';
-
 import { ComunidadeComponent }                  from './components/pages/comunidade/comunidade.component';
-
 import { DashboardComponent }                   from './components/pages/dashboard/dashboard.component';
-
-import { DespesasComponent }                    from './components/pages/dashboard/dialog/despesas/despesas.component';
-
 import { EstoqueComponent }                     from './components/pages/estoque/estoque.component';
 
+// Componentes
+
+import { CartaoComponent }                      from './components/cartao/cartao.component';
+import { ConfiguracoesComponent }               from './components/dialogs/configuracoes/configuracoes.component';
+import { DespesasComponent }                    from './components/pages/dashboard/dialog/despesas/despesas.component';
 import { Error404Component }                    from './components/error404/error404.component';
-
 import { FaturamentoComponent }                 from './components/pages/dashboard/dialog/faturamento/faturamento.component';
-
 import { NavegacaoComponent }                   from './components/navegacao/navegacao.component';
-
 import { NascimentoComponent }                  from './components/pages/dashboard/dialog/nascimento/nascimento.component';
-
 import { NotificacoesComponent }                from './components/dialogs/notificacoes/notificacoes.component';
 
 import { OrdemServicoComponent }                from './components/pages/ordem-servico/ordem-servico.component';
@@ -42,8 +35,6 @@ import { OrdemServicoDialogFinishComponent }    from './components/pages/ordem-s
 import { OrdemServicoDialogRelatorioComponent } from './components/pages/ordem-servico/ordem-servico-dialog-relatorio/ordem-servico-dialog-relatorio.component';
 import { OrdemServicoDialogUpdateComponent }    from './components/pages/ordem-servico/ordem-servico-dialog-update/ordem-servico-dialog-update.component';
 
-import { PermissaoAcessoComponent }             from './components/pages/permissao-acesso/permissao-acesso.component';
-import { PermissaoAcessoDialogComponent }       from './components/pages/permissao-acesso/permissao-acesso-dialog/permissao-acesso-dialog.component';
 
 import { ProdutosComponent }                    from './components/pages/produtos/produtos.component';
 import { ProdutosDialogComponent }              from './components/pages/produtos/produtos-dialog/produtos-dialog.component';
@@ -70,6 +61,7 @@ import { UsuarioDialogUpdateComponent } from './components/pages/usuario/usuario
 import { ClientesModule } from './modules/modules/clientes/clientes.module';
 import { AutomacoesModule } from './modules/modules/automacoes/automacoes.module';
 import { EmpresasModule } from './modules/modules/empresas/empresas.module';
+import { PermissaoModule } from './modules/modules/permissao/permissao.module';
 
 @NgModule({
   declarations: [
@@ -112,9 +104,7 @@ import { EmpresasModule } from './modules/modules/empresas/empresas.module';
 
     UsuarioComponent,
     UsuariosDialogComponent,
-
-    PermissaoAcessoComponent,
-    PermissaoAcessoDialogComponent,
+ 
     LoginComponent,
     HomeComponent,
     ConfirmacaoComponent,
@@ -138,6 +128,7 @@ import { EmpresasModule } from './modules/modules/empresas/empresas.module';
     AutomacoesModule,
     EmpresasModule,       
     ClientesModule, 
+    PermissaoModule
   ],
   exports: [
     HttpClientModule,
