@@ -70,12 +70,9 @@ import { EmpresasUpdateDialogComponent } from './components/pages/empresas/empre
 import { ProdutosUpdateDialogComponent } from './components/pages/produtos/produtos-update-dialog/produtos-update-dialog.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { UsuarioDialogUpdateComponent } from './components/pages/usuario/usuario-dialog-update/usuario-dialog-update.component';
-import { AutomacoesDialogComponent } from './components/pages/automacao/automacoes-dialog/automacoes-dialog.component';
-import { AutomacoesUpdateDialogComponent } from './components/pages/automacao/automacoes-update-dialog/automacoes-update-dialog.component';
-import { AutomacoesControlTimeComponent } from './components/pages/automacao/automacoes-control-time/automacoes-control-time.component';
-import { AutomacoesMonitoramentoComponent } from './components/pages/automacao/automacoes-monitoramento/automacoes-monitoramento.component';
 
 import { ClientesModule } from './modules/modules/clientes/clientes.module';
+import { AutomacoesModule } from './modules/modules/automacoes/automacoes.module';
 
 @NgModule({
   declarations: [
@@ -132,10 +129,6 @@ import { ClientesModule } from './modules/modules/clientes/clientes.module';
     ProdutosUpdateDialogComponent,
     NotesComponent,
     UsuarioDialogUpdateComponent,
-    AutomacoesDialogComponent,
-    AutomacoesUpdateDialogComponent,
-    AutomacoesControlTimeComponent,
-    AutomacoesMonitoramentoComponent,
   ],
 
   imports: [
@@ -146,8 +139,11 @@ import { ClientesModule } from './modules/modules/clientes/clientes.module';
     HttpClientModule,
     NgxMaskModule.forRoot(),
     ReactiveFormsModule,
-    ClientesModule,        
+
     SharedModule,
+
+    ClientesModule, 
+    AutomacoesModule       
   ],
   exports: [
     HttpClientModule,
