@@ -38,6 +38,7 @@ import { FlexLayoutModule }                 from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AsyncPipe, CommonModule, NgFor }                 from '@angular/common';
 import { NgxMaskModule } from 'ngx-mask';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 const materialModules = [
   MatBadgeModule,
@@ -84,6 +85,7 @@ const cdkModules = [
     AsyncPipe,
     FormsModule,
     NgFor,
+    CurrencyMaskModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
     
@@ -92,6 +94,7 @@ const cdkModules = [
     materialModules
   ],
   exports: [
+    CurrencyMaskModule,
     CommonModule,
     cdkModules,
     FlexLayoutModule,

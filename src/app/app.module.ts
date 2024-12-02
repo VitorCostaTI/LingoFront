@@ -1,10 +1,10 @@
 // Funcionalidades do Angular
 
-import { AppRoutingModule }        from './app-routing.module';
-import { AppComponent }            from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule }           from '@angular/platform-browser';
-import { NgModule }                from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 // Modulos Compartilhados
 
@@ -13,48 +13,42 @@ import { SharedModule } from './modules/shared/shared.module';
 
 //Pages
 
-import { AuditoriaComponent }                   from './components/pages/auditoria/auditoria.component';
-import { ComunidadeComponent }                  from './components/pages/comunidade/comunidade.component';
-import { DashboardComponent }                   from './components/pages/dashboard/dashboard.component';
-import { EstoqueComponent }                     from './components/pages/estoque/estoque.component';
+import { AuditoriaComponent } from './components/pages/auditoria/auditoria.component';
+import { ComunidadeComponent } from './components/pages/comunidade/comunidade.component';
+import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
+import { EstoqueComponent } from './components/pages/estoque/estoque.component';
 
 // Componentes
 
-import { CartaoComponent }                      from './components/cartao/cartao.component';
-import { ConfiguracoesComponent }               from './components/dialogs/configuracoes/configuracoes.component';
-import { DespesasComponent }                    from './components/pages/dashboard/dialog/despesas/despesas.component';
-import { Error404Component }                    from './components/error404/error404.component';
-import { FaturamentoComponent }                 from './components/pages/dashboard/dialog/faturamento/faturamento.component';
-import { NavegacaoComponent }                   from './components/navegacao/navegacao.component';
-import { NascimentoComponent }                  from './components/pages/dashboard/dialog/nascimento/nascimento.component';
-import { NotificacoesComponent }                from './components/dialogs/notificacoes/notificacoes.component';
+import { CartaoComponent } from './components/cartao/cartao.component';
+import { ConfiguracoesComponent } from './components/dialogs/configuracoes/configuracoes.component';
+import { DespesasComponent } from './components/pages/dashboard/dialog/despesas/despesas.component';
+import { Error404Component } from './components/error404/error404.component';
+import { FaturamentoComponent } from './components/pages/dashboard/dialog/faturamento/faturamento.component';
+import { NavegacaoComponent } from './components/navegacao/navegacao.component';
+import { NascimentoComponent } from './components/pages/dashboard/dialog/nascimento/nascimento.component';
+import { NotificacoesComponent } from './components/dialogs/notificacoes/notificacoes.component';
 
-import { OrdemServicoComponent }                from './components/pages/ordem-servico/ordem-servico.component';
-import { OrdemServicoDialogAddComponent }       from './components/pages/ordem-servico/ordem-servico-dialog-add/ordem-servico-dialog-add.component';
-import { OrdemServicoDialogFinishComponent }    from './components/pages/ordem-servico/ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';
+import { OrdemServicoComponent } from './components/pages/ordem-servico/ordem-servico.component';
+import { OrdemServicoDialogAddComponent } from './components/pages/ordem-servico/ordem-servico-dialog-add/ordem-servico-dialog-add.component';
+import { OrdemServicoDialogFinishComponent } from './components/pages/ordem-servico/ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';
 import { OrdemServicoDialogRelatorioComponent } from './components/pages/ordem-servico/ordem-servico-dialog-relatorio/ordem-servico-dialog-relatorio.component';
-import { OrdemServicoDialogUpdateComponent }    from './components/pages/ordem-servico/ordem-servico-dialog-update/ordem-servico-dialog-update.component';
+import { OrdemServicoDialogUpdateComponent } from './components/pages/ordem-servico/ordem-servico-dialog-update/ordem-servico-dialog-update.component';
 
+import { RankingComponent } from './components/pages/dashboard/dialog/ranking/ranking.component';
 
-import { ProdutosComponent }                    from './components/pages/produtos/produtos.component';
-import { ProdutosDialogComponent }              from './components/pages/produtos/produtos-dialog/produtos-dialog.component';
-
-import { RankingComponent }                     from './components/pages/dashboard/dialog/ranking/ranking.component';
-
-import { UsuarioComponent }                     from './components/pages/usuario/usuario.component';
-import { UsuariosDialogComponent }              from './components/pages/usuario/usuarios-dialog/usuarios-dialog.component';
+import { UsuarioComponent } from './components/pages/usuario/usuario.component';
+import { UsuariosDialogComponent } from './components/pages/usuario/usuarios-dialog/usuarios-dialog.component';
 
 // Máscara
 
-import { NgxMaskModule }      from 'ngx-mask';
-import { CurrencyMaskModule } from "ng2-currency-mask";
+import { NgxMaskModule } from 'ngx-mask';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/account/login/login.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { ConfirmacaoComponent } from './components/dialogs/confirmacao/confirmacao.component';
 import { AutomacaoComponent } from './components/pages/automacao/automacao.component';
-import { ProdutosUpdateDialogComponent } from './components/pages/produtos/produtos-update-dialog/produtos-update-dialog.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { UsuarioDialogUpdateComponent } from './components/pages/usuario/usuario-dialog-update/usuario-dialog-update.component';
 
@@ -62,6 +56,7 @@ import { ClientesModule } from './modules/modules/clientes/clientes.module';
 import { AutomacoesModule } from './modules/modules/automacoes/automacoes.module';
 import { EmpresasModule } from './modules/modules/empresas/empresas.module';
 import { PermissaoModule } from './modules/modules/permissao/permissao.module';
+import { ProdutosModule } from './modules/modules/produtos/produtos.module';
 
 @NgModule({
   declarations: [
@@ -70,7 +65,7 @@ import { PermissaoModule } from './modules/modules/permissao/permissao.module';
     AuditoriaComponent,
 
     CartaoComponent,
-    
+
     ConfiguracoesComponent,
 
     ComunidadeComponent,
@@ -78,9 +73,9 @@ import { PermissaoModule } from './modules/modules/permissao/permissao.module';
     DashboardComponent,
 
     DespesasComponent,
-    
+
     EstoqueComponent,
-    
+
     Error404Component,
 
     FaturamentoComponent,
@@ -90,26 +85,22 @@ import { PermissaoModule } from './modules/modules/permissao/permissao.module';
     NascimentoComponent,
 
     NotificacoesComponent,
-    
+
     OrdemServicoComponent,
     OrdemServicoDialogAddComponent,
     OrdemServicoDialogFinishComponent,
     OrdemServicoDialogRelatorioComponent,
     OrdemServicoDialogUpdateComponent,
-    
-    ProdutosComponent,
-    ProdutosDialogComponent,
-    
+
     RankingComponent,
 
     UsuarioComponent,
     UsuariosDialogComponent,
- 
+
     LoginComponent,
     HomeComponent,
     ConfirmacaoComponent,
     AutomacaoComponent,
-    ProdutosUpdateDialogComponent,
     NotesComponent,
     UsuarioDialogUpdateComponent,
   ],
@@ -118,7 +109,6 @@ import { PermissaoModule } from './modules/modules/permissao/permissao.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
-    CurrencyMaskModule,
     HttpClientModule,
     NgxMaskModule.forRoot(),
     ReactiveFormsModule,
@@ -126,9 +116,10 @@ import { PermissaoModule } from './modules/modules/permissao/permissao.module';
     SharedModule,
 
     AutomacoesModule,
-    EmpresasModule,       
-    ClientesModule, 
-    PermissaoModule
+    EmpresasModule,
+    ClientesModule,
+    PermissaoModule,
+    ProdutosModule
   ],
   exports: [
     HttpClientModule,
