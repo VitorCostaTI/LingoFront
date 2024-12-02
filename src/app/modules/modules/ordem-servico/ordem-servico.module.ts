@@ -6,9 +6,11 @@ import { OrdemServicoDialogAddComponent } from 'src/app/components/pages/ordem-s
 import { OrdemServicoDialogFinishComponent } from 'src/app/components/pages/ordem-servico/ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';
 import { OrdemServicoDialogRelatorioComponent } from 'src/app/components/pages/ordem-servico/ordem-servico-dialog-relatorio/ordem-servico-dialog-relatorio.component';
 import { OrdemServicoDialogUpdateComponent } from 'src/app/components/pages/ordem-servico/ordem-servico-dialog-update/ordem-servico-dialog-update.component';
+import { CartaoComponent } from 'src/app/components/cartao/cartao.component';
 
 @NgModule({
   declarations: [
+    CartaoComponent,
     OrdemServicoComponent,
     OrdemServicoDialogAddComponent,
     OrdemServicoDialogFinishComponent,
@@ -19,6 +21,7 @@ import { OrdemServicoDialogUpdateComponent } from 'src/app/components/pages/orde
     SharedModule
   ],
   exports: [
+    CartaoComponent,
     OrdemServicoComponent,
     OrdemServicoDialogAddComponent,
     OrdemServicoDialogFinishComponent,

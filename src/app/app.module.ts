@@ -19,7 +19,6 @@ import { EstoqueComponent } from './components/pages/estoque/estoque.component';
 
 // Componentes
 
-import { CartaoComponent } from './components/cartao/cartao.component';
 import { ConfiguracoesComponent } from './components/dialogs/configuracoes/configuracoes.component';
 import { DespesasComponent } from './components/pages/dashboard/dialog/despesas/despesas.component';
 import { Error404Component } from './components/error404/error404.component';
@@ -53,8 +52,6 @@ import { OrdemServicoModule } from './modules/modules/ordem-servico/ordem-servic
     AppComponent,
 
     AuditoriaComponent,
-
-    CartaoComponent,
 
     ConfiguracoesComponent,
 
