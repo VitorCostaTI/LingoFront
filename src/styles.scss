@@ -8,6 +8,14 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+}
+
+.card {
+  background: linear-gradient(90deg, rgba(255, 165, 0, 1) 0%, rgba(243, 175, 48, 0.911) 35%, rgba(255, 165, 0, 1) 100%);
+  width: 101.8%;
+  margin: -15px;
+  height: 190px;
 }
 
 table {
@@ -15,14 +23,15 @@ table {
 }
 
 @media only screen and (max-width: 1150px) {
-  .table-responsive{
-      overflow: scroll;
-      display: inline-block;
+  .table-responsive {
+    overflow: scroll;
+    display: inline-block;
   }
-  th, td{
-      min-width: 150px !important;
+  th,
+  td {
+    min-width: 150px !important;
   }
-} 
+}
 
 .loader {
   border: 16px solid #f3f3f3;
