@@ -1,33 +1,5 @@
 import { Component } from '@angular/core';
-
-export interface DespesaElement {
-  custo: string;
-  descricao: string;
-  Oservico: string;
-}
-
-const ELEMENT_DATA: DespesaElement[] = [
-  {
-    custo: 'R$1.200,00',
-    descricao: 'Despesa',
-    Oservico: '0079'
-  },
-  {
-    custo: 'R$1.200,00',
-    descricao: 'Despesa',
-    Oservico: '0079'
-  },
-  {
-    custo: 'R$1.200,00',
-    descricao: 'Despesa',
-    Oservico: '0079'
-  },
-  {
-    custo: 'R$1.200,00',
-    descricao: 'Despesa',
-    Oservico: '0079'
-  },
-];
+import { DESPESA_DATA } from 'src/database/Despesa';
 
 @Component({
   selector: 'app-despesas',
@@ -42,5 +14,5 @@ export class DespesasComponent {
     'Oservico'
   ];
   
-  dataSource = ELEMENT_DATA;
+  dataSource = DESPESA_DATA;
 }
