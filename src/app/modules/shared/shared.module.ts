@@ -36,7 +36,8 @@ import { PortalModule }  from '@angular/cdk/portal';
 
 import { FlexLayoutModule }                 from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AsyncPipe, NgFor }                 from '@angular/common';
+import { AsyncPipe, CommonModule, NgFor }                 from '@angular/common';
+import { NgxMaskModule } from 'ngx-mask';
 
 const materialModules = [
   MatBadgeModule,
@@ -79,18 +80,22 @@ const cdkModules = [
 
 @NgModule({
   imports: [
+    CommonModule,
     AsyncPipe,
     FormsModule,
     NgFor,
     ReactiveFormsModule,
-
+    NgxMaskModule.forRoot(),
+    
     cdkModules,
     FlexLayoutModule,
     materialModules
   ],
   exports: [
+    CommonModule,
     cdkModules,
     FlexLayoutModule,
+    ReactiveFormsModule,
     materialModules
   ],
 })

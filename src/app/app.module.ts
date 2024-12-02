@@ -16,9 +16,6 @@ import { AuditoriaComponent }                   from './components/pages/auditor
 
 import { CartaoComponent }                      from './components/cartao/cartao.component';
 
-import { ClientesComponent }                    from './components/pages/clientes/clientes.component';
-import { ClientesDialogComponent }              from './components/pages/clientes/clientes-dialog/clientes-dialog.component';
-
 import { ConfiguracoesComponent }               from './components/dialogs/configuracoes/configuracoes.component';
 
 import { ComunidadeComponent }                  from './components/pages/comunidade/comunidade.component';
@@ -69,7 +66,6 @@ import { LoginComponent } from './components/account/login/login.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { ConfirmacaoComponent } from './components/dialogs/confirmacao/confirmacao.component';
 import { AutomacaoComponent } from './components/pages/automacao/automacao.component';
-import { ClientesUpdateDialogComponent } from './components/pages/clientes/clientes-update-dialog/clientes-update-dialog.component';
 import { EmpresasUpdateDialogComponent } from './components/pages/empresas/empresas-update-dialog/empresas-update-dialog.component';
 import { ProdutosUpdateDialogComponent } from './components/pages/produtos/produtos-update-dialog/produtos-update-dialog.component';
 import { NotesComponent } from './components/notes/notes.component';
@@ -79,6 +75,8 @@ import { AutomacoesUpdateDialogComponent } from './components/pages/automacao/au
 import { AutomacoesControlTimeComponent } from './components/pages/automacao/automacoes-control-time/automacoes-control-time.component';
 import { AutomacoesMonitoramentoComponent } from './components/pages/automacao/automacoes-monitoramento/automacoes-monitoramento.component';
 
+import { ClientesModule } from './modules/modules/clientes/clientes.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,9 +85,6 @@ import { AutomacoesMonitoramentoComponent } from './components/pages/automacao/a
 
     CartaoComponent,
     
-    ClientesComponent,
-    ClientesDialogComponent,
-        
     ConfiguracoesComponent,
 
     ComunidadeComponent,
@@ -133,7 +128,6 @@ import { AutomacoesMonitoramentoComponent } from './components/pages/automacao/a
     HomeComponent,
     ConfirmacaoComponent,
     AutomacaoComponent,
-    ClientesUpdateDialogComponent,
     EmpresasUpdateDialogComponent,
     ProdutosUpdateDialogComponent,
     NotesComponent,
@@ -152,6 +146,7 @@ import { AutomacoesMonitoramentoComponent } from './components/pages/automacao/a
     HttpClientModule,
     NgxMaskModule.forRoot(),
     ReactiveFormsModule,
+    ClientesModule,        
     SharedModule,
   ],
   exports: [
