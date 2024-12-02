@@ -46,14 +46,13 @@ import { ProdutosModule } from './modules/modules/produtos/produtos.module';
 import { UsuariosModule } from './modules/modules/usuarios/usuarios.module';
 import { OrdemServicoModule } from './modules/modules/ordem-servico/ordem-servico.module';
 import { AuditoriaModule } from './modules/modules/auditoria/auditoria.module';
+import { ComunidadeModule } from './modules/modules/comunidade/comunidade.module';
 
 @NgModule({
   declarations: [
     AppComponent,
 
     ConfiguracoesComponent,
-
-    ComunidadeComponent,
 
     DashboardComponent,
 
@@ -91,6 +90,7 @@ import { AuditoriaModule } from './modules/modules/auditoria/auditoria.module';
 
     AuditoriaModule,
     AutomacoesModule,
+    ComunidadeModule,
     EmpresasModule,
     ClientesModule,
     OrdemServicoModule,
