@@ -1,26 +1,28 @@
 <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer mode="side" class="sidenav">
         <div class="navegacao">
-           <app-navegacao></app-navegacao>
-       </div>
+            <app-navegacao></app-navegacao>
+        </div>
     </mat-drawer>
 
     <div class="example-sidenav-content">
-        <mat-card class="total">    
+        <mat-card class="total">
             <mat-card-content>
-                <div fxLayout="row" fxLayoutAlign="space-between center" class="middle"> 
+                <div fxLayout="row" fxLayoutAlign="space-between center" class="middle">
                     <button mat-icon-button matTooltip="Menu" (click)="drawer.toggle()">
-                        <mat-icon aria-hidden="false" fontIcon="menu" class="icon-hover"></mat-icon> 
+                        <mat-icon aria-hidden="false" fontIcon="menu" class="icon-hover"></mat-icon>
                     </button>
                     <a routerLink="/" class="pointer title">Lingo Kennel</a>
-                    <div fxLayout="row" fxLayoutAlign="end center" > 
+                    <div fxLayout="row" fxLayoutAlign="end center">
                         <button mat-icon-button (click)="copyLinkedln()" matTooltip="Compartilhar">
-                            <mat-icon aria-hidden="false" fontIcon="shared" class="icon-hover"></mat-icon> 
+                            <mat-icon aria-hidden="false" fontIcon="shared" class="icon-hover"></mat-icon>
                         </button>
                         &nbsp;
                         &nbsp;
-                        <button mat-icon-button (click)="openDialogNotificacoes('750ms', '150ms')" matTooltip="Notificações">
-                            <mat-icon matBadge="3" matBadgeColor="warn" aria-hidden="false" fontIcon="notifications" class="icon-hover"></mat-icon>
+                        <button mat-icon-button (click)="openDialogNotificacoes('750ms', '150ms')"
+                            matTooltip="Notificações">
+                            <mat-icon matBadge="3" matBadgeColor="warn" aria-hidden="false" fontIcon="notifications"
+                                class="icon-hover"></mat-icon>
                         </button>
                         &nbsp;
                         &nbsp;
@@ -30,36 +32,38 @@
 
                         <mat-menu #menu="matMenu">
                             <div fxLayout="row" class="option">
-                                <mat-icon aria-hidden="false" fontIcon="speaker_notes" class="icon-hover"></mat-icon> 
+                                <mat-icon aria-hidden="false" fontIcon="speaker_notes" class="icon-hover"></mat-icon>
                                 &nbsp;
                                 <p (click)="openNotesDialog('750ms', '150ms')" class="pointer">Anotações</p>
-                            </div> 
-                            
+                            </div>
+
                             <div fxLayout="row" class="option">
-                                <mat-icon aria-hidden="false" fontIcon="theaters"></mat-icon> 
+                                <mat-icon aria-hidden="false" fontIcon="theaters"></mat-icon>
                                 &nbsp;
                                 <p routerLink="automacao" class="pointer">Automações</p>
-                            </div>   
+                            </div>
 
                             <div fxLayout="row" class="option">
-                                <mat-icon aria-hidden="false" fontIcon="group" class="icon-hover"></mat-icon> 
+                                <mat-icon aria-hidden="false" fontIcon="group" class="icon-hover"></mat-icon>
                                 &nbsp;
                                 <p routerLink="/comunidade" class="pointer">Comunidade</p>
-                            </div>                      
+                            </div>
 
                             <mat-divider></mat-divider>
-                            
+
                             <div fxLayout="row" class="option">
-                                <mat-icon aria-hidden="false" fontIcon="logout" class="icon-hover"></mat-icon> 
+                                <mat-icon aria-hidden="false" fontIcon="logout" class="icon-hover"></mat-icon>
                                 &nbsp;
                                 <p routerLink="login" class="pointer">Deslogar</p>
                             </div>
                         </mat-menu>
-                        
+
                     </div>
                 </div>
             </mat-card-content>
-        </mat-card>  
-        <router-outlet></router-outlet>
+        </mat-card>
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </mat-drawer-container>
