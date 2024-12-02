@@ -10,19 +10,11 @@ import { NgModule } from '@angular/core';
 
 import { SharedModule } from './modules/shared/shared.module';
 
-//Pages
-
-import { EstoqueComponent } from './components/pages/estoque/estoque.component';
-
 // Componentes
 
-import { DespesasComponent } from './components/pages/dashboard/dialog/despesas/despesas.component';
 import { Error404Component } from './components/error404/error404.component';
-import { FaturamentoComponent } from './components/pages/dashboard/dialog/faturamento/faturamento.component';
 import { NavegacaoComponent } from './components/navegacao/navegacao.component';
-import { NascimentoComponent } from './components/pages/dashboard/dialog/nascimento/nascimento.component';
 import { NotificacoesComponent } from './components/dialogs/notificacoes/notificacoes.component';
-import { RankingComponent } from './components/pages/dashboard/dialog/ranking/ranking.component';
 
 // Máscara
 
@@ -30,7 +22,6 @@ import { NgxMaskModule } from 'ngx-mask';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { LoginComponent } from './components/account/login/login.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { ConfirmacaoComponent } from './components/dialogs/confirmacao/confirmacao.component';
 import { NotesComponent } from './components/notes/notes.component';
