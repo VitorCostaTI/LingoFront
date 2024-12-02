@@ -1,4 +1,4 @@
-import { Cliente } from "src/app/modules/model/Cliente";
+import { Cliente } from "src/app/resources/model/Cliente";
 
 export const Cliente_DATA: Cliente[] = [
     {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Auditoria_DATA } from 'src/Database/Auditoria';
+import { Auditoria_DATA } from 'src/database/Auditoria';
 
 @Component({
   selector: 'app-auditoria',

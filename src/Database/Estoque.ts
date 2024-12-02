@@ -1,4 +1,4 @@
-import { Estoque } from "src/app/modules/model/Estoque";
+import { Estoque } from "src/app/resources/model/Estoque";
 
 export const Estoque_DATA: Estoque[] = [
     {

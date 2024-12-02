@@ -4,7 +4,7 @@ import { DespesasComponent } from './dialog/despesas/despesas.component';
 import { FaturamentoComponent } from './dialog/faturamento/faturamento.component';
 import { NascimentoComponent } from './dialog/nascimento/nascimento.component';
 import { RankingComponent } from './dialog/ranking/ranking.component';
-import { Agendamento_DATA } from 'src/Database/Agendamento';
+import { Agendamento_DATA } from 'src/database/Agendamento';
 
 @Component({
   selector: 'app-dashboard',

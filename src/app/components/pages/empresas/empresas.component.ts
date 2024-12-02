@@ -2,9 +2,9 @@ import { Component, HostListener } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { EmpresasdialogComponent } from './empresas-dialog/empresas-dialog.component';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
-import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
+import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
 import { EmpresasUpdateDialogComponent } from './empresas-update-dialog/empresas-update-dialog.component';
-import { Empresa_DATA } from 'src/Database/Empresa';
+import { Empresa_DATA } from 'src/database/Empresa';
 
 @Component({
   selector: 'app-empresas',

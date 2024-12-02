@@ -2,9 +2,9 @@ import { Component, HostListener } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ClientesDialogComponent } from './clientes-dialog/clientes-dialog.component';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
-import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
+import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
 import { ClientesUpdateDialogComponent } from './clientes-update-dialog/clientes-update-dialog.component';
-import { Cliente_DATA } from 'src/Database/Cliente';
+import { Cliente_DATA } from 'src/database/Cliente';
 
 @Component({
   selector: 'app-clientes',

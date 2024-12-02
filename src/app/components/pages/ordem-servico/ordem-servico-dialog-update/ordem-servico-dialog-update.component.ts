@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Cliente_DATA } from 'src/Database/Cliente';
-import { Colaborador_DATA } from 'src/Database/Colaborador';
+import { Cliente_DATA } from 'src/database/Cliente';
+import { Colaborador_DATA } from 'src/database/Colaborador';
 
 @Component({
   selector: 'app-ordem-servico-dialog-update',

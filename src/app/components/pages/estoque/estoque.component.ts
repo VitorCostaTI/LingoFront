@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TemplateCrudService } from 'src/app/modules/services/Template/template-crud.service';
-import { Colaborador_DATA } from 'src/Database/Colaborador';
-import { Estoque_DATA } from 'src/Database/Estoque';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
+import { Colaborador_DATA } from 'src/database/Colaborador';
+import { Estoque_DATA } from 'src/database/Estoque';
 
 @Component({
   selector: 'app-estoque',

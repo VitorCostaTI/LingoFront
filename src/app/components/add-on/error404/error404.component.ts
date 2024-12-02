@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TemplateCrudService } from 'src/app/modules/services/Template/template-crud.service';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-error404',

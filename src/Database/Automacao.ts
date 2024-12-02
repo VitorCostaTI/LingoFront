@@ -1,4 +1,4 @@
-import { Automacao } from "src/app/modules/model/Automacao";
+import { Automacao } from "src/app/resources/model/Automacao";
 
 export const Automacao_DATA: Automacao[] = [
     {

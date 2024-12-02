@@ -1,10 +1,10 @@
 import { Component, HostListener } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProdutosDialogComponent } from './produtos-dialog/produtos-dialog.component';
-import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
+import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
 import { ProdutosUpdateDialogComponent } from './produtos-update-dialog/produtos-update-dialog.component';
-import { Produto_DATA } from 'src/Database/Produto';
+import { Produto_DATA } from 'src/database/Produto';
 
 @Component({
   selector: 'app-produtos',

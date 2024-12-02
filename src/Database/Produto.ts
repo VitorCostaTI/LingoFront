@@ -1,4 +1,4 @@
-import { Produto } from "src/app/modules/model/Produto";
+import { Produto } from "src/app/resources/model/Produto";
 
 export const Produto_DATA: Produto[] = [
     {

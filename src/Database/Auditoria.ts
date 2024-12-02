@@ -1,4 +1,4 @@
-import { Auditoria } from "src/app/modules/model/Auditoria";
+import { Auditoria } from "src/app/resources/model/Auditoria";
 
 export const Auditoria_DATA: Auditoria[] = [
     {

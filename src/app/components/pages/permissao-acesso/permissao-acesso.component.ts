@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PermissaoAcessoDialogComponent } from './permissao-acesso-dialog/permissao-acesso-dialog.component';
-import { TemplateCrudService } from 'src/app/modules/services/Template/template-crud.service';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-permissao-acesso',

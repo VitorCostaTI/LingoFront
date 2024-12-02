@@ -1,9 +1,9 @@
 import { Component, HostListener } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
-import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
-import { TemplateCrudService } from 'src/app/modules/services/Template/template-crud.service';
-import { Automacao_DATA } from 'src/Database/Automacao';
+import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
+import { Automacao_DATA } from 'src/database/Automacao';
 import { AutomacoesDialogComponent } from './automacoes-dialog/automacoes-dialog.component';
 import { AutomacoesUpdateDialogComponent } from './automacoes-update-dialog/automacoes-update-dialog.component';
 import { AutomacoesControlTimeComponent } from './automacoes-control-time/automacoes-control-time.component';

@@ -1,4 +1,4 @@
-import { Agendamento } from "src/app/modules/model/Agendamento";
+import { Agendamento } from "src/app/resources/model/Agendamento";
 
 export const Agendamento_DATA: Agendamento[] = [
   {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
-import { TemplateCrudService } from 'src/app/modules/services/Template/template-crud.service';
+import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-confirmacao',

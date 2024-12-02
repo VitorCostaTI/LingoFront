@@ -3,9 +3,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { UsuariosDialogComponent } from './usuarios-dialog/usuarios-dialog.component';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
-import { ConfirmacaoService } from 'src/app/modules/services/Confirmacao/confirmacao.service';
+import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
 import { UsuarioDialogUpdateComponent } from './usuario-dialog-update/usuario-dialog-update.component';
-import { Colaborador_DATA } from 'src/Database/Colaborador';
+import { Colaborador_DATA } from 'src/database/Colaborador';
 
 @Component({
   selector: 'app-usuario',

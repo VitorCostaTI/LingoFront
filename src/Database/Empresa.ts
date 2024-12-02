@@ -1,4 +1,4 @@
-import { Empresa } from "src/app/modules/model/Empresa";
+import { Empresa } from "src/app/resources/model/Empresa";
 
 export const Empresa_DATA: Empresa[] = [
     {

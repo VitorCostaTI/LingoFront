@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Clipboard } from '@angular/cdk/clipboard';
 import { NotificacoesComponent } from '../../dialogs/notificacoes/notificacoes.component';
-import { NotesComponent } from '../../notes/notes.component';
-import { TemplateCrudService } from 'src/app/modules/services/Template/template-crud.service';
+import { NotesComponent } from '../../dialogs/notes/notes.component';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-home',

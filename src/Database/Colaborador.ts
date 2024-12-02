@@ -1,4 +1,4 @@
-import { Colaborador } from "src/app/modules/model/Colaborador";
+import { Colaborador } from "src/app/resources/model/Colaborador";
 
 export const Colaborador_DATA: Colaborador[] = [
     {
