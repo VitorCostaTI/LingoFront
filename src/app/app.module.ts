@@ -13,16 +13,27 @@ import { SharedModule } from './modules/shared/shared.module';
 // Componentes
 
 import { AuditoriaComponent }                   from './components/pages/auditoria/auditoria.component';
-import { CartaoComponent }                      from './components/cartao/cartao.component'
+
+import { CartaoComponent }                      from './components/cartao/cartao.component';
+
 import { ConfiguracoesComponent }               from './components/dialogs/configuracoes/configuracoes.component';
+
 import { ComunidadeComponent }                  from './components/pages/comunidade/comunidade.component';
+
 import { DashboardComponent }                   from './components/pages/dashboard/dashboard.component';
+
 import { DespesasComponent }                    from './components/pages/dashboard/dialog/despesas/despesas.component';
+
 import { EstoqueComponent }                     from './components/pages/estoque/estoque.component';
+
 import { Error404Component }                    from './components/error404/error404.component';
+
 import { FaturamentoComponent }                 from './components/pages/dashboard/dialog/faturamento/faturamento.component';
+
 import { NavegacaoComponent }                   from './components/navegacao/navegacao.component';
+
 import { NascimentoComponent }                  from './components/pages/dashboard/dialog/nascimento/nascimento.component';
+
 import { NotificacoesComponent }                from './components/dialogs/notificacoes/notificacoes.component';
 
 import { OrdemServicoComponent }                from './components/pages/ordem-servico/ordem-servico.component';
@@ -52,13 +63,13 @@ import { LoginComponent } from './components/account/login/login.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { ConfirmacaoComponent } from './components/dialogs/confirmacao/confirmacao.component';
 import { AutomacaoComponent } from './components/pages/automacao/automacao.component';
-import { EmpresasUpdateDialogComponent } from './components/pages/empresas/empresas-update-dialog/empresas-update-dialog.component';
 import { ProdutosUpdateDialogComponent } from './components/pages/produtos/produtos-update-dialog/produtos-update-dialog.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { UsuarioDialogUpdateComponent } from './components/pages/usuario/usuario-dialog-update/usuario-dialog-update.component';
 
 import { ClientesModule } from './modules/modules/clientes/clientes.module';
 import { AutomacoesModule } from './modules/modules/automacoes/automacoes.module';
+import { EmpresasModule } from './modules/modules/empresas/empresas.module';
 
 @NgModule({
   declarations: [
@@ -75,7 +86,7 @@ import { AutomacoesModule } from './modules/modules/automacoes/automacoes.module
     DashboardComponent,
 
     DespesasComponent,
-
+    
     EstoqueComponent,
     
     Error404Component,
@@ -124,8 +135,9 @@ import { AutomacoesModule } from './modules/modules/automacoes/automacoes.module
 
     SharedModule,
 
+    AutomacoesModule,
+    EmpresasModule,       
     ClientesModule, 
-    AutomacoesModule       
   ],
   exports: [
     HttpClientModule,
