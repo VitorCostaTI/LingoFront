@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 
-
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { PortalModule } from '@angular/cdk/portal';
 
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { AsyncPipe, CommonModule, NgFor } from '@angular/common';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AsyncPipe, CommonModule, NgFor } from '@angular/common';
+import { materialModules } from 'src/style/material/material';
 import { NgxMaskModule } from 'ngx-mask';
-import { CurrencyMaskModule } from 'ng2-currency-mask';
-import { materialModules } from 'src/Style/material/material';
-import { AppRoutingModule } from 'src/app/app-routing.module';
 
 const cdkModules = [
   CdkTreeModule,
@@ -20,27 +19,26 @@ const cdkModules = [
 @NgModule({
   imports: [
     AppRoutingModule,
-    CommonModule,
     AsyncPipe,
+    CommonModule,
+    CurrencyMaskModule,
     FormsModule,
     NgFor,
-    CurrencyMaskModule,
-    ReactiveFormsModule,
     NgxMaskModule.forRoot(),
+    ReactiveFormsModule,
 
     cdkModules,
     FlexLayoutModule,
     materialModules
   ],
   exports: [
-    CurrencyMaskModule,
-    CommonModule,
     cdkModules,
+    CommonModule,
+    CurrencyMaskModule,
     FlexLayoutModule,
     ReactiveFormsModule,
     materialModules
   ],
 })
 
-export class SharedModule {
-}
+export class SharedModule { }
