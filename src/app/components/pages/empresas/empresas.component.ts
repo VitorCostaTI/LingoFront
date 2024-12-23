@@ -1,10 +1,13 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { EmpresasdialogComponent } from './empresas-dialog/empresas-dialog.component';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
 import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
 import { EmpresasUpdateDialogComponent } from './empresas-update-dialog/empresas-update-dialog.component';
 import { Empresa_DATA } from 'src/database/Empresa';
+import { MatTableDataSource } from '@angular/material/table';
+import { Empresa } from 'src/app/resources/model/Empresa';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-empresas',
@@ -20,6 +23,13 @@ export class EmpresasComponent {
     public dialog: MatDialog,
     private confirmacaoService: ConfirmacaoService
   ) { }
+
+  dataSource = new MatTableDataSource<Empresa>(Empresa_DATA);
+
+  @ViewChild(MatSort) sort!: MatSort
+  ngAfterViewInit(): void{
+    this.dataSource.sort = this.sort
+  }
 
   @HostListener('window:keydown.control.y', ['$event'])
   handleSave(event: KeyboardEvent){
@@ -62,6 +72,4 @@ export class EmpresasComponent {
     'contato',
     'acoes'
   ];
-
-  dataSource = Empresa_DATA;
 }
