@@ -45,7 +45,7 @@ export const Cliente_DATA: Cliente[] = [
     },
     {
       cliente: 'Cauê Daniel Carlos Moreira',
-      email: 'Cauê Daniel Carlos Moreira',
+      email: 'caueMoreira@email.com',
       cpf: '455.817.170-60',
       telefone: '+55 (81) 3854-2780',
       telefone2: '+55 (81) 98678-8263',
