@@ -1,10 +1,13 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProdutosDialogComponent } from './produtos-dialog/produtos-dialog.component';
 import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
 import { ProdutosUpdateDialogComponent } from './produtos-update-dialog/produtos-update-dialog.component';
 import { Produto_DATA } from 'src/database/Produto';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { Produto } from 'src/app/resources/model/Produto';
 
 @Component({
   selector: 'app-produtos',
@@ -21,8 +24,15 @@ export class ProdutosComponent {
     private confirmacaoService: ConfirmacaoService
   ) { }
 
+  dataSource = new MatTableDataSource<Produto>(Produto_DATA)
+
+  @ViewChild(MatSort) sort!: MatSort
+  ngAfterViewInit(): void{
+    this.dataSource.sort = this.sort
+  }
+
   @HostListener('window:keydown.control.y', ['$event'])
-  handleSave(event: KeyboardEvent){
+  handleSave(event: KeyboardEvent) {
     event.preventDefault();
     this.openDialogProduto('500ms', '250ms')
   }
@@ -63,6 +73,4 @@ export class ProdutosComponent {
     'quantidade',
     'acoes'
   ];
-
-  dataSource = Produto_DATA;
 }
