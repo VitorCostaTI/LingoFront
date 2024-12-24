@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-usuarios-dialog',
@@ -14,7 +15,10 @@ export class UsuariosDialogComponent {
 
   isLoading: boolean = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private templateService: TemplateCrudService,
+    private fb: FormBuilder
+  ) {
     this.cadastroMorador = this.fb.group({
       colaborador: ['', [Validators.required]],
       setor: ['', [Validators.required]],
@@ -44,6 +48,7 @@ export class UsuariosDialogComponent {
 
   salvarCadastro(): void {
     this.isLoading = true;
+    this.templateService.snackBarSuccess('Usuario cadastrado com sucesso', '')
     setTimeout(() => {
       window.location.reload();
     }, 3500);

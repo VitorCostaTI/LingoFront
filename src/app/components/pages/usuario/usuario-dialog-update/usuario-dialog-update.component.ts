@@ -1,9 +1,7 @@
 import { Component, Inject } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { map, startWith } from 'rxjs/operators';
-import { Observable } from 'rxjs';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-usuario-dialog-update',
@@ -20,6 +18,7 @@ export class UsuarioDialogUpdateComponent {
 
   constructor(
     private fb: FormBuilder,
+    private templateService: TemplateCrudService,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
 
@@ -52,6 +51,7 @@ export class UsuarioDialogUpdateComponent {
 
   atualizarCadastro(): void {
     this.isLoading = true;
+    this.templateService.snackBarSuccess('Usuario cadastrado com sucesso', '')
     setTimeout(() => {
       window.location.reload();
     }, 3500);
