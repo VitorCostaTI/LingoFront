@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { map, startWith } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 export interface State {
   flag: string;
@@ -160,7 +161,11 @@ export class ClientesDialogComponent {
     },
   ];
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient,
+    private templateService: TemplateCrudService
+  ) {
 
     this.cadastroCliente = this.fb.group({
       cliente: ['', [Validators.required, Validators.minLength]],
@@ -209,6 +214,7 @@ export class ClientesDialogComponent {
 
   salvarCadastro(): void {
     this.isLoading = true;
+    this.templateService.snackBarSuccess('Cliente cadastrado com sucesso', '')
     setTimeout(() => {
       window.location.reload();
     }, 3500);

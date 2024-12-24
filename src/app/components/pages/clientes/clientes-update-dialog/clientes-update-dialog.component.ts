@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, startWith } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 export interface State {
   flag: string;
@@ -164,6 +165,7 @@ export class ClientesUpdateDialogComponent {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
+    private templateService: TemplateCrudService,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
 
@@ -214,6 +216,7 @@ export class ClientesUpdateDialogComponent {
 
   atualizarCadastro(): void {
     this.isLoading = true;
+    this.templateService.snackBarSuccess('Cliente atualizado com sucesso', '')
     setTimeout(() => {
       window.location.reload();
     }, 3500);
