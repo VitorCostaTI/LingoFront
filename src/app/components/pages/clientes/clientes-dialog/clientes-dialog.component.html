@@ -68,24 +68,17 @@
           formControlName="cidade">
       </mat-form-field>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Estado</mat-label>
-        <input matInput aria-label="State" [required]="cadastroCliente.get('cep')?.value" [(ngModel)]="endereco.estado"
-          formControlName="estado">
-        <mat-select>
-          <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
-            <img alt="" class="example-option-img" [src]="state.flag" height="25">
-            &nbsp;
-            <span>{{state.name}}</span> - {{state.sigla}}
-          </mat-option>
-        </mat-select>
+      <mat-form-field>
+        <mat-label>Cidade</mat-label>
+        <input matInput [required]="cadastroCliente.get('cep')?.value" [(ngModel)]="endereco.cidade"
+          formControlName="cidade">
       </mat-form-field>
     </div>
 
     <div fxLayout="row" fxLayoutAlign="center" class="form">
       <mat-form-field>
-        <mat-label>Complemento</mat-label>
-        <input matInput formControlName="complemento">
+        <mat-label>Estado</mat-label>
+        <input matInput formControlName="estado">
       </mat-form-field>
     </div>
 

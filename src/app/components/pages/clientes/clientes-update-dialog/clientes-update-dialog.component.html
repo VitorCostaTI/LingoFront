@@ -2,7 +2,6 @@
   <h1>Cliente</h1>
 </div>
 
-
 <mat-divider></mat-divider>
 
 <form [formGroup]="cadastroCliente">
@@ -70,17 +69,10 @@
           [required]="cadastroCliente.get('cep')?.value" formControlName="cidade">
       </mat-form-field>
 
-      <mat-form-field class="example-full-width">
+      <mat-form-field>
         <mat-label>Estado</mat-label>
-        <input matInput aria-label="State" [(ngModel)]="endereco.estado" [(ngModel)]="data.estado"
+        <input matInput [(ngModel)]="endereco.estado" [(ngModel)]="data.estado"
           [required]="cadastroCliente.get('cep')?.value" formControlName="estado">
-        <mat-select>
-          <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
-            <img alt="" class="example-option-img" [src]="state.flag" height="25">
-            &nbsp;
-            <span>{{state.name}}</span> - {{state.sigla}}
-          </mat-option>
-        </mat-select>
       </mat-form-field>
     </div>
 

@@ -71,16 +71,10 @@
           <mat-label>Cidade</mat-label>
           <input matInput formControlName="cidade">
         </mat-form-field>
-        <mat-form-field class="example-full-width">
+
+        <mat-form-field>
           <mat-label>Estado</mat-label>
-          <input matInput aria-label="State">
-          <mat-select formControlName="estado">
-            <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
-              <img alt="" class="example-option-img" [src]="state.flag" height="25">
-              &nbsp;
-              <span>{{state.name}}</span> - {{state.sigla}}
-            </mat-option>
-          </mat-select>
+          <input matInput formControlName="estado">
         </mat-form-field>
       </div>
 
