@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
 import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
@@ -8,6 +8,9 @@ import { AutomacoesDialogComponent } from './automacoes-dialog/automacoes-dialog
 import { AutomacoesUpdateDialogComponent } from './automacoes-update-dialog/automacoes-update-dialog.component';
 import { AutomacoesControlTimeComponent } from './automacoes-control-time/automacoes-control-time.component';
 import { AutomacoesMonitoramentoComponent } from './automacoes-monitoramento/automacoes-monitoramento.component';
+import { MatTableDataSource } from '@angular/material/table';
+import { Automacao } from 'src/app/resources/model/Automacao';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-automacao',
@@ -25,6 +28,8 @@ export class AutomacaoComponent {
   power2: boolean = true;
   power3: boolean = true;
 
+  dataSource = new MatTableDataSource<Automacao>(Automacao_DATA);
+
   constructor(private dialog: MatDialog,
     private confirmacaoService: ConfirmacaoService,
     private templateService: TemplateCrudService
@@ -32,6 +37,11 @@ export class AutomacaoComponent {
 
   ngOnInit(): void {
     this.reload();
+  }
+
+  @ViewChild(MatSort) sort!: MatSort
+  ngAfterViewInit(): void{
+    this.dataSource.sort = this.sort;
   }
 
   @HostListener('window:keydown.control.m', ['$event'])
@@ -159,6 +169,4 @@ export class AutomacaoComponent {
     'manutencao',
     'acoes'
   ];
-
-  dataSource = Automacao_DATA;
 }
