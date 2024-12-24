@@ -1,1 +1,50 @@
-<p>automacao-comandos works!</p>
+<div class="container">
+    <mat-list role="list">
+        <mat-list-item role="listitem">
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                ControlFood - Ração
+                <div>
+                    <button mat-icon-button (click)="openDialogTemporizador('500ms', '250ms')">
+                        <mat-icon>timer</mat-icon>
+                    </button>
+                    <button mat-icon-button (click)="powerFunction1()">
+                        <mat-icon [ngStyle]="{'color': power1 ? 'red' : 'rgb(126, 121, 121)'}">
+                            power_settings_new
+                        </mat-icon>
+                    </button>
+                </div>
+            </div>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                ControlFood - Bebedouro
+                <div>
+                    <button mat-icon-button (click)="openDialogTemporizador('500ms', '250ms')">
+                        <mat-icon>timer</mat-icon>
+                    </button>
+                    <button mat-icon-button (click)="powerFunction2()">
+                        <mat-icon [ngStyle]="{'color': power2 ? 'red' : 'rgb(126, 121, 121)'}">
+                            power_settings_new
+                        </mat-icon>
+                    </button>
+                </div>
+            </div>
+        </mat-list-item>
+
+        <mat-list-item role="listitem">
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                Monitoramento
+                <div>
+                    <button mat-icon-button (click)="openDialogMonitoramento('500ms', '250ms')">
+                        <mat-icon>live_tv</mat-icon>
+                    </button>
+                    <button mat-icon-button (click)="powerFunction3()">
+                        <mat-icon [ngStyle]="{'color': power3 ? 'red' : 'rgb(126, 121, 121)'}">
+                            power_settings_new
+                        </mat-icon>
+                    </button>
+                </div>
+            </div>
+        </mat-list-item>
+    </mat-list>
+</div>
