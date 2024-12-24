@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Empresa</h1>
+    <h1>Automacao > Dispositivos</h1>
 </div>
 
 <mat-divider></mat-divider>
@@ -61,7 +61,7 @@
         <div class="margin" fxLayout="row" fxLayoutAlign="end center">
             <button mat-dialog-close mat-flat-button color="warn" [hidden]="isLoading">Cancelar</button>
             &nbsp;
-            <button mat-flat-button color="primary" [disabled]="cadastroAutomacao.invalid"
+            <button mat-flat-button color="primary" [disabled]="cadastroAutomacao.invalid" (click)="atualizarCadastro()"
                 [hidden]="isLoading">Salvar</button>
         </div>
     </div>
