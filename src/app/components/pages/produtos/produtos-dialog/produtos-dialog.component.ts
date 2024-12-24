@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-produtos-dialog',
@@ -12,7 +13,10 @@ export class ProdutosDialogComponent {
 
   cadastroProduto: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private templateService: TemplateCrudService,
+    private fb: FormBuilder
+  ) {
     this.cadastroProduto = this.fb.group({
       produto: ['', [Validators.required, Validators.minLength]],
       categoria: ['', [Validators.required, Validators.minLength]],
@@ -26,6 +30,7 @@ export class ProdutosDialogComponent {
 
   salvarCadastro(): void {
     this.isLoading = true;
+    this.templateService.snackBarSuccess('Produto cadastrado com sucesso', '')
     setTimeout(() => {
       window.location.reload();
     }, 3500);

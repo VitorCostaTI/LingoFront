@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-produtos-update-dialog',
@@ -14,6 +15,7 @@ export class ProdutosUpdateDialogComponent {
 
   constructor(
     private fb: FormBuilder,
+    private templateService: TemplateCrudService,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.cadastroProduto = this.fb.group({
@@ -29,6 +31,7 @@ export class ProdutosUpdateDialogComponent {
 
   atualizarCadastro(): void {
     this.isLoading = true;
+    this.templateService.snackBarSuccess('Produto atualizado com sucesso', '')
     setTimeout(() => {
       window.location.reload();
     }, 3500);
