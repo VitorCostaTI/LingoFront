@@ -1,11 +1,13 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UsuariosDialogComponent } from './usuarios-dialog/usuarios-dialog.component';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
 import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
 import { UsuarioDialogUpdateComponent } from './usuario-dialog-update/usuario-dialog-update.component';
 import { Colaborador_DATA } from 'src/database/Colaborador';
+import { MatTableDataSource } from '@angular/material/table';
+import { Colaborador } from 'src/app/resources/model/Colaborador';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-usuario',
@@ -17,10 +19,17 @@ export class UsuarioComponent {
 
   isActive = false;
 
+  dataSource = new MatTableDataSource<Colaborador>(Colaborador_DATA);
+
   constructor(
     public dialog: MatDialog,
     private confirmacaoService: ConfirmacaoService
   ) { }
+
+  @ViewChild(MatSort) sort!: MatSort
+  ngAfterViewInit(): void{
+    this.dataSource.sort = this.sort
+  }
 
   @HostListener('window:keydown.control.y', ['$event'])
   handleSave(event: KeyboardEvent) {
@@ -66,6 +75,4 @@ export class UsuarioComponent {
     'telefone2',
     'acoes'
   ];
-
-  dataSource = Colaborador_DATA;
 }
