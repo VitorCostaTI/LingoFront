@@ -39,6 +39,7 @@ export class ClientesComponent {
 
   openDialogCliente(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(ClientesDialogComponent, {
+      autoFocus: false,
       minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
@@ -47,6 +48,7 @@ export class ClientesComponent {
 
   openDialogUpdateCliente(enterAnimationDuration: string, exitAnimationDuration: string, cliente: any): void {
     this.dialog.open(ClientesUpdateDialogComponent, {
+      autoFocus: false,
       minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,

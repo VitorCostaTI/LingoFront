@@ -39,6 +39,7 @@ export class UsuarioComponent {
 
   openDialogColaborador(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(UsuariosDialogComponent, {
+      autoFocus: false,
       width: '800px',
       height: '63%',
       enterAnimationDuration,

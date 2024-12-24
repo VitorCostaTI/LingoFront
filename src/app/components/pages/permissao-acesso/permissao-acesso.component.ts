@@ -16,6 +16,7 @@ export class PermissaoAcessoComponent {
 
   openDialogServicoAdicionar(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(PermissaoAcessoDialogComponent, {
+      autoFocus: false,
       width: '750px',
       enterAnimationDuration,
       exitAnimationDuration,

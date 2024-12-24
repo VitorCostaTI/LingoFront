@@ -39,6 +39,7 @@ export class AutomacaoComponent {
 
   openDialogAutomacao(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(AutomacoesDialogComponent, {
+      autoFocus: false,
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,

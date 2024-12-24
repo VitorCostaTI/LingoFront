@@ -29,6 +29,7 @@ export class HomeComponent {
 
   openNotesDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(NotesComponent, {
+      autoFocus: false,
       width: '750px',
       enterAnimationDuration,
       exitAnimationDuration,

@@ -48,6 +48,7 @@ export class AutomacaoDispositivosComponent {
 
   openDialogUpdate(enterAnimationDuration: string, exitAnimationDuration: string, automacao: any): void {
     this.dialog.open(AutomacoesUpdateDialogComponent, {
+      autoFocus: false,
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,

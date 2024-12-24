@@ -21,6 +21,7 @@ export class OrdemServicoComponent {
 
   openDialogServicoAdicionar(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(OrdemServicoDialogAddComponent, {
+      autoFocus: false,
       width: '60%',
       enterAnimationDuration,
       exitAnimationDuration,

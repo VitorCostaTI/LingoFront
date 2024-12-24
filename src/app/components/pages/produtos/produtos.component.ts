@@ -39,6 +39,7 @@ export class ProdutosComponent {
 
   openDialogProduto(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(ProdutosDialogComponent, {
+      autoFocus: false,
       minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
@@ -47,6 +48,7 @@ export class ProdutosComponent {
 
   openDialogUpdateProduto(enterAnimationDuration: string, exitAnimationDuration: string, produto: any): void {
     this.dialog.open(ProdutosUpdateDialogComponent, {
+      autoFocus: false,
       minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,

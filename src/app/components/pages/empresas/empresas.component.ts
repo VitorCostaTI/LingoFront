@@ -39,6 +39,7 @@ export class EmpresasComponent {
 
   openDialogEmpresas(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(EmpresasdialogComponent, {
+      autoFocus: false,
       minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
@@ -47,6 +48,7 @@ export class EmpresasComponent {
 
   openDialogUpdateEmpresas(enterAnimationDuration: string, exitAnimationDuration: string, empresas: any): void {
     this.dialog.open(EmpresasUpdateDialogComponent, {
+      autoFocus: false,
       minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
