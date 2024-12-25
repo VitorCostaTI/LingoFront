@@ -48,7 +48,7 @@
         <div *ngIf="isLoading" class="loader"></div>
     </div>
 
-    <div class="actions" fxLayout="row" fxLayoutAlign="end center">
+    <div class="margin" fxLayout="row" fxLayoutAlign="end center">
         <button mat-dialog-close mat-flat-button color="warn" [hidden]="isLoading">Cancelar</button>
         &nbsp;
         <button mat-flat-button color="primary" (click)="saveColumn()" matTooltip="Realiza requisição da nova tabela"

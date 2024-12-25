@@ -5,13 +5,13 @@ import { TemplateCrudService } from 'src/app/resources/services/Template/templat
 
 @Component({
   selector: 'app-usuario-dialog-update',
-  templateUrl: './usuario-dialog-update.component.html',
-  styleUrls: ['./usuario-dialog-update.component.scss']
+  templateUrl: './usuario-dialog.component.html',
+  styleUrls: ['./usuario-dialog.component.scss']
 })
 
-export class UsuarioDialogUpdateComponent {
+export class UsuarioDialogComponent {
 
-  cadastroMorador: FormGroup;
+  cadastroUsuario: FormGroup;
   hide = true;
 
   isLoading: boolean = false;
@@ -22,7 +22,7 @@ export class UsuarioDialogUpdateComponent {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
 
-    this.cadastroMorador = this.fb.group({
+    this.cadastroUsuario = this.fb.group({
       colaborador: ['', [Validators.required]],
       setor: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],

@@ -1,9 +1,8 @@
 import { Component, HostListener, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { UsuariosDialogComponent } from './usuarios-dialog/usuarios-dialog.component';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
 import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
-import { UsuarioDialogUpdateComponent } from './usuario-dialog-update/usuario-dialog-update.component';
+import { UsuarioDialogComponent } from './usuario-dialog/usuario-dialog.component';
 import { Colaborador_DATA } from 'src/database/Colaborador';
 import { MatTableDataSource } from '@angular/material/table';
 import { Colaborador } from 'src/app/resources/model/Colaborador';
@@ -38,17 +37,18 @@ export class UsuarioComponent {
   }
 
   openDialogColaborador(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(UsuariosDialogComponent, {
+    this.dialog.open(UsuarioDialogComponent, {
       autoFocus: false,
       width: '800px',
       height: '63%',
       enterAnimationDuration,
       exitAnimationDuration,
+      data: []
     });
   }
 
   openDialogUpdate(enterAnimationDuration: string, exitAnimationDuration: string, data: any): void {
-    this.dialog.open(UsuarioDialogUpdateComponent, {
+    this.dialog.open(UsuarioDialogComponent, {
       width: '800px',
       height: '63%',
       enterAnimationDuration,
