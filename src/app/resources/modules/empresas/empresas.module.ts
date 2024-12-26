@@ -1,25 +1,19 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { EmpresasComponent } from 'src/app/components/pages/empresas/empresas.component';
-import { EmpresasdialogComponent } from 'src/app/components/pages/empresas/empresas-dialog/empresas-dialog.component';
 import { SharedModule } from '../../shared/shared.module';
-import { EmpresasUpdateDialogComponent } from 'src/app/components/pages/empresas/empresas-update-dialog/empresas-update-dialog.component';
-
-
+import { EmpresasDialogComponent } from 'src/app/components/pages/empresas/empresas-dialog/empresas-dialog.component';
 
 @NgModule({
   declarations: [
     EmpresasComponent,
-    EmpresasdialogComponent,
-    EmpresasUpdateDialogComponent,
+    EmpresasDialogComponent,
   ],
   imports: [
     SharedModule
   ],
   exports: [
     EmpresasComponent,
-    EmpresasdialogComponent,
-    EmpresasUpdateDialogComponent,
+    EmpresasDialogComponent,
   ]
 })
 export class EmpresasModule { }

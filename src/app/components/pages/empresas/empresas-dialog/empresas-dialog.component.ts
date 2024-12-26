@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
@@ -7,14 +8,14 @@ import { TemplateCrudService } from 'src/app/resources/services/Template/templat
   templateUrl: './empresas-dialog.component.html',
   styleUrls: ['./empresas-dialog.component.scss']
 })
-export class EmpresasdialogComponent {
-
+export class EmpresasDialogComponent {
   cadastroEmpresa: FormGroup;
   isLoading: boolean = false;
 
   constructor(
+    fb: FormBuilder,
     private templateService: TemplateCrudService,
-    fb: FormBuilder
+    @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.cadastroEmpresa = fb.group({
       razao_social: ['', [Validators.required, Validators.minLength]],
@@ -25,9 +26,9 @@ export class EmpresasdialogComponent {
     })
   }
 
-  salvarCadastro(): void {
+  atualizarCadastro(): void {
     this.isLoading = true;
-    this.templateService.snackBarSuccess('Empresa cadastrada com sucesso', '')
+    this.templateService.snackBarSuccess('Empresa atualizada com sucesso', '')
     setTimeout(() => {
       window.location.reload();
     }, 3500);

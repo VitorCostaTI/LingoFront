@@ -1,13 +1,12 @@
 import { Component, HostListener, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { EmpresasdialogComponent } from './empresas-dialog/empresas-dialog.component';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
 import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
-import { EmpresasUpdateDialogComponent } from './empresas-update-dialog/empresas-update-dialog.component';
 import { Empresa_DATA } from 'src/database/Empresa';
 import { MatTableDataSource } from '@angular/material/table';
 import { Empresa } from 'src/app/resources/model/Empresa';
 import { MatSort } from '@angular/material/sort';
+import { EmpresasDialogComponent } from './empresas-dialog/empresas-dialog.component';
 
 @Component({
   selector: 'app-empresas',
@@ -38,21 +37,22 @@ export class EmpresasComponent {
   }
 
   openDialogEmpresas(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(EmpresasdialogComponent, {
+    this.dialog.open(EmpresasDialogComponent, {
       autoFocus: false,
       minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
+      data: []
     });
   }
 
-  openDialogUpdateEmpresas(enterAnimationDuration: string, exitAnimationDuration: string, empresas: any): void {
-    this.dialog.open(EmpresasUpdateDialogComponent, {
+  openDialogUpdateEmpresas(enterAnimationDuration: string, exitAnimationDuration: string, data: any): void {
+    this.dialog.open(EmpresasDialogComponent, {
       autoFocus: false,
       minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
-      data: empresas
+      data: data
     });
   }
 

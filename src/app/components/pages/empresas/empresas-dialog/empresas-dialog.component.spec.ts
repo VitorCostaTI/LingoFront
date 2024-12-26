@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmpresasdialogComponent } from './empresas-dialog.component';
+import { EmpresasUpdateDialogComponent } from './empresas-dialog.component';
 
-describe('EmpresasdialogComponent', () => {
-  let component: EmpresasdialogComponent;
-  let fixture: ComponentFixture<EmpresasdialogComponent>;
+describe('EmpresasUpdateDialogComponent', () => {
+  let component: EmpresasUpdateDialogComponent;
+  let fixture: ComponentFixture<EmpresasUpdateDialogComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [EmpresasdialogComponent]
+      declarations: [EmpresasUpdateDialogComponent]
     });
-    fixture = TestBed.createComponent(EmpresasdialogComponent);
+    fixture = TestBed.createComponent(EmpresasUpdateDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
