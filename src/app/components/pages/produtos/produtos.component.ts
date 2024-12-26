@@ -3,7 +3,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { ProdutosDialogComponent } from './produtos-dialog/produtos-dialog.component';
 import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
-import { ProdutosUpdateDialogComponent } from './produtos-update-dialog/produtos-update-dialog.component';
 import { Produto_DATA } from 'src/database/Produto';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -43,18 +42,18 @@ export class ProdutosComponent {
       minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
+      data: []
     });
   };
 
-  openDialogUpdateProduto(enterAnimationDuration: string, exitAnimationDuration: string, produto: any): void {
-    this.dialog.open(ProdutosUpdateDialogComponent, {
+  openDialogUpdateProduto(enterAnimationDuration: string, exitAnimationDuration: string, data: any): void {
+    this.dialog.open(ProdutosDialogComponent, {
       autoFocus: false,
       minWidth: '60%',
       enterAnimationDuration,
       exitAnimationDuration,
-      data: produto
+      data: data
     });
-    console.log(produto)
   };
 
   openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, razao_social: string): void {
