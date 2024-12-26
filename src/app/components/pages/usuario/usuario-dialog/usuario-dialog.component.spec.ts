@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UsuarioDialogUpdateComponent } from './usuario-dialog.component';
+import { UsuarioDialogComponent } from './usuario-dialog.component';
 
-describe('UsuarioDialogUpdateComponent', () => {
-  let component: UsuarioDialogUpdateComponent;
-  let fixture: ComponentFixture<UsuarioDialogUpdateComponent>;
+describe('UsuarioDialogComponent', () => {
+  let component: UsuarioDialogComponent;
+  let fixture: ComponentFixture<UsuarioDialogComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [UsuarioDialogUpdateComponent]
+      declarations: [UsuarioDialogComponent]
     });
-    fixture = TestBed.createComponent(UsuarioDialogUpdateComponent);
+    fixture = TestBed.createComponent(UsuarioDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
