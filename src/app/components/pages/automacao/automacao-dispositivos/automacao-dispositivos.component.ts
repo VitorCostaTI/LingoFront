@@ -5,7 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Automacao } from 'src/app/resources/model/Automacao';
 import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
 import { Automacao_DATA } from 'src/database/Automacao';
-import { AutomacoesUpdateDialogComponent } from '../automacoes-update-dialog/automacoes-update-dialog.component';
+import { AutomacoesDialogComponent } from '../automacoes-dialog/automacoes-dialog.component';
 import { ConfirmacaoComponent } from 'src/app/components/dialogs/confirmacao/confirmacao.component';
 
 @Component({
@@ -46,13 +46,13 @@ export class AutomacaoDispositivosComponent {
     }, 3000)
   }
 
-  openDialogUpdate(enterAnimationDuration: string, exitAnimationDuration: string, automacao: any): void {
-    this.dialog.open(AutomacoesUpdateDialogComponent, {
+  openDialogUpdate(enterAnimationDuration: string, exitAnimationDuration: string, data: any): void {
+    this.dialog.open(AutomacoesDialogComponent, {
       autoFocus: false,
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,
-      data: automacao
+      data: data
     });
   }
 

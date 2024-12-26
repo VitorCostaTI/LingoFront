@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
@@ -12,8 +13,9 @@ export class AutomacoesDialogComponent {
   isLoading: boolean = false;
 
   constructor(
-    private templateService: TemplateCrudService,
     fb: FormBuilder,
+    private templateService: TemplateCrudService,
+    @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.cadastroAutomacao = fb.group({
       ip: ['', [Validators.required]],
@@ -26,9 +28,9 @@ export class AutomacoesDialogComponent {
     })
   }
 
-  salvarCadastro(): void {
+  atualizarCadastro(): void {
     this.isLoading = true;
-    this.templateService.snackBarSuccess('Dispositivo cadastrado com sucesso', '')
+    this.templateService.snackBarSuccess('Dispositivo atualizado com sucesso', '')
     setTimeout(() => {
       window.location.reload();
     }, 3500);

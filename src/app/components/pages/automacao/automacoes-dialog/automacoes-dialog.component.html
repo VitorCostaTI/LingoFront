@@ -9,31 +9,31 @@
         <div fxLayout="row" fxLayoutAlign="center" class="form">
             <mat-form-field>
                 <mat-label>IP</mat-label>
-                <input matInput formControlName="ip">
+                <input matInput [(ngModel)]="data.ip" formControlName="ip">
             </mat-form-field>
         </div>
 
         <div fxLayout="row" fxLayoutAlign="center" class="form">
             <mat-form-field>
                 <mat-label>Modelo</mat-label>
-                <input matInput formControlName="modelo">
+                <input matInput [(ngModel)]="data.modelo" formControlName="modelo">
             </mat-form-field>
 
             <mat-form-field>
                 <mat-label>Fabricante</mat-label>
-                <input matInput formControlName="fabricante">
+                <input matInput [(ngModel)]="data.fabricante" formControlName="fabricante">
             </mat-form-field>
         </div>
 
         <div fxLayout="row" fxLayoutAlign="center" class="form">
             <mat-form-field>
                 <mat-label>Equipamento</mat-label>
-                <input matInput formControlName="equipamento">
+                <input matInput [(ngModel)]="data.equipamento" formControlName="equipamento">
             </mat-form-field>
 
             <mat-form-field>
                 <mat-label>Firmware</mat-label>
-                <input matInput formControlName="firmware">
+                <input matInput [(ngModel)]="data.firmware" formControlName="firmware">
             </mat-form-field>
 
         </div>
@@ -41,14 +41,14 @@
         <div fxLayout="row" fxLayoutAlign="center" class="form">
             <mat-form-field>
                 <mat-label>Local</mat-label>
-                <input matInput formControlName="local">
+                <input matInput [(ngModel)]="data.local" formControlName="local">
             </mat-form-field>
         </div>
 
         <div fxLayout="row" fxLayoutAlign="center" class="form">
             <mat-form-field>
                 <mat-label>Porta</mat-label>
-                <input matInput formControlName="porta">
+                <input matInput [(ngModel)]="data.porta" formControlName="porta">
             </mat-form-field>
         </div>
 
@@ -61,7 +61,7 @@
         <div class="margin" fxLayout="row" fxLayoutAlign="end center">
             <button mat-dialog-close mat-flat-button color="warn" [hidden]="isLoading">Cancelar</button>
             &nbsp;
-            <button mat-flat-button color="primary" [disabled]="cadastroAutomacao.invalid"
+            <button mat-flat-button color="primary" [disabled]="cadastroAutomacao.invalid" (click)="atualizarCadastro()"
                 [hidden]="isLoading">Salvar</button>
         </div>
     </div>

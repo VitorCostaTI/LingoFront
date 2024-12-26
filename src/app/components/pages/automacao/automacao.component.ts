@@ -43,6 +43,7 @@ export class AutomacaoComponent {
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,
+      data: []
     });
   }
 
