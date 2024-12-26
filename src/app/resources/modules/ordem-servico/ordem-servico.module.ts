@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 import { OrdemServicoComponent } from 'src/app/components/pages/ordem-servico/ordem-servico.component';
 import { OrdemServicoDialogAddComponent } from 'src/app/components/pages/ordem-servico/ordem-servico-dialog-add/ordem-servico-dialog-add.component';
 import { OrdemServicoDialogFinishComponent } from 'src/app/components/pages/ordem-servico/ordem-servico-dialog-finish/ordem-servico-dialog-finish.component';

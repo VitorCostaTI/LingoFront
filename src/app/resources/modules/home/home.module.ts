@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 import { ConfirmacaoComponent } from 'src/app/components/dialogs/confirmacao/confirmacao.component';
 import { Error404Component } from 'src/app/components/add-on/error404/error404.component';
 import { NotesComponent } from 'src/app/components/dialogs/notes/notes.component';

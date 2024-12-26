@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ProdutosComponent } from 'src/app/components/pages/produtos/produtos.component';
-import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 import { ProdutosDialogComponent } from 'src/app/components/pages/produtos/produtos-dialog/produtos-dialog.component';
 
 @NgModule({

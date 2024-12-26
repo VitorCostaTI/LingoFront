@@ -10,7 +10,7 @@ import { NgModule } from '@angular/core';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SharedModule } from './resources/shared/shared.module';
+import { SharedModule } from './resources/modules/shared/shared.module';
 
 // Pages
 
