@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
@@ -8,8 +9,8 @@ import { TemplateCrudService } from 'src/app/resources/services/Template/templat
   templateUrl: './clientes-dialog.component.html',
   styleUrls: ['./clientes-dialog.component.scss']
 })
-export class ClientesDialogComponent {
 
+export class ClientesDialogComponent {
   cadastroCliente: FormGroup;
 
   endereco: any = {};
@@ -19,7 +20,8 @@ export class ClientesDialogComponent {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
-    private templateService: TemplateCrudService
+    private templateService: TemplateCrudService,
+    @Inject(MAT_DIALOG_DATA) public data: any
   ) {
 
     this.cadastroCliente = this.fb.group({
@@ -62,9 +64,9 @@ export class ClientesDialogComponent {
     });
   }
 
-  salvarCadastro(): void {
+  atualizarCadastro(): void {
     this.isLoading = true;
-    this.templateService.snackBarSuccess('Cliente cadastrado com sucesso', '')
+    this.templateService.snackBarSuccess('Cliente atualizado com sucesso', '')
     setTimeout(() => {
       window.location.reload();
     }, 3500);
