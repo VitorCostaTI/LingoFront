@@ -15,6 +15,7 @@ import { OrdemServicoComponent } from './components/pages/ordem-servico/ordem-se
 import { PermissaoAcessoComponent } from './components/pages/permissao-acesso/permissao-acesso.component';
 import { ProdutosComponent } from './components/pages/produtos/produtos.component';
 import { UsuarioComponent } from './components/pages/usuario/usuario.component';
+import { ProfileUserComponent } from './components/pages/usuario/profile-user/profile-user.component';
 
 const routes: Routes = [
 
@@ -31,6 +32,7 @@ const routes: Routes = [
       { path: 'permissoes', component: PermissaoAcessoComponent },
       { path: 'produtos', component: ProdutosComponent },
       { path: 'usuarios', component: UsuarioComponent },
+      { path: 'perfil', component: ProfileUserComponent },
     ]
   },
   { path: 'login', component: LoginComponent },
