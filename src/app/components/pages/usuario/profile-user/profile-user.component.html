@@ -40,7 +40,7 @@
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Password</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                    <input matInput [type]="hide ? 'password' : 'text'">
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Esconder password'"
                         [attr.aria-pressed]="hide">
                         <mat-icon matTooltip="Esconder senha">{{hide ? 'visibility_off' :
@@ -51,7 +51,42 @@
         </form>
     </mat-card>
 
-   <div class="ficha"></div>
+    <mat-card class="ficha">
+        <mat-card-title>Ficha Cadastral</mat-card-title>
+        <mat-divider></mat-divider>
+        <div class="register">
+            <h3 mat-card-subtitle><i>Permissões de Acesso</i></h3>
+            <mat-divider></mat-divider>
+            <div class="hierarquia">
+                <mat-chip class="mat-elevation-z6"> Admnistração </mat-chip>
+                <mat-chip class="mat-elevation-z6"> Cadastro </mat-chip>
+                <mat-chip class="mat-elevation-z6"> Controle de Usuario </mat-chip>
+                <mat-chip class="mat-elevation-z6"> Comunidade </mat-chip>
+                <mat-chip class="mat-elevation-z6"> Notificações </mat-chip>
+                <mat-chip class="mat-elevation-z6"> Operações </mat-chip>
+            </div>
+            <mat-divider></mat-divider>
+            <h3 mat-card-subtitle><i>Permissões de Acesso</i></h3>
+            <mat-divider></mat-divider>
+            <div class="post">
+                <mat-form-field>
+                    <mat-label>E-Mail</mat-label>
+                    <input type="email" matInput>
+                    <mat-icon matSuffix>alternate_email</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>E-Mail</mat-label>
+                    <input type="email" matInput>
+                    <mat-icon matSuffix>alternate_email</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>E-Mail</mat-label>
+                    <input type="email" matInput>
+                    <mat-icon matSuffix>alternate_email</mat-icon>
+                </mat-form-field>
+            </div>
+        </div>
+    </mat-card>
 </div>
 
 <br>

@@ -24,6 +24,10 @@
     justify-content: space-around;
 }
 
+mat-card-title {
+    margin: 15px;
+}
+
 form {
     margin-top: 15px;
 }
@@ -34,6 +38,32 @@ form {
         width: 100%;
         margin: 5px 10px;
     }
+}
+
+.hierarquia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+    padding: 25px;
+}
+
+mat-chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 60px;
+    padding: 0 16px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background: rgb(149, 61, 61);
+    background: linear-gradient(90deg, rgba(149, 61, 61, 1) 0%, rgba(151, 68, 68, 1) 50%, rgba(159, 67, 67, 1) 100%);
+}
+
+::ng-deep .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) .mdc-evolution-chip__text-label {
+    font-family: -webkit-body !important;
+    color: whitesmoke !important;
 }
 
 img {
