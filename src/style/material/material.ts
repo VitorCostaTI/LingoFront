@@ -1,5 +1,6 @@
 import { OverlayModule } from "@angular/cdk/overlay";
 import { MatBadgeModule } from "@angular/material/badge";
+import { MatBottomSheetModule } from "@angular/material/bottom-sheet";
 import { MatButtonModule } from "@angular/material/button";
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
 import { MatCardModule } from "@angular/material/card";
@@ -32,6 +33,7 @@ import { MatTreeModule } from "@angular/material/tree";
 export const materialModules = [
   MatBadgeModule,
   MatButtonModule,
+  MatBottomSheetModule,
   MatCardModule,
   MatCheckboxModule,
   MatChipsModule,

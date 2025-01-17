@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Clipboard } from '@angular/cdk/clipboard';
 import { NotificacoesComponent } from '../../dialogs/notificacoes/notificacoes.component';
 import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,6 @@ import { TemplateCrudService } from 'src/app/resources/services/Template/templat
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  title = 'frontLingo';
 
   constructor(
     public clipboard: Clipboard,
@@ -18,14 +18,12 @@ export class HomeComponent {
     public templateService: TemplateCrudService
   ) { }
 
-  openDialogNotificacoes(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(NotificacoesComponent, {
-      width: '750px',
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
+  private _bottomSheet = inject(MatBottomSheet);
+
+  openBottomSheet(): void {
+    this._bottomSheet.open(NotificacoesComponent);
   }
-  
+
   copyLinkedln() {
     const link = 'https://www.linkedin.com/in/vitor-costa-10566b22a/'
     this.clipboard.copy(link)
