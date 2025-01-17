@@ -4,20 +4,20 @@
     <mat-card class="user">
         <div class="profile">
             <img src="assets/img/perfil.png" alt="perfil-profile">
-            <h1 mat-card-title><b>Vitor Costa</b></h1>
-            <h2 mat-card-subtitle><i>Vitor Henrique Mariano da Costa</i></h2>
+            <h1 mat-card-title><b>{{perfilUsuario?.nickName}}</b></h1>
+            <h2 mat-card-subtitle><i>{{perfilUsuario?.colaborador}}</i></h2>
         </div>
 
         <mat-divider></mat-divider>
 
         <div class="rendimentos">
             <div>
-                <p><i>N.serviços</i></p>
+                <p><i>{{perfilUsuario?.servicos}}</i></p>
                 <b>Serviços</b>
             </div>
 
             <div>
-                <p><i>N.reclamacoes</i></p>
+                <p><i>{{perfilUsuario?.reclamacoes}}</i></p>
                 <b>Reclamações</b>
             </div>
         </div>
@@ -28,19 +28,19 @@
             <div class="post">
                 <mat-form-field class="example-full-width">
                     <mat-label>Telefone</mat-label>
-                    <input type="tel" matInput mask="(00) 00000-0000">
+                    <input type="tel" matInput [value]="perfilUsuario?.telefone">
                     <mat-icon matSuffix>phone</mat-icon>
                 </mat-form-field>
             </div>
             <div class="post">
                 <mat-form-field>
                     <mat-label>E-Mail</mat-label>
-                    <input type="email" matInput>
+                    <input type="email" matInput [value]="perfilUsuario?.email">
                     <mat-icon matSuffix>alternate_email</mat-icon>
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Password</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'">
+                    <input matInput [type]="hide ? 'password' : 'text'" [value]="perfilUsuario?.password">
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Esconder password'"
                         [attr.aria-pressed]="hide">
                         <mat-icon matTooltip="Esconder senha">{{hide ? 'visibility_off' :
@@ -58,11 +58,11 @@
             <div class="post">
                 <mat-form-field>
                     <mat-label>Supervisor</mat-label>
-                    <input matInput disabled>
+                    <input matInput disabled [value]="perfilUsuario?.supervisor">
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Setor</mat-label>
-                    <input matInput disabled>
+                    <input matInput [value]="perfilUsuario?.setor" disabled>
                 </mat-form-field>
             </div>
             <div class="hierarquia">
@@ -79,12 +79,12 @@
             <div class="post">
                 <mat-form-field>
                     <mat-label>Telefone 2</mat-label>
-                    <input matInput>
+                    <input matInput [value]="perfilUsuario?.telefone2">
                     <mat-icon matSuffix>phone</mat-icon>
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Contato de emergencia</mat-label>
-                    <input matInput>
+                    <input matInput [value]="perfilUsuario?.emergencia">
                     <mat-icon matSuffix>emergency</mat-icon>
                 </mat-form-field>
             </div>

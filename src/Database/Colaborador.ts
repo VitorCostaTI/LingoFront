@@ -2,10 +2,33 @@ import { Colaborador } from "src/app/resources/model/Colaborador";
 
 export const Colaborador_DATA: Colaborador[] = [
     {
+        colaborador: 'Vitor Henrique Mariano da Costa',
+        nickName: 'Vitor Costa',
+        documento: "717.968.872-00",
+        pis: "234.93088.64-3",
+        setor: 'Software',
+        supervisor: 'Vitor Henrique Mariano da Costa',
+        email: 'vitortecnologia62@gmail.com',
+        password: "OsMHdzGse3",
+        telefone: '(19) 3854-9878',
+        telefone2: '(19) 93501-0698',
+        cep: "13486 - 034",
+        logradouro: "Vereador Samuel Berto",
+        bairro: "Nova Suiça",
+        cidade: "Limeira",
+        estado: "SP",
+        complemento: "Lote 3",
+        emergencia: 'Pai - (62) 98276-0747',
+        servicos: 1290,
+        reclamacoes: 2
+    },
+    {
         colaborador: 'José Vicente Jesus',
+        nickName: 'José Jesus',
         documento: "717.968.872-00",
         pis: "234.93088.64-3",
         setor: 'Contabilidade',
+        supervisor: 'José Vicente Jesus',
         email: 'jose_vicente_jesus@leandroreis.com',
         password: "OsMHdzGse3",
         telefone: '(62) 3854-9878',
@@ -16,13 +39,17 @@ export const Colaborador_DATA: Colaborador[] = [
         cidade: "Planaltina",
         estado: "GO",
         complemento: "Lote 3",
-        emergencia: 'Pai - (62) 98276-0747'
+        emergencia: 'Pai - (62) 98276-0747',
+        servicos: 1290,
+        reclamacoes: 2
     },
     {
         colaborador: 'Fernanda Marlene Novaes',
+        nickName: 'Fernanda Novaes',
         documento: "341.831.272-11",
         pis: "304.85551.29-4",
         setor: 'Operacional',
+        supervisor: 'Fernanda Marlene Novaes',
         email: 'fernanda-novaes98@msds.com.br',
         password: "Yw5KHdsWAa",
         telefone: '(65) 2854-8027',
@@ -33,13 +60,17 @@ export const Colaborador_DATA: Colaborador[] = [
         cidade: "Feira de Santana",
         estado: "BA",
         complemento: "Bloco 8",
-        emergencia: 'Mãe - (65) 99976-0741'
+        emergencia: 'Mãe - (65) 99976-0741',
+        servicos: 1290,
+        reclamacoes: 2
     },
     {
         colaborador: 'Nair Antônia Sales',
+        nickName: 'Nair Sales',
         documento: "078.763.140-07",
         pis: "923.84622.25-0",
         setor: 'Administrativo',
+        supervisor: 'Nair Antônia Sales',
         email: 'nair-sales81@lnaa.com.br',
         password: "LlLXY8ac5m",
         telefone: '(11) 2527-8445',
@@ -50,13 +81,17 @@ export const Colaborador_DATA: Colaborador[] = [
         cidade: "Gurupi",
         estado: "TO",
         complemento: "Lote 9",
-        emergencia: 'Marido - (11) 99576-0741'
+        emergencia: 'Marido - (11) 99576-0741',
+        servicos: 1290,
+        reclamacoes: 2
     },
     {
         colaborador: 'Sérgio Pietro Ruan Fogaça',
+        nickName: 'Sérgio Fogaça',
         documento: "365.771.017-52",
         pis: "337.08611.34-2",
         setor: 'Financeiro',
+        supervisor: 'Sérgio Pietro Ruan Fogaça',
         email: 'sergio-fogaca84@demasi.com.br',
         password: "LtbAgEZUl1",
         telefone: '(86) 2675-0807',
@@ -67,13 +102,17 @@ export const Colaborador_DATA: Colaborador[] = [
         cidade: "Cacoal",
         estado: "RO",
         complemento: "Aeroporto 10",
-        emergencia: 'Filho - (86) 92276-0741'
+        emergencia: 'Filho - (86) 92276-0741',
+        servicos: 1290,
+        reclamacoes: 2
     },
     {
         colaborador: 'Kaique Fernando Rocha',
+        nickName: 'Kaique Rocha',
         documento: "690.472.985-60",
         pis: "152.39979.55-7",
         setor: 'Software',
+        supervisor: 'Vitor Henrique Mariano da Costa',
         email: 'kaique.fernando.rocha@vmetaiscba.com.br',
         password: "ePKkZLFSKg",
         telefone: '(98) 2983-3202',
@@ -84,13 +123,17 @@ export const Colaborador_DATA: Colaborador[] = [
         cidade: "João Pessoa",
         estado: "PB",
         complemento: "Subsolo 8",
-        emergencia: 'Esposa - (98) 99270-0741'
+        emergencia: 'Esposa - (98) 99270-0741',
+        servicos: 1290,
+        reclamacoes: 2
     },
     {
         colaborador: 'Marcela Emilly Rayssa Gomes',
+        nickName: 'Marcela Gomes',
         documento: "260.561.564-27",
         pis: "841.68769.16-7",
         setor: 'Operacional',
+        supervisor: 'Fernanda Marlene Novaes',
         email: 'marcelaemillygomes@regler.com.br',
         password: "TRqfmxBbuY",
         telefone: '(85) 2646-7783',
@@ -101,13 +144,17 @@ export const Colaborador_DATA: Colaborador[] = [
         cidade: "Cariacica",
         estado: "ES",
         complemento: "Bloco 2",
-        emergencia: 'Neto - (85) 99546-0741'
+        emergencia: 'Neto - (85) 99546-0741',
+        servicos: 1290,
+        reclamacoes: 2
     },
     {
         colaborador: 'Giovanna Marli da Cunha',
+        nickName: 'Giovanna Cunha',
         documento: "857.756.607-22",
         pis: "575.92646.73-8",
         setor: 'Financeiro',
+        supervisor: 'Sérgio Pietro Ruan Fogaça',
         email: 'giovanna-dacunha70@ddfnet.com.br',
         password: "LHo8ByX2y0",
         telefone: '(81) 2917-4236',
@@ -118,13 +165,17 @@ export const Colaborador_DATA: Colaborador[] = [
         cidade: "Campo Grande",
         estado: "MS",
         complemento: "Apartamento 8",
-        emergencia: 'Primo - (81) 99276-2341'
+        emergencia: 'Primo - (81) 99276-2341',
+        servicos: 1290,
+        reclamacoes: 2
     },
     {
         colaborador: 'Tatiane Larissa Emily Aragão',
+        nickName: 'Tatiane Aragão',
         documento: "770.437.245-97",
         pis: "248.59639.65-4",
         setor: 'Administrativo',
+        supervisor: 'Nair Antônia Sales',
         email: 'tatiane_aragao@jmmarcenaria.com.br',
         password: "u8EOrMqtym",
         telefone: '(67) 3772-4865',
@@ -135,13 +186,17 @@ export const Colaborador_DATA: Colaborador[] = [
         cidade: "Salvador",
         estado: "BA",
         complemento: "Bloco 2",
-        emergencia: 'Tio - (67) 99286-0741'
+        emergencia: 'Tio - (67) 99286-0741',
+        servicos: 1290,
+        reclamacoes: 2
     },
     {
         colaborador: 'Ian Heitor Renan Fernandes',
+        nickName: 'Heitor Fernandes',
         documento: "916.126.590-04",
         pis: "651.03610.39-6",
         setor: 'Operacional',
+        supervisor: 'Fernanda Marlene Novaes',
         email: 'ian_heitor_fernandes@unitower.com.br',
         password: "jEEZno4x7C",
         telefone: '(17) 3793-0486',
@@ -152,13 +207,17 @@ export const Colaborador_DATA: Colaborador[] = [
         cidade: "Boa Vista",
         estado: "RR",
         complemento: "Sobreloja 5",
-        emergencia: 'Pai - (17) 99276-0711'
+        emergencia: 'Pai - (17) 99276-0711',
+        servicos: 1290,
+        reclamacoes: 2
     },
     {
         colaborador: 'Cláudio Raul Lima',
+        nickName: 'Cláudio Lima',
         documento: "868.363.175-35",
         pis: "725.94517.03-3",
         setor: 'Software',
+        supervisor: 'Vitor Henrique Mariano da Costa',
         email: 'claudio-lima79@orthoi.com.br',
         password: "eaZnsYSA54",
         telefone: '(65) 2626-1380',
@@ -169,6 +228,8 @@ export const Colaborador_DATA: Colaborador[] = [
         cidade: "Manaus",
         estado: "AM",
         complemento: "Andar 1",
-        emergencia: 'Pai - (65) 99271-0741'
+        emergencia: 'Pai - (65) 99271-0741',
+        servicos: 1290,
+        reclamacoes: 2
     },
 ];
