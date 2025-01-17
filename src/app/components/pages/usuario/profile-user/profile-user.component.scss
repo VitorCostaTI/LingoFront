@@ -4,6 +4,21 @@
     margin-top: -125px;
 }
 
+@media only screen and (max-width: 960px) {
+    .container-user {
+        display: block;
+    }
+
+    .user {
+        width: 100% !important;
+    }
+
+    .ficha{
+        margin-top: 50px;
+        width: 100% !important;
+    }
+}
+
 .profile {
     margin: 25px 0px;
     text-align: center;
@@ -45,7 +60,7 @@ form {
         margin: 15px 25px;
     }
 
-    .post{
+    .post {
         margin: 15px 0;
     }
 }
