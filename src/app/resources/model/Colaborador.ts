@@ -1,3 +1,5 @@
+import { Permissao } from "./Permissao";
+
 export interface Colaborador {
     colaborador: string;
     nickName: string;
@@ -17,5 +19,6 @@ export interface Colaborador {
     complemento: string;
     emergencia: string;
     servicos: number,
-    reclamacoes: number
+    reclamacoes: number,
+    permissao: Permissao[]
 }

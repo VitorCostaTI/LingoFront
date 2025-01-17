@@ -20,7 +20,33 @@ export const Colaborador_DATA: Colaborador[] = [
         complemento: "Lote 3",
         emergencia: 'Pai - (62) 98276-0747',
         servicos: 1290,
-        reclamacoes: 2
+        reclamacoes: 2,
+        permissao: [
+            {
+                nome: 'Automação',
+                ativo: true
+            },
+            {
+                nome: 'Cadastro',
+                ativo: true
+            },
+            {
+                nome: 'Comunidade',
+                ativo: true
+            },
+            {
+                nome: 'Controle de Usuario',
+                ativo: true
+            },
+            {
+                nome: 'Notificações',
+                ativo: true
+            },
+            {
+                nome: 'Operações',
+                ativo: true
+            },
+        ],
     },
     {
         colaborador: 'José Vicente Jesus',
@@ -41,7 +67,21 @@ export const Colaborador_DATA: Colaborador[] = [
         complemento: "Lote 3",
         emergencia: 'Pai - (62) 98276-0747',
         servicos: 1290,
-        reclamacoes: 2
+        reclamacoes: 2,
+        permissao: [
+            {
+                nome: 'Cadastro',
+                ativo: true
+            },
+            {
+                nome: 'Notificações',
+                ativo: true
+            },
+            {
+                nome: 'Operações',
+                ativo: true
+            },
+        ],
     },
     {
         colaborador: 'Fernanda Marlene Novaes',
@@ -62,7 +102,21 @@ export const Colaborador_DATA: Colaborador[] = [
         complemento: "Bloco 8",
         emergencia: 'Mãe - (65) 99976-0741',
         servicos: 1290,
-        reclamacoes: 2
+        reclamacoes: 2,
+        permissao: [
+            {
+                nome: 'Cadastro',
+                ativo: true
+            },
+            {
+                nome: 'Comunidade',
+                ativo: true
+            },
+            {
+                nome: 'Operações',
+                ativo: true
+            },
+        ],
     },
     {
         colaborador: 'Nair Antônia Sales',
@@ -83,7 +137,21 @@ export const Colaborador_DATA: Colaborador[] = [
         complemento: "Lote 9",
         emergencia: 'Marido - (11) 99576-0741',
         servicos: 1290,
-        reclamacoes: 2
+        reclamacoes: 2,
+        permissao: [
+            {
+                nome: 'Cadastro',
+                ativo: true
+            },
+            {
+                nome: 'Notificações',
+                ativo: true
+            },
+            {
+                nome: 'Operações',
+                ativo: true
+            },
+        ],
     },
     {
         colaborador: 'Sérgio Pietro Ruan Fogaça',
@@ -104,7 +172,21 @@ export const Colaborador_DATA: Colaborador[] = [
         complemento: "Aeroporto 10",
         emergencia: 'Filho - (86) 92276-0741',
         servicos: 1290,
-        reclamacoes: 2
+        reclamacoes: 2,
+        permissao: [
+            {
+                nome: 'Cadastro',
+                ativo: true
+            },
+            {
+                nome: 'Notificações',
+                ativo: true
+            },
+            {
+                nome: 'Operações',
+                ativo: true
+            },
+        ],
     },
     {
         colaborador: 'Kaique Fernando Rocha',
@@ -125,7 +207,33 @@ export const Colaborador_DATA: Colaborador[] = [
         complemento: "Subsolo 8",
         emergencia: 'Esposa - (98) 99270-0741',
         servicos: 1290,
-        reclamacoes: 2
+        reclamacoes: 2,
+        permissao: [
+            {
+                nome: 'Automação',
+                ativo: true
+            },
+            {
+                nome: 'Cadastro',
+                ativo: true
+            },
+            {
+                nome: 'Comunidade',
+                ativo: true
+            },
+            {
+                nome: 'Controle de Usuario',
+                ativo: true
+            },
+            {
+                nome: 'Notificações',
+                ativo: true
+            },
+            {
+                nome: 'Operações',
+                ativo: true
+            },
+        ],
     },
     {
         colaborador: 'Marcela Emilly Rayssa Gomes',
@@ -146,7 +254,21 @@ export const Colaborador_DATA: Colaborador[] = [
         complemento: "Bloco 2",
         emergencia: 'Neto - (85) 99546-0741',
         servicos: 1290,
-        reclamacoes: 2
+        reclamacoes: 2,
+        permissao: [
+            {
+                nome: 'Cadastro',
+                ativo: true
+            },
+            {
+                nome: 'Comunidade',
+                ativo: true
+            },
+            {
+                nome: 'Operações',
+                ativo: true
+            },
+        ],
     },
     {
         colaborador: 'Giovanna Marli da Cunha',
@@ -167,7 +289,21 @@ export const Colaborador_DATA: Colaborador[] = [
         complemento: "Apartamento 8",
         emergencia: 'Primo - (81) 99276-2341',
         servicos: 1290,
-        reclamacoes: 2
+        reclamacoes: 2,
+        permissao: [
+            {
+                nome: 'Cadastro',
+                ativo: true
+            },
+            {
+                nome: 'Notificações',
+                ativo: true
+            },
+            {
+                nome: 'Operações',
+                ativo: true
+            },
+        ],
     },
     {
         colaborador: 'Tatiane Larissa Emily Aragão',
@@ -188,7 +324,21 @@ export const Colaborador_DATA: Colaborador[] = [
         complemento: "Bloco 2",
         emergencia: 'Tio - (67) 99286-0741',
         servicos: 1290,
-        reclamacoes: 2
+        reclamacoes: 2,
+        permissao: [
+            {
+                nome: 'Cadastro',
+                ativo: true
+            },
+            {
+                nome: 'Notificações',
+                ativo: true
+            },
+            {
+                nome: 'Operações',
+                ativo: true
+            },
+        ],
     },
     {
         colaborador: 'Ian Heitor Renan Fernandes',
@@ -209,7 +359,21 @@ export const Colaborador_DATA: Colaborador[] = [
         complemento: "Sobreloja 5",
         emergencia: 'Pai - (17) 99276-0711',
         servicos: 1290,
-        reclamacoes: 2
+        reclamacoes: 2,
+        permissao: [
+            {
+                nome: 'Cadastro',
+                ativo: true
+            },
+            {
+                nome: 'Comunidade',
+                ativo: true
+            },
+            {
+                nome: 'Operações',
+                ativo: true
+            },
+        ],
     },
     {
         colaborador: 'Cláudio Raul Lima',
@@ -230,6 +394,32 @@ export const Colaborador_DATA: Colaborador[] = [
         complemento: "Andar 1",
         emergencia: 'Pai - (65) 99271-0741',
         servicos: 1290,
-        reclamacoes: 2
+        reclamacoes: 2,
+        permissao: [
+            {
+                nome: 'Automação',
+                ativo: true
+            },
+            {
+                nome: 'Cadastro',
+                ativo: true
+            },
+            {
+                nome: 'Comunidade',
+                ativo: true
+            },
+            {
+                nome: 'Controle de Usuario',
+                ativo: true
+            },
+            {
+                nome: 'Notificações',
+                ativo: true
+            },
+            {
+                nome: 'Operações',
+                ativo: true
+            },
+        ],
     },
 ];
