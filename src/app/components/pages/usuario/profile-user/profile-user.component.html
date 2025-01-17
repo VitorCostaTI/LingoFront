@@ -55,8 +55,16 @@
         <mat-card-title>Ficha Cadastral</mat-card-title>
         <mat-divider></mat-divider>
         <div class="register">
-            <h3 mat-card-subtitle><i>Permissões de Acesso</i></h3>
-            <mat-divider></mat-divider>
+            <div class="post">
+                <mat-form-field>
+                    <mat-label>Supervisor</mat-label>
+                    <input matInput disabled>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Setor</mat-label>
+                    <input matInput disabled>
+                </mat-form-field>
+            </div>
             <div class="hierarquia">
                 <mat-chip class="mat-elevation-z6"> Admnistração </mat-chip>
                 <mat-chip class="mat-elevation-z6"> Cadastro </mat-chip>
@@ -70,22 +78,18 @@
             <mat-divider></mat-divider>
             <div class="post">
                 <mat-form-field>
-                    <mat-label>E-Mail</mat-label>
-                    <input type="email" matInput>
-                    <mat-icon matSuffix>alternate_email</mat-icon>
+                    <mat-label>Telefone 2</mat-label>
+                    <input matInput>
+                    <mat-icon matSuffix>phone</mat-icon>
                 </mat-form-field>
                 <mat-form-field>
-                    <mat-label>E-Mail</mat-label>
-                    <input type="email" matInput>
-                    <mat-icon matSuffix>alternate_email</mat-icon>
-                </mat-form-field>
-                <mat-form-field>
-                    <mat-label>E-Mail</mat-label>
-                    <input type="email" matInput>
-                    <mat-icon matSuffix>alternate_email</mat-icon>
+                    <mat-label>Contato de emergencia</mat-label>
+                    <input matInput>
+                    <mat-icon matSuffix>emergency</mat-icon>
                 </mat-form-field>
             </div>
         </div>
+        <mat-divider></mat-divider>
     </mat-card>
 </div>
 

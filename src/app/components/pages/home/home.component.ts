@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Clipboard } from '@angular/cdk/clipboard';
 import { NotificacoesComponent } from '../../dialogs/notificacoes/notificacoes.component';
-import { NotesComponent } from '../../dialogs/notes/notes.component';
 import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
@@ -26,16 +25,7 @@ export class HomeComponent {
       exitAnimationDuration,
     });
   }
-
-  openNotesDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(NotesComponent, {
-      autoFocus: false,
-      width: '750px',
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
-  }
-
+  
   copyLinkedln() {
     const link = 'https://www.linkedin.com/in/vitor-costa-10566b22a/'
     this.clipboard.copy(link)
