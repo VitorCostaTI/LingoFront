@@ -1,7 +1,6 @@
 import { Component, HostListener, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmacaoComponent } from '../../dialogs/confirmacao/confirmacao.component';
-import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
 import { Cliente_DATA } from 'src/database/Cliente';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -57,13 +56,13 @@ export class ClientesComponent {
     });
   }
 
-  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, cliente: string): void {
+  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, cliente: any): void {
     const dialogRef = this.dialog.open(ConfirmacaoComponent, {
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,
       data: {
-        nome: cliente,
+        nome: cliente.cliente,
         message: "Deseja deletar o cliente:"
       }
     });
