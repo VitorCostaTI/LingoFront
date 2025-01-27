@@ -57,20 +57,20 @@ export class ProdutosComponent {
     });
   };
 
-  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, produto: string): void {
+  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, produto: any): void {
     const dialogRef = this.dialog.open(ConfirmacaoComponent, {
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,
       data: {
-        nome: produto,
+        nome: produto.produto,
         message: "Deseja deletar o produto:"
       }
     });
 
     dialogRef.afterClosed().subscribe((confirm: boolean) => {
       if (confirm) {
-        this.templateService.snackBarSuccess("Deseja deletar o produto:" ,"")
+        this.templateService.snackBarSuccess("Produto deletado com sucesso:" ,"")
       }
     })
   };

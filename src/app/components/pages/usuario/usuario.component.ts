@@ -7,6 +7,7 @@ import { Colaborador_DATA } from 'src/database/Colaborador';
 import { MatTableDataSource } from '@angular/material/table';
 import { Colaborador } from 'src/app/resources/model/Colaborador';
 import { MatSort } from '@angular/material/sort';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-usuario',
@@ -22,11 +23,11 @@ export class UsuarioComponent {
 
   constructor(
     public dialog: MatDialog,
-    private confirmacaoService: ConfirmacaoService
+    private templateService: TemplateCrudService,
   ) { }
 
   @ViewChild(MatSort) sort!: MatSort
-  ngAfterViewInit(): void{
+  ngAfterViewInit(): void {
     this.dataSource.sort = this.sort
   }
 
@@ -57,14 +58,22 @@ export class UsuarioComponent {
     });
   }
 
-  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, usuario: string): void {
-    this.confirmacaoService.acao = "deletar";
-    this.confirmacaoService.nome = usuario;
-    this.dialog.open(ConfirmacaoComponent, {
+  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, usuario: any): void {
+    const dialogRef = this.dialog.open(ConfirmacaoComponent, {
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,
+      data: {
+        nome: usuario.colaborador,
+        message: "Deseja deletar o usuario:"
+      }
     });
+    dialogRef.afterClosed().subscribe((confirm: boolean) => {
+      if (confirm) {
+        this.templateService.snackBarSuccess("Usuario deletado com sucesso", "");
+      }
+    })
+
   }
 
   displayedColumns: string[] = [
