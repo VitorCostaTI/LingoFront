@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confirmacao.service';
 import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
@@ -8,13 +9,17 @@ import { TemplateCrudService } from 'src/app/resources/services/Template/templat
   styleUrls: ['./confirmacao.component.scss']
 })
 export class ConfirmacaoComponent {
-  constructor(private confirmacaoService: ConfirmacaoService, private templateService: TemplateCrudService) { }
+
+  constructor(
+    public dialogRef: MatDialogRef<ConfirmacaoComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: { message: string, nome: string }
+  ) { }
 
   isLoading: boolean = false;
 
-  acao: String = this.confirmacaoService.acao;
-  nome: String = this.confirmacaoService.nome;
-
+  ngOnInit(): void {
+    console.log(this.data)
+  }
 
   recarregarPagina(): void {
     setTimeout(() => {
@@ -23,8 +28,6 @@ export class ConfirmacaoComponent {
   }
 
   actionConfirm(): void {
-    this.isLoading = true;
-    this.templateService.snackBarSuccess("Sucesso ao executar requisição", "")
-    this.recarregarPagina();
+    this.dialogRef.close(true)
   }
 }

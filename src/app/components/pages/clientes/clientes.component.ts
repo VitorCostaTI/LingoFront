@@ -7,6 +7,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Cliente } from 'src/app/resources/model/Cliente';
 import { ClientesDialogComponent } from './clientes-dialog/clientes-dialog.component';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-clientes',
@@ -19,12 +20,13 @@ export class ClientesComponent {
   isActive = false;
 
   constructor(
-    public dialog: MatDialog, 
+    public dialog: MatDialog,
+    private templateService: TemplateCrudService,
     private confirmacaoService: ConfirmacaoService
   ) { }
 
   @HostListener('window:keydown.control.y', ['$event'])
-  handleSave(event: KeyboardEvent){
+  handleSave(event: KeyboardEvent) {
     event.preventDefault();
     this.openDialogCliente('500ms', '250ms')
   }
@@ -32,7 +34,7 @@ export class ClientesComponent {
   dataSource = new MatTableDataSource<Cliente>(Cliente_DATA);
 
   @ViewChild(MatSort) sort!: MatSort
-  ngAfterViewInit(): void{
+  ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
   }
 
@@ -56,14 +58,23 @@ export class ClientesComponent {
     });
   }
 
-  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, nome: string): void {
-    this.confirmacaoService.acao = "deletar";
-    this.confirmacaoService.nome = nome;
-    this.dialog.open(ConfirmacaoComponent, {
+  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, cliente: string): void {
+    const dialogRef = this.dialog.open(ConfirmacaoComponent, {
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,
+      data: {
+        message: "Deseja deletar o cliente:",
+        nome: cliente
+      }
+      
     });
+
+    dialogRef.afterClosed().subscribe((confirm: boolean) => {
+      if (confirm) {
+        this.templateService.snackBarSuccess("Cliente deletado com sucesso!", "")
+      }
+    })
   }
 
   displayedColumns: string[] = [
