@@ -7,6 +7,7 @@ import { ConfirmacaoService } from 'src/app/resources/services/Confirmacao/confi
 import { Automacao_DATA } from 'src/database/Automacao';
 import { AutomacoesDialogComponent } from '../automacoes-dialog/automacoes-dialog.component';
 import { ConfirmacaoComponent } from 'src/app/components/dialogs/confirmacao/confirmacao.component';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-automacao-dispositivos',
@@ -20,7 +21,7 @@ export class AutomacaoDispositivosComponent {
 
   constructor(
     private dialog: MatDialog,
-    private confirmacaoService: ConfirmacaoService,
+    private templateService: TemplateCrudService,
   ) { }
 
   ngOnInit(): void {
@@ -57,13 +58,21 @@ export class AutomacaoDispositivosComponent {
   }
 
   openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, nome: string): void {
-    this.confirmacaoService.acao = "desconectar";
-    this.confirmacaoService.nome = nome;
-    this.dialog.open(ConfirmacaoComponent, {
+    const dialogRef = this.dialog.open(ConfirmacaoComponent, {
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,
+      data: {
+        nome: nome,
+        message: "Deseja desconectar o equipamento:"
+      }
     });
+
+    dialogRef.afterClosed().subscribe((confirm: boolean) => {
+      if(confirm){
+        this.templateService.snackBarSuccess("Equipamento desconectado com sucesso", "")
+      }
+    })
   }
 
   displayedColumns: string[] = [
