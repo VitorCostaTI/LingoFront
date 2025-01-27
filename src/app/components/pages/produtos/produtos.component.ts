@@ -7,6 +7,7 @@ import { Produto_DATA } from 'src/database/Produto';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Produto } from 'src/app/resources/model/Produto';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-produtos',
@@ -20,13 +21,13 @@ export class ProdutosComponent {
 
   constructor(
     public dialog: MatDialog,
-    private confirmacaoService: ConfirmacaoService
+    private templateService: TemplateCrudService,
   ) { }
 
   dataSource = new MatTableDataSource<Produto>(Produto_DATA)
 
   @ViewChild(MatSort) sort!: MatSort
-  ngAfterViewInit(): void{
+  ngAfterViewInit(): void {
     this.dataSource.sort = this.sort
   }
 
@@ -56,14 +57,22 @@ export class ProdutosComponent {
     });
   };
 
-  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, razao_social: string): void {
-    this.confirmacaoService.acao = "deletar";
-    this.confirmacaoService.nome = razao_social;
-    this.dialog.open(ConfirmacaoComponent, {
+  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, produto: string): void {
+    const dialogRef = this.dialog.open(ConfirmacaoComponent, {
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,
+      data: {
+        nome: produto,
+        message: "Deseja deletar o produto:"
+      }
     });
+
+    dialogRef.afterClosed().subscribe((confirm: boolean) => {
+      if (confirm) {
+        this.templateService.snackBarSuccess("Deseja deletar o produto:" ,"")
+      }
+    })
   };
 
   displayedColumns: string[] = [
