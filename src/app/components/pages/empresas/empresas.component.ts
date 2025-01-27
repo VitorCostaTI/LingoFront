@@ -57,13 +57,13 @@ export class EmpresasComponent {
     });
   }
 
-  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, razao_social: string): void {
+  openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, empresa: any): void {
     const dialogRef = this.dialog.open(ConfirmacaoComponent, {
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,
       data: {
-        nome: razao_social,
+        nome: empresa.razao_social,
         message: "Deseja deletar a empresa:"
       }
     });
