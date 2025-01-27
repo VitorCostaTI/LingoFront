@@ -22,7 +22,6 @@ export class ClientesComponent {
   constructor(
     public dialog: MatDialog,
     private templateService: TemplateCrudService,
-    private confirmacaoService: ConfirmacaoService
   ) { }
 
   @HostListener('window:keydown.control.y', ['$event'])
@@ -64,10 +63,9 @@ export class ClientesComponent {
       enterAnimationDuration,
       exitAnimationDuration,
       data: {
-        message: "Deseja deletar o cliente:",
-        nome: cliente
+        nome: cliente,
+        message: "Deseja deletar o cliente:"
       }
-      
     });
 
     dialogRef.afterClosed().subscribe((confirm: boolean) => {

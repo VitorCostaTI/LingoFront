@@ -7,6 +7,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Empresa } from 'src/app/resources/model/Empresa';
 import { MatSort } from '@angular/material/sort';
 import { EmpresasDialogComponent } from './empresas-dialog/empresas-dialog.component';
+import { TemplateCrudService } from 'src/app/resources/services/Template/template-crud.service';
 
 @Component({
   selector: 'app-empresas',
@@ -20,18 +21,18 @@ export class EmpresasComponent {
 
   constructor(
     public dialog: MatDialog,
-    private confirmacaoService: ConfirmacaoService
+    private templateService: TemplateCrudService,
   ) { }
 
   dataSource = new MatTableDataSource<Empresa>(Empresa_DATA);
 
   @ViewChild(MatSort) sort!: MatSort
-  ngAfterViewInit(): void{
+  ngAfterViewInit(): void {
     this.dataSource.sort = this.sort
   }
 
   @HostListener('window:keydown.control.y', ['$event'])
-  handleSave(event: KeyboardEvent){
+  handleSave(event: KeyboardEvent) {
     event.preventDefault();
     this.openDialogEmpresas('500ms', '250ms')
   }
@@ -57,12 +58,20 @@ export class EmpresasComponent {
   }
 
   openDialogDelete(enterAnimationDuration: string, exitAnimationDuration: string, razao_social: string): void {
-    this.confirmacaoService.acao = "deletar";
-    this.confirmacaoService.nome = razao_social;
-    this.dialog.open(ConfirmacaoComponent, {
+    const dialogRef = this.dialog.open(ConfirmacaoComponent, {
       width: '80%',
       enterAnimationDuration,
       exitAnimationDuration,
+      data: {
+        nome: razao_social,
+        message: "Deseja deletar a empresa:"
+      }
+    });
+
+    dialogRef.afterClosed().subscribe((confirm: boolean) => {
+      if (confirm) {
+        this.templateService.snackBarSuccess("Empresa deletado com sucesso!", "")
+      }
     });
   }
 
